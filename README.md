@@ -22,12 +22,8 @@ https://ask.thmanyah.com/hc/en-001/articles/45993930027281-thmanyah-Font-for-Eve
 
 الملفات في جذر المستودع جاهزة كما هي (`index.html` و `assets/`). من إعدادات المستودع: Pages ← Deploy from a branch ← الفرع الرئيسي، المجلد `/ (root)`. لا يحتاج الموقع أي خادم ولا تسجيل دخول.
 
+ملفا الشعار الرسميان (الحبري والأبيض) في `assets/brand/`.
 
-```
-./build.sh            # يجمع المحرك في dist/engine.js
-python3 site/build.py # يبني الموقع في site/
-python3 site/test.py  # اختبارات Playwright
-```
 
 </div>
 
@@ -56,11 +52,5 @@ Everything is plain static files at the repo root (`index.html`, `assets/`). In 
 
 The official W monogram files (ink and white) are in .
 
-
-```
-./build.sh            # assembles the engine into dist/engine.js
-python3 site/build.py # builds the site into site/
-python3 site/test.py  # Playwright tests
-```
 
 Third-party code: snapdom 3.3.3 and jsPDF 2.5.1, both MIT — licences in `assets/vendor/`.
