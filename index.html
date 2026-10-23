@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>استوديو وجدان</title>
+<meta name="description" content="استوديو تصاميم وجدان المالكي: ٢٠٠ تصميم جاهز لمنشورات LinkedIn و X، تعدّلين النص بالضغط عليه وتحمّلين الصورة.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" crossorigin="anonymous" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,700;8..60,900&family=Noto+Naskh+Arabic:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=2cc35436bd">
+<script>try{var t=localStorage.getItem('wjs-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<header class="topbar">
+  <div class="in">
+    <a class="brand" href="#" id="home" aria-label="استوديو وجدان — الرئيسية"><span id="brandMark" aria-hidden="true"></span><b>استوديو وجدان</b><span class="sub">تصاميم منشورات الهوية</span></a>
+    <button class="btn ghost" id="btnTheme" type="button" aria-label="تبديل المظهر"></button>
+  </div>
+</header>
+
+<div class="shell">
+  <!-- ========== gallery ========== -->
+  <section id="viewGallery" aria-labelledby="hTitle">
+    <div class="hero">
+      <div>
+        <h1 id="hTitle">اكتبي، اختاري التصميم، وحمّليه.</h1>
+        <p>كل تصميم هنا من نظام هوية وجدان. اضغطي على أي تصميم لفتحه، ثم اضغطي على النص نفسه لتعديله — التنسيق ثابت ولا يتغير إلا الكلام.</p>
+      </div>
+      <div class="stats" id="heroStats"></div>
+    </div>
+
+    <div class="layout">
+      <aside class="side" aria-label="الإعدادات والمحتوى">
+        <section class="panel group" aria-labelledby="l-setup">
+          <div class="label" id="l-setup">المنصة</div>
+          <div class="seg" id="segFmt" role="group" aria-label="المنصة"></div>
+          <div class="label">الفئة</div>
+          <div class="chips" id="chipsCat" role="group" aria-label="الفئة"></div>
+          <div class="row" style="gap:16px;align-items:flex-start">
+            <div class="group" style="flex:1 1 140px"><div class="label">اللغة</div><div class="seg" id="segLang" role="group" aria-label="اللغة"></div></div>
+            <div class="group" style="flex:1 1 180px"><div class="label">الوضع</div><div class="seg" id="segMode" role="group" aria-label="الوضع"></div></div>
+          </div>
+          <div class="label">النمط</div>
+          <div class="seg" id="segStyle" role="group" aria-label="النمط"></div>
+        </section>
+
+        <section class="panel" id="contentPanel">
+         <details id="contentDetails" open>
+          <summary><span id="l-content">محتوى الفئة</span></summary>
+          <div class="group" style="margin-top:10px">
+          <div class="row"><button class="btn" id="btnReset" type="button">إرجاع العيّنة</button></div>
+          <p class="note info" id="sampleNote">هذا محتوى عيّنة. اكتبي محتواك هنا ليظهر على كل تصاميم الفئة، أو افتحي تصميمًا وعدّلي نصه مباشرة.</p>
+          <div id="form" class="group"></div>
+          </div>
+         </details>
+        </section>
+
+        <section class="panel group">
+          <details id="sigDetails">
+            <summary>التوقيع والخط</summary>
+            <div class="group" style="margin-top:10px">
+              <div class="field"><label for="sigName">الاسم</label><input type="text" id="sigName" autocomplete="off"></div>
+              <div class="field"><label for="sigHandle">المعرّف في X</label><input type="text" id="sigHandle" dir="ltr" autocomplete="off"></div>
+              <div class="field"><label for="sigRole">الصفة</label><input type="text" id="sigRole" autocomplete="off"></div>
+              <div class="field"><label for="fontName">اسم خط العناوين كما هو مثبت في جهازك</label><input type="text" id="fontName" dir="ltr" placeholder="Thmanyah Serif Display" autocomplete="off"></div>
+            </div>
+          </details>
+          <p class="note" id="fontNote" hidden>خط ثمانية غير مثبت على هذا الجهاز، فتظهر العناوين بخط بديل. <a href="https://ask.thmanyah.com/hc/en-001/articles/45993930027281-thmanyah-Font-for-Everyone" target="_blank" rel="noopener">حمّلي خط ثمانية من موقعهم</a> وثبّتيه، ثم حدّثي الصفحة وحمّلي التصاميم من الجهاز نفسه.</p>
+          <p class="note ok" id="fontOk" hidden>خط العناوين مثبت — العناوين تظهر به.</p>
+        </section>
+      </aside>
+
+      <main class="main" id="main">
+        <div class="toolbar">
+          <div class="count" id="count" role="status" aria-live="polite"></div>
+        </div>
+        <div class="grid" id="grid"></div>
+      </main>
+    </div>
+  </section>
+
+  <!-- ========== editor ========== -->
+  <section id="viewEditor" hidden aria-labelledby="edTitle">
+    <div class="ed-head">
+      <button class="btn" id="edBack" type="button">→ كل التصاميم</button>
+      <h1 id="edTitle"></h1>
+      <span id="edTags" class="row"></span>
+    </div>
+    <div class="editor">
+      <div class="ed-canvas">
+        <div class="ed-stage" id="edStage"></div>
+        <div class="ed-pager" id="edPager" hidden>
+          <button class="btn" id="edPrev" type="button" aria-label="الشريحة السابقة">→</button>
+          <div class="dots" id="edDots" role="group" aria-label="الشرائح"></div>
+          <button class="btn" id="edNext" type="button" aria-label="الشريحة التالية">←</button>
+        </div>
+      </div>
+      <aside class="ed-side">
+        <section class="panel group">
+          <p class="hint">اضغطي على أي نص في التصميم واكتبي. الحجم يتكيّف تلقائيًا ليبقى داخل المساحة. للتراجع: ⌘Z أو Ctrl+Z.</p>
+          <div class="note" id="edWarn" role="status" aria-live="polite" hidden></div>
+          <div class="group"><div class="label">المنصة</div><div class="seg" id="edFmt" role="group" aria-label="المنصة"></div></div>
+          <div class="group"><div class="label">اللغة</div><div class="seg" id="edLang" role="group" aria-label="اللغة"></div></div>
+          <div class="group"><div class="label">الوضع</div><div class="seg" id="edMode" role="group" aria-label="الوضع"></div></div>
+        </section>
+        <section class="panel group">
+          <button class="btn primary" id="edPng" type="button">تحميل PNG</button>
+          <button class="btn" id="edPdf" type="button" hidden>تحميل الشرائح PDF</button>
+          <button class="btn ghost" id="edReset" type="button">إرجاع نص هذا التصميم</button>
+          <p class="hint" id="edSaved"></p>
+        </section>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="site">
+    <span>استوديو وجدان المالكي · <span dir="ltr">wejdan404ui</span></span>
+    <span>الخطوط: IBM Plex و Source Serif و Noto Naskh من Google Fonts · التصدير: snapdom و jsPDF (رخصة MIT)</span>
+  </footer>
+</div>
+
+<div class="pop" id="pop" hidden role="dialog"></div>
+<input type="file" id="filePick" accept="image/*" hidden>
+<div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
+<div class="offscreen" id="off" aria-hidden="true"></div>
+
+<script src="assets/engine.js?v=2cc35436bd"></script>
+<script src="assets/vendor/snapdom.js"></script>
+<script src="assets/vendor/jspdf.umd.min.js"></script>
+<script src="assets/app.js?v=2cc35436bd"></script>
+</body>
+</html>
