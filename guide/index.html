@@ -1,0 +1,1207 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<style>:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0;font:14px system-ui}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>دليل هوية وجدان</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,700;8..60,900&display=swap">
+<style>
+/* Layout: Arabic-first RTL brand book — sticky chapter rail on wide screens, one reading column, specimens drawn live from the Wejdan tokens. */
+:root{
+  /* semantic tokens — Light / Brand Light (tokens.json) */
+  --surface:#FFFFFF; --surface-subtle:#F2F7FE; --surface-elevated:#FFFFFF; --surface-inverse:#0E121C; --surface-dark:#0E121C;
+  --text:#0E121C; --text-2:#2B3358; --text-muted:#50545C; --text-accent:#4E5C96; --text-inverse:#FFFFFF;
+  --border-subtle:#BEDAF7; --border:#9BC4EE; --border-strong:#0E121C; --focus:#6172B5;
+  --brand:#6172B5; --brand-2:#9BC4EE; --action:#6172B5; --action-hover:#3D4877; --action-pressed:#2B3358; --action-disabled:#E5E6E7;
+  --glow:#9BC4EE; --logo:#0E121C;
+  --ok:#207F4D; --warn:#966400; --err:#A71A1E; --info:#2169C7;
+  --il-canvas:#FFFFFF; --il-field:#DCE0EF; --il-fill:#BEDAF7; --il-line:#3D4877; --il-accent:#6172B5; --il-high:#5E93D6;
+  --scrim:rgba(14,18,28,.56);
+  --shadow-subtle:0 4px 16px rgba(14,18,28,.12); --shadow-elevated:0 12px 32px rgba(14,18,28,.18);
+  /* type */
+  --f-display:"Thmanyah Serif Text","Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-display-ar:"Thmanyah Serif Text","Noto Naskh Arabic","Source Serif 4",serif;
+  --f-sans:"IBM Plex Sans",system-ui,sans-serif;
+  --f-ar:"IBM Plex Sans Arabic","IBM Plex Sans",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+  /* radius */
+  --r-xs:4px; --r-sm:12px; --r-md:20px; --r-lg:32px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --surface:#0E121C; --surface-subtle:#181C26; --surface-elevated:#222630; --surface-inverse:#FFFFFF; --surface-dark:#0E121C;
+  --text:#FFFFFF; --text-2:#D1D2D5; --text-muted:#A2A4A9; --text-accent:#BEDAF7; --text-inverse:#0E121C;
+  --border-subtle:#40444D; --border:#6E7179; --border-strong:#86898F; --focus:#BEDAF7;
+  --brand:#7587CF; --brand-2:#BEDAF7; --action:#9BC4EE; --action-hover:#BEDAF7; --action-pressed:#7FAAE3; --action-disabled:#40444D;
+  --glow:#BEDAF7; --logo:#FFFFFF;
+  --ok:#78E8AF; --warn:#FFCD53; --err:#F78383; --info:#78B7FF;
+  --il-canvas:#0E121C; --il-field:#3D4877; --il-fill:#4E5C96; --il-line:#DDEBFC; --il-accent:#9BC4EE; --il-high:#FFFFFF;
+  --shadow-subtle:0 4px 16px rgba(0,0,0,.36); --shadow-elevated:0 12px 32px rgba(0,0,0,.48);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --surface:#0E121C; --surface-subtle:#181C26; --surface-elevated:#222630; --surface-inverse:#FFFFFF; --surface-dark:#0E121C;
+  --text:#FFFFFF; --text-2:#D1D2D5; --text-muted:#A2A4A9; --text-accent:#BEDAF7; --text-inverse:#0E121C;
+  --border-subtle:#40444D; --border:#6E7179; --border-strong:#86898F; --focus:#BEDAF7;
+  --brand:#7587CF; --brand-2:#BEDAF7; --action:#9BC4EE; --action-hover:#BEDAF7; --action-pressed:#7FAAE3; --action-disabled:#40444D;
+  --glow:#BEDAF7; --logo:#FFFFFF;
+  --ok:#78E8AF; --warn:#FFCD53; --err:#F78383; --info:#78B7FF;
+  --il-canvas:#0E121C; --il-field:#3D4877; --il-fill:#4E5C96; --il-line:#DDEBFC; --il-accent:#9BC4EE; --il-high:#FFFFFF;
+  --shadow-subtle:0 4px 16px rgba(0,0,0,.36); --shadow-elevated:0 12px 32px rgba(0,0,0,.48);
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--surface);color:var(--text);font:400 16px/1.8 var(--f-ar);-webkit-font-smoothing:antialiased;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--surface)}
+[lang="en"],.en{font-family:var(--f-sans)}
+a{color:var(--text-accent);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
+h1,h2,h3,h4{margin:0;text-wrap:balance;font-weight:700}
+p{margin:0}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.w{display:block;fill:currentColor;color:var(--logo)}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--surface);border-bottom:1px solid var(--border-subtle);
+  margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.bar-in{max-width:1320px;margin:0 auto;display:flex;align-items:center;gap:16px;height:60px}
+.bar .w{width:32px;height:auto;flex:none}
+.bar-name{font-weight:600;font-size:15px;white-space:nowrap}
+.bar-name span{color:var(--text-muted);font-weight:400}
+.chips{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0;mask-image:linear-gradient(to left,#000 92%,transparent)}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;font-size:13px;line-height:20px;padding:6px 10px;border-radius:999px;color:var(--text-muted);text-decoration:none;white-space:nowrap}
+.chips a:hover{color:var(--text);background:var(--surface-subtle)}
+.chips a.on{color:var(--text);background:var(--surface-subtle);font-weight:600}
+
+/* frame */
+.frame{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:48px}
+.rail{display:none}
+@media (min-width:1100px){
+  .frame{grid-template-columns:220px minmax(0,1fr)}
+  .rail{display:block;position:sticky;top:calc(84px + env(safe-area-inset-top,0px));align-self:start;max-height:calc(100vh - 100px);overflow:auto;padding-block:32px;font-size:13px}
+  .rail ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+  .rail a{display:flex;gap:10px;padding:5px 10px;border-radius:8px;color:var(--text-muted);text-decoration:none;line-height:1.5}
+  .rail a b{font-family:var(--f-mono);font-weight:400;font-size:11px;color:var(--text-muted);min-width:20px;padding-top:1px}
+  .rail a:hover{background:var(--surface-subtle);color:var(--text)}
+  .rail a.on{color:var(--text);background:var(--surface-subtle);font-weight:600}
+  .chips{display:none}
+}
+main{min-width:0;max-width:960px;padding-bottom:96px}
+
+/* cover */
+.cover{padding-block:64px 48px;display:grid;gap:32px;border-bottom:1px solid var(--border-subtle)}
+.cover-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cover .w{width:128px;height:auto}
+.eyebrow{font:600 12px/16px var(--f-sans);letter-spacing:.12em;text-transform:uppercase;color:var(--text-accent)}
+.cover h1{font-family:var(--f-display-ar);font-weight:700;font-size:clamp(44px,8vw,80px);line-height:1.25}
+.cover .sub{font-family:var(--f-display);font-size:clamp(22px,3.4vw,32px);line-height:1.3;color:var(--text-2)}
+.cover .lede{max-width:62ch;font-size:18px;line-height:1.85;color:var(--text-2)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--border-subtle);border:1px solid var(--border-subtle);border-radius:var(--r-sm);overflow:hidden}
+.facts div{background:var(--surface);padding:14px 16px;display:grid;gap:2px}
+.facts b{font:600 24px/32px var(--f-sans);font-variant-numeric:tabular-nums}
+.facts span{font-size:13px;color:var(--text-muted);line-height:1.5}
+.srcline{font-size:13px;color:var(--text-muted);line-height:1.7}
+
+/* sections */
+section.ch{padding-block:72px 8px;display:grid;gap:28px}
+.sec-head{display:grid;grid-template-columns:auto 1fr;gap:4px 20px;align-items:baseline;padding-bottom:20px;border-bottom:2px solid var(--text)}
+.sec-no{font:500 15px/1 var(--f-mono);color:var(--text-muted);grid-row:span 2;padding-top:10px}
+.sec-head h2{font-family:var(--f-display-ar);font-size:clamp(30px,5vw,44px);line-height:1.35}
+.sec-head .en{font-size:15px;color:var(--text-muted);letter-spacing:.02em}
+.sec-head .src{grid-column:2;font-size:12px;color:var(--text-muted)}
+.intro{max-width:66ch;font-size:17px;color:var(--text-2)}
+h3{font-size:22px;line-height:1.5;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+h3 .en{font-size:13px;font-weight:500;color:var(--text-muted)}
+h4{font-size:16px;line-height:1.6}
+.block{display:grid;gap:16px}
+.note{font-size:14px;color:var(--text-muted);line-height:1.75;max-width:70ch}
+.pill{display:inline-flex;align-items:center;gap:6px;font:600 11px/16px var(--f-sans);letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--border-subtle);color:var(--text-muted);white-space:nowrap;direction:ltr}
+.req{display:inline-block;font:500 12px/18px var(--f-mono);padding:1px 6px;border:1px dashed var(--border-strong);border-radius:4px;color:var(--text-muted);direction:ltr;white-space:nowrap}
+.sample{display:inline-block;font:600 10px/16px var(--f-sans);letter-spacing:.1em;padding:1px 6px;border-radius:4px;background:var(--surface-subtle);color:var(--text-muted);direction:ltr}
+
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:12px}
+.panel{background:var(--surface-subtle);border-radius:var(--r-md);padding:20px;display:grid;gap:10px;align-content:start;min-width:0}
+.panel p{font-size:15px;line-height:1.75;color:var(--text-2)}
+.panel .k{font:600 12px/16px var(--f-sans);letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
+.line-list{list-style:none;margin:0;padding:0;display:grid}
+.line-list li{padding:12px 0;border-top:1px solid var(--border-subtle);display:grid;gap:2px;font-size:15px}
+.line-list li:first-child{border-top:0}
+.line-list.pr li{display:block}
+ol.steps{margin:0;padding:0;list-style:none;counter-reset:s;display:grid;gap:10px}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:15px;line-height:1.7}
+ol.steps li::before{content:counter(s);font:600 13px/28px var(--f-sans);text-align:center;width:28px;height:28px;border-radius:50%;background:var(--surface-subtle);color:var(--text-2)}
+
+/* tables */
+.tw{overflow-x:auto;border:1px solid var(--border-subtle);border-radius:var(--r-sm)}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.6}
+th,td{text-align:start;padding:10px 14px;border-top:1px solid var(--border-subtle);vertical-align:top}
+thead th{border-top:0;background:var(--surface-subtle);font-weight:600;font-size:12px;color:var(--text-muted);white-space:nowrap}
+td.n,th.n{font-variant-numeric:tabular-nums}
+
+/* tokens / copy */
+.tok{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;font:500 12px/18px var(--f-mono);direction:ltr;padding:3px 8px 3px 4px;border-radius:6px;border:1px solid var(--border-subtle);background:var(--surface);color:var(--text);white-space:nowrap}
+.tok i{width:14px;height:14px;border-radius:3px;box-shadow:inset 0 0 0 1px rgba(127,127,127,.35);flex:none}
+.tok:hover{border-color:var(--border-strong)}
+.tok:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);opacity:0;pointer-events:none;background:var(--surface-inverse);color:var(--text-inverse);font:500 13px/20px var(--f-ar);padding:10px 16px;border-radius:999px;transition:opacity .2s,transform .2s;z-index:70}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* swatches */
+.core{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px}
+.core button{all:unset;cursor:pointer;display:grid;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border-subtle);background:var(--surface)}
+.core button:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.core .chip{height:112px;display:flex;align-items:flex-end;padding:12px}
+.core .chip span{font:500 13px/18px var(--f-mono);direction:ltr}
+.core .meta{padding:12px 14px;display:grid;gap:2px;font-size:13px;line-height:1.6;color:var(--text-2)}
+.core .meta b{font-size:15px;color:var(--text)}
+.ramp{display:grid;grid-template-columns:repeat(var(--n,10),minmax(0,1fr));border-radius:var(--r-sm);overflow:hidden;border:1px solid var(--border-subtle)}
+.ramp button{all:unset;cursor:pointer;height:72px;padding:6px;display:flex;flex-direction:column;justify-content:flex-end;gap:0;font:500 10px/14px var(--f-mono);direction:ltr;min-width:0}
+.ramp button:focus-visible{outline:2px solid var(--focus);outline-offset:-2px}
+.ramp button em{font-style:normal;opacity:.85;overflow:hidden;text-overflow:clip;white-space:nowrap}
+@media (max-width:640px){.ramp{grid-template-columns:repeat(5,minmax(0,1fr))}.ramp[style*="13"]{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.ramp-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.ramp-h h4 span{color:var(--text-muted);font-weight:400;font-size:13px}
+.grads{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px}
+.grad{border-radius:var(--r-sm);overflow:hidden;border:1px solid var(--border-subtle);display:grid}
+.grad .g{height:88px}
+.grad .m{padding:10px 12px;display:grid;gap:6px;font-size:12px;line-height:1.5;color:var(--text-muted)}
+.grad .m b{font:500 12px/16px var(--f-mono);color:var(--text);direction:ltr;text-align:right}
+.v-ok{color:var(--ok);border-color:currentColor}.v-watch{color:var(--warn);border-color:currentColor}.v-clash{color:var(--err);border-color:currentColor}
+
+/* logo */
+.logo-duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.stage{border-radius:var(--r-md);min-height:280px;display:grid;place-items:center;position:relative;padding:40px}
+.stage .w{width:min(180px,46%);height:auto}
+.stage.light{background:#FFFFFF;border:1px solid var(--border-subtle)}
+.stage.light .w{color:#0E121C}
+.stage.dark{background:#0E121C;border:1px solid var(--border-subtle)}
+.stage.dark .w{color:#FFFFFF}
+.stage .cap{position:absolute;inset:auto 16px 12px 16px;display:flex;justify-content:space-between;gap:8px;font:500 11px/16px var(--f-mono);direction:ltr}
+.stage.light .cap{color:#50545C}.stage.dark .cap{color:#A2A4A9}
+.ladder{overflow-x:auto;border:1px solid var(--border-subtle);border-radius:var(--r-md)}
+.ladder-in{display:flex;align-items:flex-end;gap:28px;padding:28px 24px 20px;width:max-content;direction:ltr}
+.ladder figure{margin:0;display:grid;justify-items:center;gap:8px}
+.ladder figcaption{font:500 11px/14px var(--f-mono);color:var(--text-muted);text-align:center;white-space:nowrap}
+.ladder figcaption b{display:block;color:var(--text);font-weight:600}
+.clear{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px;align-items:center}
+.cs-box{position:relative;justify-self:center;padding:32px;outline:1px dashed var(--brand);outline-offset:0;background:repeating-linear-gradient(45deg,transparent 0 6px,color-mix(in srgb,var(--brand) 12%,transparent) 6px 7px)}
+.cs-box .inner{background:var(--surface);outline:1px solid var(--border)}
+.cs-box .w{width:128px;height:auto}
+.cs-box .lbl{position:absolute;font:500 11px/14px var(--f-mono);color:var(--text-accent);direction:ltr}
+.misuse{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px}
+.mis{border-radius:var(--r-sm);border:1px solid var(--border-subtle);overflow:hidden;display:grid}
+.mis .s{height:120px;display:grid;place-items:center;background:#FFFFFF;position:relative;overflow:hidden}
+.mis .s .w{width:64px;height:auto;color:#0E121C}
+.mis .t{padding:10px 12px;font-size:13px;line-height:1.55;display:grid;gap:2px}
+.mis .t b{color:var(--err);font-size:13px}
+.mis.ok .t b{color:var(--ok)}
+.dl{display:grid;gap:12px;padding:20px;border-radius:var(--r-md);border:1px solid var(--border-subtle)}
+.dl-row{display:flex;flex-wrap:wrap;gap:8px}
+.bar-back{flex:none;font-size:13px;font-weight:600;color:var(--text);text-decoration:none;border:1px solid var(--border-subtle);border-radius:999px;padding:6px 12px;white-space:nowrap}
+.bar-back:hover{background:var(--surface-subtle)}
+.btn{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 18px;border-radius:var(--r-sm);font:600 15px/20px var(--f-ar);background:var(--action);color:var(--text-inverse);transition:background .15s}
+.btn:hover{background:var(--action-hover)}.btn:active{background:var(--action-pressed)}
+.btn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.btn.sec{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1px var(--border-strong)}
+.btn.sec:hover{background:var(--surface-subtle)}
+.btn[disabled],.btn.dis{background:var(--action-disabled);color:var(--text-muted);cursor:not-allowed;box-shadow:none}
+.btn.link{background:transparent;color:var(--text-accent);padding-inline:4px;text-decoration:underline;text-underline-offset:4px}
+.btn.focus{outline:2px solid var(--focus);outline-offset:2px}
+.btn.hov{background:var(--action-hover)}
+
+/* type */
+.spec-row{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;padding:16px 0;border-top:1px solid var(--border-subtle)}
+.spec-row:first-child{border-top:0}
+.spec-meta{display:flex;flex-wrap:wrap;gap:6px 16px;font:500 12px/16px var(--f-mono);color:var(--text-muted);direction:ltr;justify-content:flex-end}
+.spec-meta b{color:var(--text);font-weight:600}
+.spec-sample{overflow-wrap:anywhere;min-width:0}
+.ramp-box{border:1px solid var(--border-subtle);border-radius:var(--r-md);padding:4px 20px}
+.fam{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+.fam .panel .big{font-size:56px;line-height:1.2}
+
+/* space */
+.sp-row{display:grid;grid-template-columns:76px 1fr;align-items:center;gap:12px;font:500 12px/16px var(--f-mono);direction:ltr}
+.sp-row div{height:12px;background:var(--brand);border-radius:2px;max-width:100%}
+.radii{display:flex;flex-wrap:wrap;gap:16px;direction:ltr}
+.radii figure{margin:0;display:grid;gap:6px;justify-items:center;font:500 11px/14px var(--f-mono);color:var(--text-muted)}
+.radii .r{width:72px;height:72px;background:var(--surface-subtle);border:1px solid var(--border)}
+.icons{display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px;direction:ltr}
+.icons figure{margin:0;display:grid;justify-items:center;gap:6px;font:500 11px/14px var(--f-mono);color:var(--text-muted)}
+.icons .box{outline:1px dashed var(--border);display:grid;place-items:center}
+.gridviz{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:16px}
+.gv{display:grid;gap:8px;font-size:13px;line-height:1.5}
+.gv .cv{position:relative;background:var(--surface-subtle);border:1px solid var(--border-subtle);border-radius:6px;overflow:hidden;max-width:100%}
+.gv .cv .cols{position:absolute;display:grid;top:0;bottom:0}
+.gv .cv .cols i{background:color-mix(in srgb,var(--brand) 18%,transparent)}
+.gv b{font-weight:600}
+.depth{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px}
+.depth .d{height:120px;border-radius:var(--r-md);background:var(--surface-elevated);display:grid;place-items:center;font:500 12px/16px var(--f-mono);direction:ltr;border:1px solid var(--border-subtle)}
+.density{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+@media (max-width:640px){.density{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.density figure{margin:0;display:grid;gap:6px;font-size:12px;line-height:1.45}
+.density .tile{aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:var(--surface-dark);position:relative;max-width:100%}
+.density .tile svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* patterns */
+.pat{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+.pat figure{margin:0;display:grid;gap:8px}
+.pat .tile{aspect-ratio:4/3;border-radius:var(--r-md);overflow:hidden;position:relative;border:1px solid var(--border-subtle);max-width:100%}
+.pat .tile svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.pat figcaption{font-size:14px;line-height:1.6;display:grid;gap:2px}
+.pat figcaption span{color:var(--text-muted);font-size:13px}
+.motifs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px}
+.motif{border-radius:var(--r-md);background:var(--surface-dark);height:160px;position:relative;overflow:hidden}
+.motif svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* components */
+.cmp{border:1px solid var(--border-subtle);border-radius:var(--r-md);overflow:hidden;display:grid}
+.cmp-h{padding:14px 18px;border-bottom:1px solid var(--border-subtle);display:grid;gap:2px}
+.cmp-h b{font:600 12px/16px var(--f-sans);letter-spacing:.1em;text-transform:uppercase}
+.cmp-h p{font-size:14px;color:var(--text-muted);line-height:1.6}
+.cmp-b{padding:20px 18px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cmp-b.col{display:grid;gap:12px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--border-subtle)}
+.tabs span{padding:10px 14px;font-size:15px;color:var(--text-muted);border-bottom:2px solid transparent;margin-bottom:-1px}
+.tabs span.on{color:var(--text);border-color:var(--text);font-weight:600}
+.pager{display:flex;gap:6px;direction:ltr}
+.pager span{min-width:36px;height:36px;display:grid;place-items:center;border-radius:10px;font:500 14px/1 var(--f-sans);border:1px solid var(--border-subtle)}
+.pager span.on{background:var(--surface-inverse);color:var(--text-inverse);border-color:transparent}
+.toastx{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;padding:12px 14px;border-radius:var(--r-sm);background:var(--surface-elevated);border:1px solid var(--border-subtle);box-shadow:var(--shadow-subtle);min-width:0;flex:1 1 220px}
+.toastx .mk{grid-row:span 2;font:700 11px/16px var(--f-sans);letter-spacing:.08em;padding-top:3px}
+.toastx b{font-size:15px}.toastx p{font-size:13px;color:var(--text-muted)}
+.badge{display:inline-flex;align-items:center;gap:6px;font:600 11px/16px var(--f-sans);letter-spacing:.08em;padding:3px 8px;border-radius:999px;border:1px solid currentColor;direction:ltr}
+.field{display:grid;gap:6px;min-width:0;flex:1 1 220px}
+.field label{font-size:13px;font-weight:600}
+.field .in{min-height:44px;border-radius:var(--r-sm);border:1px solid var(--border-strong);padding:10px 14px;font:400 15px/22px var(--f-sans);color:var(--text-muted);background:var(--surface);direction:ltr;text-align:left}
+.field .in.err{border-color:var(--err);border-width:2px}
+.field small{font-size:13px;color:var(--text-muted)}
+.field small.e{color:var(--err)}
+.chip-x{display:inline-flex;align-items:center;min-height:32px;padding:4px 12px;border-radius:999px;border:1px solid var(--border-strong);font-size:14px}
+.chip-x.on{background:var(--surface-inverse);color:var(--text-inverse);border-color:transparent}
+.cardx{border-radius:var(--r-md);background:var(--surface-elevated);border:1px solid var(--border-subtle);padding:20px;display:grid;gap:8px;min-width:0;align-content:start}
+.cardx .ov{font:600 11px/16px var(--f-sans);letter-spacing:.1em;text-transform:uppercase;color:var(--text-accent)}
+.cardx h4{font-size:18px;line-height:1.45}
+.cardx p{font-size:14px;color:var(--text-2);line-height:1.65}
+.cardx .num{font:600 40px/48px var(--f-sans);font-variant-numeric:tabular-nums}
+.cardx q{font-family:var(--f-display);font-size:20px;line-height:1.5;quotes:"\201C" "\201D"}
+.empty{border:1px dashed var(--border);border-radius:var(--r-md);padding:24px;display:grid;gap:6px;justify-items:start;flex:1 1 260px}
+.empty b{font-size:16px}.empty p{font-size:14px;color:var(--text-muted)}
+
+/* frames (social, card, deck) */
+.fbox{position:relative;overflow:hidden;border-radius:12px;max-width:100%;box-shadow:var(--shadow-subtle)}
+.fbox>.fr{position:absolute;top:0;left:0;transform-origin:0 0}
+.shelf{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px;align-items:start}
+.shelf figure{margin:0;display:grid;gap:8px;min-width:0}
+.shelf figcaption{font-size:13px;color:var(--text-muted);line-height:1.6}
+.fr{font-family:var(--f-sans)}
+.fr .w{color:inherit}
+
+/* do / dont */
+.dd{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:12px}
+.dd>div{border-radius:var(--r-md);padding:18px 20px;display:grid;gap:10px;align-content:start;border:1px solid var(--border-subtle)}
+.dd h4{display:flex;align-items:center;gap:8px;font-size:15px}
+.dd .do h4{color:var(--ok)}.dd .dont h4{color:var(--err)}
+.dd ul{margin:0;padding-inline-start:20px;display:grid;gap:6px;font-size:14px;line-height:1.7}
+
+.mini-card{border-radius:var(--r-md);border:1px solid var(--border-subtle);padding:16px;display:grid;gap:6px;min-width:0}
+.mini-card b{font-size:15px}
+.mini-card p{font-size:13px;color:var(--text-muted);line-height:1.6}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0 24px;counter-reset:none}
+.toc a{display:grid;grid-template-columns:36px 1fr;gap:2px 8px;padding:12px 0;border-top:1px solid var(--border-subtle);text-decoration:none;color:var(--text)}
+.toc a b{font:500 13px/24px var(--f-mono);color:var(--text-muted);grid-row:span 2}
+.toc a span{font-size:16px;font-weight:600;line-height:1.5}
+.toc a small{font:400 13px/1.4 var(--f-sans);color:var(--text-muted)}
+.toc a:hover span{color:var(--text-accent)}
+.lines{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:10px}
+.lines p{font-family:var(--f-display);font-size:19px;line-height:1.5;padding:14px 16px;border-radius:var(--r-sm);background:var(--surface-subtle)}
+.lines p[dir="rtl"]{font-family:var(--f-display-ar)}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px;padding:12px 0;border-top:1px solid var(--border-subtle)}
+.pair p{font-size:15px;line-height:1.65}
+.pair .good::before{content:"✓ ";color:var(--ok);font-weight:700}
+.pair .bad{color:var(--text-muted);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--err) 60%,transparent)}
+footer.end{padding-block:48px;border-top:1px solid var(--border-subtle);display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;font-size:13px;color:var(--text-muted)}
+footer.end .w{width:32px;height:auto}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media (max-width:520px){section.ch{padding-block:56px 8px}.cover{padding-block:40px 36px}.sec-head{gap:4px 12px}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="w" viewBox="0 0 227 205"><path id="wpath" fill-rule="evenodd" clip-rule="evenodd" d="M0 84.9507L4.59193 86.3283L8.95426 89.0834L14.235 96.4305L56.7103 202.734L88.165 136.151L117.094 204.111L118.013 204.8L119.62 204.111L150.845 140.283L160.947 146.483L167.605 148.319H172.197L176.33 147.171L180.004 144.416L181.381 141.891L180.922 136.61L177.248 134.314L173.804 135.232L172.197 136.839L170.59 140.972L166.228 143.957L158.881 142.579L151.763 137.758L161.636 118.472L175.412 94.3641L180.233 88.8538L184.136 86.3283L188.269 85.4099V84.7211L153.83 84.9507L159.57 86.5579L163.243 89.5426L165.08 93.9049L165.309 98.2673L163.932 105.614L159.799 116.865L149.926 136.61L140.513 127.885L117.783 102.63L107.451 92.5274L102.17 88.6242L92.757 84.2619L90.0018 83.5731L84.2619 84.0323L81.5067 85.4099L78.522 88.6242L76.6852 93.2161L76.226 99.6448L78.7516 111.813L86.7874 133.396L65.8942 177.248L33.2915 99.8744L33.7507 94.1345L35.5874 90.9202L41.0978 86.7874L48.2152 84.9507H0ZM93.6753 88.3946H94.1345L94.3641 88.165H97.3489L97.5785 88.3946L99.4152 88.8538L103.548 91.3794L104.237 92.0682L105.385 92.757L107.222 94.5937H107.451L115.487 102.63V102.859L123.293 111.354V111.584L126.278 114.798V115.028L127.656 116.405V116.635L129.033 118.013V118.242L135.921 125.819V126.048L138.447 128.574V128.804L139.135 129.263L139.365 129.722L144.875 135.232H145.105L149.008 138.906L147.171 142.579V143.039L146.253 144.416V144.875L145.105 146.942V147.401L144.646 147.86V148.319L144.187 148.778L143.727 149.697V150.156L142.809 151.534V151.993L142.35 152.452L141.661 153.83V154.289L137.987 161.406V161.865L137.528 162.325L134.543 168.294V168.753L129.263 179.085V179.544L127.885 182.3L127.426 182.759L126.967 182.3L125.13 178.626V178.167L123.293 174.723V174.264L121.916 171.738V171.279L120.309 168.294V167.835L118.013 163.243V162.784L115.946 158.881V158.422L115.028 156.814V156.355L112.961 152.452V151.993L109.977 146.023V145.564L108.37 142.579V142.12L106.762 139.135V138.676L104.926 135.232V134.773L103.778 132.707V132.248L101.022 126.967V126.508L99.8744 124.441V123.982L97.5785 119.39V118.931L97.1193 118.242V117.783L96.6601 117.094V116.635L95.2825 113.65L94.8233 111.813L93.9049 109.977V109.517L93.4457 108.599V107.91L92.5274 105.614V104.926L92.2978 104.696V104.007L91.8386 103.089V102.4L91.609 102.17V101.252L91.3794 101.022V100.104L91.1498 99.8744V98.9561L90.9202 98.7265V96.4305L90.6906 96.2009V93.9049L90.9202 93.6753L91.1498 91.609L92.2978 89.5426L93.6753 88.3946ZM64.7462 35.1283V36.2762L64.5166 36.5058V37.4242L64.287 37.6538V38.5722L64.0574 38.8018V39.4906L63.8278 39.7202V40.1794L63.5982 40.409V40.8682L63.3686 41.0978V41.557L62.9094 42.2457V42.7049L62.4502 43.3937V43.8529L62.2206 44.0825V44.3121L61.991 44.5417L61.7614 45.2305L61.3022 45.6897V45.9193L61.0726 46.1489V46.3785L60.6135 46.8377V47.0673L59.6951 47.9857V48.2152L57.8583 50.052H57.6287L56.7103 50.9704H56.4807L56.0215 51.4296H55.7919L55.5623 51.6592H55.3327L55.1031 51.8888H54.8735L54.6439 52.1184H54.4143L53.2664 52.8072H52.8072L52.5776 53.0368H52.1184L51.8888 53.2664H51.4296L51.2 53.496H50.5112L50.2816 53.7256H49.5928L49.3632 53.9552H48.6744L48.4448 54.1848H47.0673H47.9856L48.2152 54.4144H49.1336L49.3632 54.6439H50.052L50.2816 54.8735H50.9704L51.2 55.1031H51.8888L52.5776 55.5623H53.0368L53.2664 55.7919H53.7256L53.9552 56.0215H54.1848L54.4143 56.2511H54.6439L54.8735 56.4807L55.5623 56.7103L56.0215 57.1695H56.2511L56.7103 57.6287H56.9399L57.8583 58.5471H58.0879L59.6951 60.1543V60.3839L60.3839 61.0726V61.3022L60.843 61.7614V61.991L61.7614 63.139V63.3686L61.991 63.5982V64.0574L62.2206 64.287V64.5166L62.6798 65.2054V65.6646L63.139 66.3534V66.8126L63.3686 67.0422V67.5014L63.5982 67.7309V68.4197L63.8278 68.6493V69.3381L64.0574 69.5677V70.2565L64.287 70.4861V71.4045L64.5166 71.6341V72.5525L64.7462 72.7821V73.93V73.0117L64.9758 72.7821V71.6341L65.2054 71.4045V70.4861L65.435 70.2565V69.5677L65.6646 69.3381V68.6493L65.8942 68.4197V67.9605L66.1238 67.7309V67.0422L66.583 66.3534V65.8942L67.0422 65.2054V64.7462L67.2717 64.5166V64.287L67.5013 64.0574V63.8278L67.7309 63.5982V63.3686L67.9605 63.139L68.1901 62.4502L68.6493 61.991V61.7614L69.1085 61.3022V61.0726L70.0269 60.1543V59.9247L71.6341 58.3175H71.8637L72.5525 57.6287H72.7821L73.93 56.7103H74.1596L74.3892 56.4807H74.6188L75.7668 55.7919H76.226L76.4556 55.5623H76.6852L76.9148 55.3327H77.374L77.6036 55.1031H78.2924L78.522 54.8735H79.2108L79.4404 54.6439H80.1291L80.3587 54.4144H81.2771L81.5067 54.1848H82.4251H81.2771L81.0475 53.9552H80.1291L79.8996 53.7256H79.2108L78.9812 53.496H78.2924L78.0628 53.2664H77.6036L77.374 53.0368H76.9148L76.226 52.5776H75.7668L75.5372 52.348H75.3076L75.078 52.1184H74.8484L74.6188 51.8888H74.3892L74.1596 51.6592L73.4708 51.4296L73.0117 50.9704H72.7821L72.0933 50.2816H71.8637L69.5677 47.9857V47.7561L68.8789 47.0673V46.8377L68.4197 46.3785V46.1489L68.1901 45.9193L67.9605 45.2305L67.5013 44.7713V44.5417L67.2717 44.3121V43.8529L66.583 42.7049V42.2457L66.3534 42.0161V41.557L66.1238 41.3274V40.8682L65.8942 40.6386V40.1794L65.6646 39.9498V39.261L65.435 39.0314V38.3426L65.2054 38.113V37.4242L64.9758 37.1946V36.0466L64.7462 35.817V35.1283ZM96.2009 16.3013V17.2197L95.9713 17.4493V18.1381L95.7417 18.3677V18.8269L95.5121 19.0565V19.5157L95.2825 19.7453V20.2045L95.0529 20.4341V20.6637L94.8233 20.8933V21.1229L94.5937 21.3525L94.3641 22.0413L93.9049 22.5005V22.73L93.4457 23.1892V23.4188L92.5274 24.3372H92.2978L91.609 25.026H91.3794L90.9202 25.4852H90.6906L90.461 25.7148H90.0018L89.7722 25.9444H89.5426L89.313 26.174H88.8538L88.6242 26.4036H87.7058L87.4762 26.6332H87.017H87.7058L87.9354 26.8628H88.6242L88.8538 27.0924H89.313L89.5426 27.322H89.7722L90.0018 27.5516H90.2314L90.461 27.7812L91.1498 28.0108L91.609 28.47H91.8386L94.1345 30.7659V30.9955L94.3641 31.2251V31.4547L94.5937 31.6843V31.9139L95.2825 33.0619V33.5211L95.5121 33.7507V34.2099L95.7417 34.4395V35.1283L95.9713 35.3578V36.0466L96.2009 36.2762V37.1946V36.965L96.4305 36.7354V35.817L96.6601 35.5874V34.8987L96.8897 34.6691V34.2099L97.1193 33.9803V33.5211L97.3489 33.2915V32.8323L97.5785 32.6027V32.3731L97.8081 32.1435L98.0377 31.4547L98.9561 30.3067V30.0771L100.334 28.6996H100.563L101.252 28.0108H101.482L102.63 27.322H103.089L103.318 27.0924H103.778L104.007 26.8628H104.466L104.696 26.6332H105.614H104.926L104.696 26.4036H104.007L103.778 26.174H103.318L103.089 25.9444H102.63L102.4 25.7148H102.17L101.941 25.4852L101.252 25.2556L100.334 24.3372H100.104L99.6448 23.878V23.6484L98.4969 22.5005V22.2709L98.0377 21.8117V21.5821L97.3489 20.4341V19.9749L97.1193 19.7453V19.2861L96.8897 19.0565V18.5973L96.6601 18.3677V17.9085L96.4305 17.6789V16.9901L96.2009 16.7605V16.3013ZM42.9345 1.60717V2.52556L42.7049 2.75516V3.44395L42.4753 3.67354V4.36233L42.2457 4.59193V5.05112L42.0161 5.28072V5.73991L41.7865 5.96951V6.4287L41.5569 6.6583L41.3274 7.34709L40.8682 7.80628L40.6386 8.49507L39.7202 9.41345V9.64305L38.3426 11.0206H38.113L36.965 11.939H36.7354L35.5874 12.6278H35.1283L34.8987 12.8574H34.4395L34.2099 13.087H33.5211L33.2915 13.3166L33.5211 13.5462H34.2099L34.8987 14.0054H35.3578L35.5874 14.235H36.0466L36.2762 14.4646L36.965 14.6942L37.4242 15.1534H37.6538L38.113 15.6126H38.3426L39.9498 17.2197V17.4493L40.6386 18.1381V18.3677L40.8682 18.5973V18.8269L41.0978 19.0565V19.2861L41.7865 20.4341V20.8933L42.0161 21.1229V21.5821L42.2457 21.8117V22.2709L42.4753 22.5005V23.1892L42.7049 23.4188V24.3372L42.9345 24.5668L43.1641 24.3372V23.4188L43.3937 23.1892V22.5005L43.6233 22.2709V21.8117L43.8529 21.5821V21.1229L44.0825 20.8933V20.4341L44.3121 20.2045V19.9749L44.5417 19.7453V19.5157L44.7713 19.2861L45.0009 18.5973L45.4601 18.1381V17.9085L45.9193 17.4493V17.2197L47.5265 15.6126H47.7561L48.2152 15.1534L48.904 14.9238L49.3632 14.4646H49.5928L49.8224 14.235H50.2816L50.5112 14.0054H50.9704L51.2 13.7758H51.6592L51.8888 13.5462H52.5776L52.8072 13.3166H53.2664H52.5776L52.348 13.087H51.8888L51.6592 12.8574H50.9704L50.7408 12.6278H50.2816L50.052 12.3982H49.8224L49.5928 12.1686L48.904 11.939L48.4448 11.4798H48.2152L47.7561 11.0206H47.5265L45.6897 9.18386V8.95426L45.2305 8.49507V8.26547L45.0009 8.03587V7.80628L44.7713 7.57668V7.34709L44.0825 6.1991V5.73991L43.6233 5.05112V4.36233L43.3937 4.13274V3.67354L43.1641 3.44395V2.52556L42.9345 2.29596V1.60717ZM106.303 2.29596L90.2314 6.88789L75.5372 13.3166L64.5166 19.7453L50.9704 30.0771L39.7202 41.3274L31.4547 52.348L23.6484 67.2718L20.4341 78.0628L21.5821 78.2924L25.4852 67.0422L31.9139 54.6439L39.261 44.3121L47.7561 35.1283L56.4807 27.5516L68.6493 19.0565L78.2924 13.7758L90.2314 8.72466L103.778 4.82152L113.88 3.21435L127.426 2.75516L137.069 3.67354L149.238 6.4287L157.503 9.41345L167.605 14.4646L177.937 21.5821L188.958 31.9139L196.075 40.6386L202.045 50.052L207.096 60.6135L210.54 70.7157L212.836 81.2771L213.754 89.5426L213.525 104.696L211.458 116.865L206.637 131.1L200.667 142.809L190.335 156.814L178.167 168.524L166.687 176.33L152.452 182.759L140.283 185.973L147.63 185.743L158.881 183.218L168.983 179.544L177.019 175.641L192.402 165.539L204.57 154.059L210.77 146.253L215.591 138.676L222.709 122.375L226.152 106.074V87.2466L224.775 78.0628L222.249 68.4197L218.805 59.2359L214.443 50.5112L204.57 36.0466L191.713 22.9596L176.56 12.3982L162.784 5.96951L154.978 3.44395L143.039 0.918386L134.314 0H123.982L106.303 2.29596Z"/></symbol>
+    <symbol id="spark" viewBox="0 0 24 24"><path d="M12 0C12.8 6.4 17.6 11.2 24 12C17.6 12.8 12.8 17.6 12 24C11.2 17.6 6.4 12.8 0 12C6.4 11.2 11.2 6.4 12 0Z"/></symbol>
+    <linearGradient id="g-aurora" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0F1220"/><stop offset=".55" stop-color="#1E243F"/><stop offset="1" stop-color="#6172B5" stop-opacity=".85"/></linearGradient>
+    <linearGradient id="g-bad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BEDAF7"/><stop offset="1" stop-color="#6172B5"/></linearGradient>
+  </defs>
+</svg>
+
+<header class="bar">
+  <div class="bar-in">
+    <svg class="w" viewBox="0 0 227 205" role="img" aria-label="W"><use href="#w"/></svg>
+    <div class="bar-name">دليل الهوية <span lang="en">· Wejdan</span></div>
+    <a class="bar-back" href="../">استوديو وجدان ←</a>
+    <nav class="chips" id="chips" aria-label="الفصول"></nav>
+  </div>
+</header>
+
+<div class="frame">
+<aside class="rail" aria-label="الفصول"><ol id="rail"></ol></aside>
+<main>
+
+<!-- COVER -->
+<section class="cover" id="top">
+  <div class="cover-top">
+    <div style="display:grid;gap:14px">
+      <div class="eyebrow" lang="en">Brand guidelines · v1</div>
+      <h1>دليل هوية وجدان</h1>
+      <p class="sub" lang="en" dir="ltr" style="text-align:right">Human insight. Precise systems.</p>
+    </div>
+    <svg class="w" viewBox="0 0 227 205" role="img" aria-label="علامة W"><use href="#w"/></svg>
+  </div>
+  <p class="lede">هوية لتجربة المستخدم والتفاعل بين الإنسان والحاسوب والبحث وتصميم المنتجات. الدليل يجمع ملف فيقما «الهوية البصرية» في كتاب واحد مرتّب: العلامة، والألوان، والخطوط، والأنماط، والمكوّنات، والقوالب، والصوت، والحوكمة. كل قيمة هنا منقولة من المصدر كما هي، وما لم يُقرأ بوضوح يبقى معلّمًا <span class="req">[CONTENT REQUIRED]</span>.</p>
+  <div class="facts">
+    <div><b class="mono">1</b><span>علامة واحدة: W</span></div>
+    <div><b class="mono">4</b><span>ألوان أساسية</span></div>
+    <div><b class="mono">44</b><span>نمطًا نصيًا</span></div>
+    <div><b class="mono">170</b><span>متغيرًا في فيقما</span></div>
+    <div><b class="mono">31</b><span>مجموعة مكوّنات</span></div>
+    <div><b class="mono">25</b><span>تدرّجًا لونيًا</span></div>
+  </div>
+  <p class="srcline">المصادر بالترتيب: نظام التصميم (README + tokens.json)، مواصفة الألوان، صفحات فيقما 00–29 (تصدير Google Drive، قُرئ 2026-10-23)، وقوالب السوشال (صفحة 13). ملف فيقما: <span class="mono">pei6kBFtNKDcYAwPBG1gTN</span></p>
+</section>
+
+<!-- CONTENTS -->
+<section class="ch" id="contents" data-no="—" data-ar="المحتويات" data-en="Contents">
+  <header class="sec-head"><span class="sec-no">00</span><h2>المحتويات</h2><span class="en" lang="en">Contents</span></header>
+  <nav class="toc" id="toc" aria-label="المحتويات"></nav>
+</section>
+
+<!-- 01 FOUNDATION -->
+<section class="ch" id="foundation" data-no="01" data-ar="الأساس" data-en="Foundation">
+  <header class="sec-head"><span class="sec-no">01</span><h2>الأساس</h2><span class="en" lang="en">Foundation · philosophy, personality, boundaries</span><span class="src">فيقما 01 — Brand Foundation</span></header>
+  <p class="intro">الفلسفة: <b>الدفاع عن الإنسان داخل المنتج</b>. العبارة تصف طريقة عمل وجدان: البحث يجد الإنسان، والقرار يتبع الدليل، والمنتج يبقى مفتوحًا لمن يستخدمه، والمنطق يبقى بعد التسليم.</p>
+  <div class="block">
+    <h3>أربعة مبادئ <span class="en" lang="en">Four principles</span></h3>
+    <div class="grid2" id="principles"></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><span class="k" lang="en">Strategy</span><p dir="ltr" lang="en" style="font-family:var(--f-display);font-size:20px;color:var(--text);text-align:left">Research signal → Design decision → Digital system</p><p>إشارة البحث، ثم قرار التصميم، ثم نظام رقمي: الإصغاء للاحتكاك الحقيقي، وتوضيح الخطوة التالية، وتحويل النية إلى مسار قابل للاستخدام.</p></div>
+    <div class="panel"><span class="k" lang="en">Personality</span>
+      <div style="display:flex;flex-wrap:wrap;gap:6px" lang="en"><span class="pill">Professional</span><span class="pill">Curious</span><span class="pill">Thoughtful</span><span class="pill">Quietly distinctive</span></div>
+      <p>النبرة ناعمة ومهذبة ومهنية، لا صاخبة ولا آلية ولا حادة.</p>
+      <p lang="en" dir="ltr" style="text-align:left;font-family:var(--f-display);font-size:18px;color:var(--text)">“Human insight made visible. Precise systems made human.”</p>
+    </div>
+  </div>
+  <div class="block">
+    <h3>التوازنات <span class="en" lang="en">Tensions — where the identity sits</span></h3>
+    <div id="tensions" class="block" style="gap:14px"></div>
+    <p class="note">كل مقياس موجود ليحسم قرار تصميم قبل أن يتحول إلى نقاش.</p>
+  </div>
+  <div class="grid2">
+    <div class="panel"><span class="k" lang="en">Duality</span><h4>شكل محوري واحد، وصدى هادئ واحد</h4><p>الطبقة الأمامية دقيقة وكاملة التباين، واحدة في كل تكوين، وتحمل المعنى. الصدى أنعم: إزاحة <span class="mono">8–16 px</span> أو شفافية <span class="mono">12–28%</span>، ولا يزيد على صدى واحد. يُستخدم في أعمال البطل وأغلفة مختارة فقط. لا صدى للعلامة W أبدًا.</p></div>
+    <div class="panel"><span class="k" lang="en">Themes</span><h4>Light و Dark، ولكل منهما نسخة Brand</h4><p>Brand Light تساوي Light، و Brand Dark تساوي Dark قيمةً بقيمة. لون الإجراء يتبع الوضع: <span class="mono">Violet 500</span> في الفاتح و <span class="mono">Sky 300</span> في الداكن. الترتيب والأوزان ثابتة في الوضعين، ولا تعتمد أي معلومة على التوهج أو اللون أو الحركة وحدها.</p></div>
+  </div>
+  <div class="dd">
+    <div class="do"><h4>✓ التموضع</h4><ul><li lang="en">Human insight. Precise systems.</li><li>حقائق فقط، ولكل حقيقة مصدر.</li><li>المحتوى التجريبي يُعلَّم <span class="sample">SAMPLE</span>.</li><li>الحقيقة الناقصة تبقى <span class="req">[CONTENT REQUIRED]</span> أو <span class="req">[VERIFICATION REQUIRED]</span>.</li></ul></div>
+    <div class="dont"><h4>✕ ما لا يجب أن تصبحه الهوية</h4><ul><li>هوية SaaS عامة، أو هوية UX مكررة.</li><li>طابع فلكي أو كوني أو أبراج.</li><li>تدرّجات موضة بلا وظيفة.</li><li>أرقام أو أدوار أو نتائج مخترعة.</li></ul></div>
+  </div>
+</section>
+
+<!-- 02 LOGO -->
+<section class="ch" id="logo" data-no="02" data-ar="نظام الشعار" data-en="Logo system">
+  <header class="sec-head"><span class="sec-no">02</span><h2>نظام الشعار</h2><span class="en" lang="en">Logo system · Brand/Logo/W</span><span class="src">فيقما 02 — Logo System · المكوّن Brand/Logo/W ‏(404:5855)</span></header>
+  <p class="intro"><b>W هي العلامة الوحيدة</b>: مونوغرام W مبني من قوس هلالي وثلاث نجمات رباعية، مربوط بالتوكن <span class="mono">logo/primary</span>، بعشرة أحجام ثابتة. رسم واحد ولون واحد، يتبع السطح. الاسم الكامل يُكتب نصًا عاديًا، ولا يتحول إلى شعار.</p>
+  <div class="logo-duo">
+    <div class="stage light"><svg class="w" viewBox="0 0 227 205" role="img" aria-label="W بالحبر على سطح فاتح"><use href="#w"/></svg><div class="cap"><span>logo/primary · Light</span><span>#0E121C</span></div></div>
+    <div class="stage dark"><svg class="w" viewBox="0 0 227 205" role="img" aria-label="W بالأبيض على سطح داكن"><use href="#w"/></svg><div class="cap"><span>logo/primary · Dark</span><span>#FFFFFF</span></div></div>
+  </div>
+  <p class="note">الملف شفاف بلا خلفية. العلامة توضع مباشرة على السطح، ولا تُحاط بصندوق ولا تُخبز معها خلفية.</p>
+
+  <div class="grid3">
+    <div class="panel"><span class="k" lang="en">Colour rule</span><p>الحبر <span class="mono">#0E121C</span> على الأسطح الفاتحة، والأبيض على الداكنة. لا لون براند ولا تدرّج ولا إطار. على سطح متوسط (مثل Violet 500) الأبيض أعلى تباينًا. إن لم يبلغ الحبر أو الأبيض <span class="mono">3:1</span> خلف العلامة، تُنقل إلى منطقة أهدأ أو سطح مصمت.</p></div>
+    <div class="panel"><span class="k" lang="en">Clear space</span><p>ربع حجم العلامة على كل جانب، يُقاس من إطار المكوّن. لا يدخل هذه المنطقة نص ولا حافة صورة ولا نمط.</p></div>
+    <div class="panel"><span class="k" lang="en">Minimum size</span><p>الحد الأدنى <span class="mono">16 px</span>. تندمج النجمات الثلاث تحت <span class="mono">32 px</span> وتُقرأ ثلاثًا من <span class="mono">32 px</span> فأكثر. استخدمي <span class="mono">16–24</span> للأيقونة المصغرة وتبويب المتصفح فقط.</p></div>
+  </div>
+
+  <div class="block">
+    <h3>عشرة أحجام، رسم واحد <span class="en" lang="en">Ten sizes · true pixels</span></h3>
+    <div class="ladder"><div class="ladder-in" id="ladder"></div></div>
+    <p class="note">اختاري أقرب درجة، ولا تغيّري مقاس النسخة يدويًا. الحجم الافتراضي للشريط العلوي <span class="mono">32</span>.</p>
+  </div>
+
+  <div class="clear">
+    <div class="cs-box" aria-label="المسافة الآمنة">
+      <span class="lbl" style="top:8px;left:50%;transform:translateX(-50%)">¼ · 32</span>
+      <span class="lbl" style="bottom:8px;left:50%;transform:translateX(-50%)">¼ · 32</span>
+      <span class="lbl" style="left:4px;top:50%;transform:translateY(-50%)">32</span>
+      <span class="lbl" style="right:4px;top:50%;transform:translateY(-50%)">32</span>
+      <div class="inner"><svg class="w" viewBox="0 0 227 205"><use href="#w"/></svg></div>
+    </div>
+    <div class="block" style="gap:10px">
+      <h4>قياس المسافة الآمنة</h4>
+      <p class="note" style="color:var(--text-2)">علامة بحجم <span class="mono">128</span> تحتاج <span class="mono">32</span> على كل جانب. بحجم <span class="mono">64</span> (هوية السوشال) تحتاج <span class="mono">16</span>، وبحجم <span class="mono">256</span> (بطاقة العمل) تحتاج <span class="mono">64</span>.</p>
+      <div class="tw"><table><thead><tr><th>الحجم</th><th>الاسم</th><th>الاستخدام</th></tr></thead><tbody id="sizes"></tbody></table></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <h3>الاستخدام الخاطئ <span class="en" lang="en">Misuse</span></h3>
+    <div class="misuse" id="misuse"></div>
+  </div>
+
+  <div class="dl" id="dl">
+    <h3>تنزيل العلامة <span class="en" lang="en">Download the mark</span></h3>
+    <p class="note">ملفا الشعار الرسميان كما سلّمتهما وجدان (<span class="mono">viewBox 0 0 227 205</span>، قصّ محكم، شفاف)، ونسخ PNG شفافة مولّدة منهما مباشرة دون إعادة رسم. SVG للطباعة والويب، و PNG للعروض والمستندات.</p>
+    <div class="dl-row" id="dl-row">
+      <button class="btn" type="button" data-dl="svg-ink">W-monogram-ink.svg</button>
+      <button class="btn" type="button" data-dl="svg-white">W-monogram-white.svg</button>
+    </div>
+    <div class="dl-row" id="dl-row2">
+      <button class="btn sec" type="button" data-dl="png-ink-512">حبر · PNG ‏512</button>
+      <button class="btn sec" type="button" data-dl="png-ink-1024">حبر · PNG ‏1024</button>
+      <button class="btn sec" type="button" data-dl="png-ink-2048">حبر · PNG ‏2048</button>
+      <button class="btn sec" type="button" data-dl="png-white-512">أبيض · PNG ‏512</button>
+      <button class="btn sec" type="button" data-dl="png-white-1024">أبيض · PNG ‏1024</button>
+      <button class="btn sec" type="button" data-dl="png-white-2048">أبيض · PNG ‏2048</button>
+    </div>
+    <p class="note" id="dl-note" hidden>التنزيل غير متاح في هذا العرض. افتحي الدليل في claude.ai لحفظ الملفات.</p>
+  </div>
+</section>
+
+<!-- 03 COLOUR -->
+<section class="ch" id="colour" data-no="03" data-ar="الألوان" data-en="Colour">
+  <header class="sec-head"><span class="sec-no">03</span><h2>الألوان</h2><span class="en" lang="en">Colour · core, ramps, semantic tokens, gradients</span><span class="src">tokens.json · مواصفة الألوان · فيقما 03</span></header>
+  <p class="intro">أربعة ألوان أساسية، وكل ما عداها درجة منها أو لون حالة وظيفي. كل تعبئة وخط ونص يُربط بتوكن دلالي، لا بقيمة أولية ولا بقيمة مكتوبة. اضغطي أي لون لنسخه.</p>
+  <div class="core" id="core"></div>
+  <div class="panel"><span class="k" lang="en">Why this black</span><p><span class="mono">#0E121C</span> هو حبر الـ W نفسه، فيشترك الشعار ونص الوضع الفاتح وصفحة الوضع الداكن في أسود واحد. الأبيض عليه يبلغ <b class="mono" id="cr-ink">18.72:1</b> دون توهج الأسود الصافي. يقع عند <span class="mono">OKLCH L 0.183</span>، بارد (درجة <span class="mono">267°</span>) دون أن يصير كحليًا.</p></div>
+  <div class="block" id="ramps"></div>
+
+  <div class="block">
+    <h3>التوكنات الدلالية <span class="en" lang="en">Semantic tokens · Light / Dark</span></h3>
+    <p class="note">المجموعتان «Wejdan — Primitives» و «Wejdan — Color»، بأوضاع Light و Dark و Brand Light و Brand Dark.</p>
+    <div class="tw"><table><thead><tr><th>التوكن</th><th>Light</th><th>Dark</th><th>الاستخدام</th></tr></thead><tbody id="sem"></tbody></table></div>
+  </div>
+
+  <div class="block">
+    <h3>ألوان الحالة <span class="en" lang="en">Status — functional, not brand</span></h3>
+    <div class="grid4" id="status"></div>
+    <p class="note">كل نص حالة يتجاوز <span class="mono">4.5:1</span> على كل سطح يمكن أن يقع عليه. الحالة ترافقها دائمًا أيقونة وتسمية، ولا تُستخدم ألوانًا لسلاسل الرسوم البيانية.</p>
+  </div>
+
+  <div class="block">
+    <h3>أزواج التباين <span class="en" lang="en">Contrast, computed live (WCAG 2.x)</span></h3>
+    <div class="tw"><table><thead><tr><th>الزوج</th><th class="n">Light</th><th class="n">Dark</th><th>الحكم</th></tr></thead><tbody id="contrast"></tbody></table></div>
+    <p class="note"><span class="mono">text/accent</span> على <span class="mono">surface/subtle</span> أقل من <span class="mono">4.5:1</span> في الفاتح، فيبقى زخرفة أو رابطًا صغيرًا هناك، ولا يُستخدم لنص متن.</p>
+  </div>
+
+  <div class="block">
+    <h3>التدرّجات <span class="en" lang="en">Gradient styles · verdict on the Dark ramp</span></h3>
+    <p class="note">التوقفات مأخوذة من أنماط فيقما كما هي، والزاوية <span class="mono">135°</span> للمقارنة فقط. الأنماط الفاتحة لا توضع على لوحة Brand Dark.</p>
+    <div class="grads" id="grads"></div>
+    <p class="note">تستخدم التوقفات خمس درجات خارج السلالم: <span class="mono">#0F1220 · #1E243F · #4A5793 · #8E9CCB · #EAF2FB</span>، وتبقى كما هي بقرار المالكة. قرار <span class="mono">Gradient/Depth</span>: يبقى خارج لوحات Dark، أو يُعاد ضبطه لاحقًا إلى <span class="mono">#090C14 → #181C26 → #222630</span>.</p>
+  </div>
+
+  <div class="dd">
+    <div class="do"><h4>✓ افعلي</h4><ul><li>اربطي كل لون بتوكن دلالي مثل <span class="mono">text/primary</span> و <span class="mono">surface/default</span>.</li><li>النص الملون الصغير يستخدم <span class="mono">text/accent</span>.</li><li>حواف المكوّنات تستخدم <span class="mono">border/strong</span>.</li></ul></div>
+    <div class="dont"><h4>✕ لا تفعلي</h4><ul><li>لا تستخدمي <span class="mono">brand/primary</span> لنص صغير؛ هو للتعبئات والعلامات.</li><li>لا تضعي تدرّجًا فاتحًا على لوحة داكنة.</li><li><span class="mono">border/default</span> و <span class="mono">border/subtle</span> للزخرفة فقط، أقل من <span class="mono">3:1</span> على الأبيض.</li></ul></div>
+  </div>
+</section>
+
+<!-- 04 TYPE -->
+<section class="ch" id="type" data-no="04" data-ar="الخطوط" data-en="Typography">
+  <header class="sec-head"><span class="sec-no">04</span><h2>الخطوط</h2><span class="en" lang="en">Typography · Thmanyah Serif display, IBM Plex text</span><span class="src">tokens.json → type · فيقما 03</span></header>
+  <p class="intro">خطّان لكل لغة، وسلّمان مستقلّان. <b>ثمانية Serif Text</b> للعناوين والعرض، و <b>IBM Plex Sans / IBM Plex Sans Arabic</b> للنصوص والأرقام والواجهة. العربية لها أحجامها وارتفاعات أسطرها، ولا يُنسخ حجم إنجليزي إلى العربية.</p>
+  <div class="fam">
+    <div class="panel"><span class="k" lang="en">Display · Arabic &amp; English</span><div class="big" style="font-family:var(--f-display-ar);font-weight:700">وجدان <span lang="en" style="font-family:var(--f-display)">Wejdan</span></div><p class="mono" style="font-size:12px;text-align:left">"Thmanyah Serif Text", Georgia, serif</p></div>
+    <div class="panel"><span class="k" lang="en">Text · Arabic</span><div class="big" style="font-family:var(--f-ar);font-weight:500">تجربة ١٢٣</div><p class="mono" style="font-size:12px;text-align:left">"IBM Plex Sans Arabic"</p></div>
+    <div class="panel"><span class="k" lang="en">Text · English</span><div class="big" lang="en" style="font-family:var(--f-sans);font-weight:500">Aa 78.5</div><p class="mono" style="font-size:12px;text-align:left">"IBM Plex Sans"</p></div>
+  </div>
+  <p class="note"><b>ترخيص:</b> ثمانية Serif Text خط مرخّص ولا يُستضاف هنا. المعاينات تستخدم بديلًا (Source Serif 4 للإنجليزية و Noto Naskh Arabic للعربية) حتى يُثبَّت الخط المرخّص. IBM Plex مفتوح ويُحمَّل من Google Fonts.</p>
+  <div class="block"><h3>العرض — عربي <span class="en" lang="en">Display — AR</span></h3><div class="ramp-box" id="t-ard"></div></div>
+  <div class="block"><h3>النص — عربي <span class="en" lang="en">Text — AR · IBM Plex Sans Arabic</span></h3><div class="ramp-box" id="t-art"></div></div>
+  <div class="block"><h3>العرض — إنجليزي <span class="en" lang="en">Display — EN</span></h3><div class="ramp-box" id="t-end"></div></div>
+  <div class="block"><h3>النص — إنجليزي <span class="en" lang="en">Text — EN · IBM Plex Sans</span></h3><div class="ramp-box" id="t-ent"></div></div>
+  <p class="note">الأحجام فوق <span class="mono">56 px</span> تُصغَّر على الشاشات الضيقة للمعاينة فقط؛ القيمة الحقيقية مكتوبة بجانب كل نمط.</p>
+  <div class="dd">
+    <div class="do"><h4>✓ قواعد</h4><ul><li>الأرقام دائمًا بخط Sans، حتى داخل تكوين Serif.</li><li>الحد الأدنى <span class="mono">12 px</span>، والاستثناء <span class="mono">EN/Overline 11 px</span> بأحرف كبيرة.</li><li>على لوحة سوشال بعرض <span class="mono">1080</span> لا يقل المتن عن <span class="mono">46 px</span>، وعلى <span class="mono">1200</span> لا يقل عن <span class="mono">51 px</span>.</li><li>العربية بأنماط AR، محاذاة يمين، واتجاه RTL.</li></ul></div>
+    <div class="dont"><h4>✕ لا تفعلي</h4><ul><li>لا تضعي نمطًا إنجليزيًا على نص عربي، ولا العكس.</li><li>لا أوزان رفيعة جدًا في الأحجام الصغيرة؛ Light محجوز لاقتباسات العرض الكبيرة.</li><li>لا أرقام بخط Serif.</li></ul></div>
+  </div>
+</section>
+
+<!-- 05 SPACE -->
+<section class="ch" id="space" data-no="05" data-ar="المسافات والشبكات والعمق" data-en="Spacing, grids, depth">
+  <header class="sec-head"><span class="sec-no">05</span><h2>المسافات والشبكات والعمق</h2><span class="en" lang="en">Spacing · radius · stroke · icon size · grids · depth · density</span><span class="src">tokens.json · فيقما 03</span></header>
+  <div class="grid2">
+    <div class="block"><h3>المسافات <span class="en" lang="en">8-point scale</span></h3><div class="block" style="gap:6px" id="spacing"></div></div>
+    <div class="block">
+      <h3>الزوايا <span class="en" lang="en">Radius</span></h3>
+      <div class="radii" id="radii"></div>
+      <p class="note">العائلتان تشتركان في <span class="mono">4 · 12 · 20 · 32</span>: <span class="mono">xs</span> للوسوم، <span class="mono">sm</span> للأزرار والحقول، <span class="mono">md</span> للبطاقات، <span class="mono">lg</span> للألواح الكبيرة، و <span class="mono">full 999</span> للحبوب والصور الرمزية.</p>
+      <h3>الخطوط والأيقونات <span class="en" lang="en">Stroke · icon box</span></h3>
+      <div style="display:grid;gap:8px" id="strokes"></div>
+      <div class="icons" id="iconsizes"></div>
+    </div>
+  </div>
+  <div class="block">
+    <h3>الشبكات <span class="en" lang="en">Grids — one per canvas</span></h3>
+    <p class="note">شبكة واحدة لكل لوحة تُطبَّق على الإطار. المحتوى يبدأ من الهامش ويلتصق بالأعمدة، ولا تُرسم الأعمدة باليد.</p>
+    <div class="gridviz" id="grids"></div>
+  </div>
+  <div class="block">
+    <h3>العمق <span class="en" lang="en">Depth — two shadows, two glows</span></h3>
+    <div class="depth">
+      <div class="d" style="box-shadow:var(--shadow-subtle)">Shadow/Subtle · y4 · blur16 · 12%</div>
+      <div class="d" style="box-shadow:var(--shadow-elevated)">Shadow/Elevated · y12 · blur32 · 18%</div>
+      <div class="d" style="background:var(--surface-dark);color:#FFFFFF;position:relative;overflow:hidden"><span style="position:absolute;width:72px;height:72px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--glow) 55%,transparent),transparent 70%)"></span><span style="position:relative">Glow/Micro <span class="req" style="color:#A2A4A9;border-color:#86898F">values</span></span></div>
+      <div class="d" style="background:var(--surface-dark);color:#FFFFFF;position:relative;overflow:hidden"><span style="position:absolute;inset:-20%;background:radial-gradient(circle at 50% 50%,color-mix(in srgb,var(--glow) 32%,transparent),transparent 60%)"></span><span style="position:relative">Glow/Hero <span class="req" style="color:#A2A4A9;border-color:#86898F">values</span></span></div>
+    </div>
+    <p class="note"><span class="mono">Glow/Micro</span> للعلامة W ونجمة البطل فقط، و <span class="mono">Glow/Hero</span> لعنصر محوري واحد في التخطيط كحد أقصى. لا توهج تحت النصوص الطويلة، ولا لون للتوهج غير <span class="mono">glow/accent</span>. قيم التوهج الدقيقة <span class="req">[CONTENT REQUIRED]</span>، والمعاينة تقريبية.</p>
+  </div>
+  <div class="block">
+    <h3>مستويات الكثافة <span class="en" lang="en">Five density levels</span></h3>
+    <div class="density" id="density"></div>
+    <div class="tw"><table><thead><tr><th></th><th class="n">0 Functional</th><th class="n">1 Subtle</th><th class="n">2 Standard</th><th class="n">3 Expressive</th><th class="n">4 Hero</th></tr></thead><tbody>
+      <tr><td class="mono">decor/opacity</td><td class="n">0%</td><td class="n">12%</td><td class="n">24%</td><td class="n">32%</td><td class="n">40%</td></tr>
+      <tr><td class="mono">decor/max-motifs</td><td class="n">0</td><td class="n">1</td><td class="n">1</td><td class="n">1</td><td class="n">1</td></tr>
+      <tr><td class="mono">decor/glow-opacity</td><td class="n">0%</td><td class="n">0%</td><td class="n">0%</td><td class="n">12%</td><td class="n">20%</td></tr>
+      <tr><td class="mono">decor/pattern-opacity</td><td class="n">0%</td><td class="n">16%</td><td class="n">48%</td><td class="n">100%</td><td class="n">100%</td></tr>
+      <tr><td>الاستخدام</td><td>المحتوى أولًا: نماذج وبيانات وقراءة كثيفة</td><td colspan="3">إبراز مضبوط</td><td>تعبير البطل: أغلفة وملصقات</td></tr>
+    </tbody></table></div>
+    <p class="note">الكثافة حسب القناة (فيقما 18): منشورات السوشال المستوى 2، الأغلفة حتى المستوى 4، السيرة والمستندات 0–1. الشفافيات الأولية: <span class="mono">opacity/subtle 12% · standard 24% · disabled 40% · scrim 56%</span>.</p>
+  </div>
+</section>
+
+<!-- 06 GRAPHIC LANGUAGE -->
+<section class="ch" id="graphic" data-no="06" data-ar="اللغة البصرية والأنماط" data-en="Graphic language & patterns">
+  <header class="sec-head"><span class="sec-no">06</span><h2>اللغة البصرية والأنماط</h2><span class="en" lang="en">Graphic language · Harlequin · Star Dotted Line · Halftone Field</span><span class="src">فيقما 06 — Graphic Language</span></header>
+  <p class="intro">الرموز تعلّم المعنى، ولا تملأ الفراغ. يظهر رمز مسيطر واحد فقط في كل تكوين: النجمة، أو الضوء والعمق، أو النمط، أو الشرارة. الأنماط مبنية من النجمة والمعيّن المحيط بها.</p>
+  <div class="motifs" id="motifs"></div>
+  <div class="block">
+    <h3>Harlequin <span class="en" lang="en">Main expressive field · approved for production</span></h3>
+    <p class="note">معيّنات بنفسجية مصمتة (Argyle)، ونجمة بيضاء رباعية داخل المعيّنات بالتناوب. الكثافة تضبط شفافية النمط: Subtle ‏16% · Standard ‏48% · Expressive ‏100%. المقياس: Small = Dense، و Medium = Standard، و Large = Standard بنسبة 200%.</p>
+    <div class="pat" id="harl"></div>
+  </div>
+  <div class="grid2">
+    <div class="pat" style="grid-template-columns:1fr"><figure><div class="tile" style="background:var(--surface-dark)"><svg id="sdl" aria-hidden="true"></svg></div><figcaption><b>Star Dotted Line</b><span>إيقاع سياقي: صف من نقاط صغيرة مع شرارة على فترات. التوقيع الأساسي، يعيش حيث يحتاجه التكوين.</span></figcaption></figure></div>
+    <div class="pat" style="grid-template-columns:1fr"><figure><div class="tile" style="background:var(--surface-dark)"><svg id="half" aria-hidden="true"></svg></div><figcaption><b>Halftone Field</b><span>تلاشٍ سياقي: شبكة شرارات يتناقص حجمها وشفافيتها نحو حافة واحدة. باعتدال، وبمستوى واحد كحد أقصى تحت السطح الافتراضي.</span></figcaption></figure></div>
+  </div>
+  <div class="panel"><span class="k" lang="en">Texture</span><p>طبقة منفصلة وأخف: <b>Clean</b> هو الافتراضي، و <b>Soft Grain</b> و <b>Paper Grain</b> يضيفان وزنًا تحريريًا هادئًا، و <b>Digital Noise</b> حسب الموقف، و <b>Pixel</b> لمسة رقمية نادرة. القيم التفصيلية <span class="req">[CONTENT REQUIRED]</span>.</p></div>
+  <div class="dd">
+    <div class="do"><h4>✓ استخدمي الأنماط لـ</h4><ul><li>هوية القسم، والخلفيات الهادئة، وأغلفة السوشال والمشاريع.</li><li>نمط واحد لكل تكوين، بالكثافة التي يسمح بها مستواه.</li></ul></div>
+    <div class="dont"><h4>✕ أبقيها خارج</h4><ul><li>خلفيات نص المتن، والمحتوى الكثيف، وواجهات الوصول الحرجة بأي كثافة.</li><li>لا تجمعي نمطًا مع عنقود شرارات.</li><li>لا تكرري W زخرفةً أو نسيجًا.</li></ul></div>
+  </div>
+</section>
+
+<!-- 07 ILLUSTRATION -->
+<section class="ch" id="illustration" data-no="07" data-ar="الرسوم التوضيحية" data-en="Illustration">
+  <header class="sec-head"><span class="sec-no">07</span><h2>الرسوم التوضيحية</h2><span class="en" lang="en">Illustration · Open Thread</span><span class="src">فيقما 07 — Illustration ‏(1207:3334)</span></header>
+  <p class="intro"><b lang="en">Open Thread</b> هو نظام الرسم: منهج واحد مرسوم في ستة مشاهد. أربع عائلات تتبع منهج البحث من الملاحظة إلى التكرار، واثنتان تُظهران الممارسة حولها: سهولة الوصول وأنظمة الذكاء الاصطناعي. الناس أولًا، وكل خط يبقى مفتوحًا، ولا تظهر النجمة إلا حيث يوجد دليل.</p>
+  <div class="grid4">
+    <div class="mini-card"><b lang="en">People first</b><p>الإنسان أولًا في كل مشهد.</p></div>
+    <div class="mini-card"><b lang="en">Stars mark evidence</b><p>النجمة تعلّم الدليل فقط.</p></div>
+    <div class="mini-card"><b lang="en">The open line</b><p>الخطوط مفتوحة، لا تُغلق على الشخص.</p></div>
+    <div class="mini-card"><b lang="en">The thread</b><p>خيط واحد يربط المشهد.</p></div>
+  </div>
+  <p class="note">«أربعة مبادئ، أربع قواعد رسم»: كل مبدأ من صفحة 01 يصبح قاعدة لطريقة رسم المشهد. نص كل قاعدة بالتفصيل <span class="req">[CONTENT REQUIRED]</span>.</p>
+  <div class="block">
+    <h3>ستة أدوار مربوطة بمتغيرات <span class="en" lang="en">Six roles, bound to variables</span></h3>
+    <div class="tw"><table><thead><tr><th>الدور</th><th>Light</th><th>Dark</th><th>يُستخدم لـ</th></tr></thead><tbody id="illus"></tbody></table></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><span class="k" lang="en">Six families, three scales each</span><ul class="line-list">
+      <li lang="en">Research &amp; observation</li><li lang="en">Synthesis &amp; insight</li><li lang="en">Testing &amp; evaluation</li><li><span class="req">[CONTENT REQUIRED]</span> عائلة التكرار</li><li lang="en">Accessibility &amp; inclusion</li><li lang="en">AI systems</li></ul></div>
+    <div class="panel"><span class="k" lang="en">Rules</span><ul class="line-list">
+      <li><b>منطقة العنوان تبقى فارغة.</b> النص يقع على اللوحة فقط، ولا يوضع على حقل الرسم.</li>
+      <li><b>اختاري المقياس حسب المهمة.</b> لكل مقياس مهمة وحد أدنى؛ أصغر مقياس مذكور: <span lang="en">Spot</span>. البقية <span class="req">[CONTENT REQUIRED]</span>.</li>
+      <li><b>اجعلي الرسم صادقًا.</b> القواعد تحمي ما يجعل الرسم عن الناس، والدليل معلَّم.</li>
+      <li><b>العربية:</b> للرسوم نسخ عربية؛ التفاصيل <span class="req">[CONTENT REQUIRED]</span>.</li>
+      <li><b>قبل أن يغادر الرسم فيقما:</b> قائمة فحص <span class="req">[CONTENT REQUIRED]</span>.</li></ul></div>
+  </div>
+  <p class="note">مكتبة الرسوم نفسها لم تُصدَّر بعد كملفات إنتاج؛ لذلك لا تُعاد رسمتها هنا.</p>
+</section>
+
+<!-- 08 IMAGERY -->
+<section class="ch" id="imagery" data-no="08" data-ar="الصور" data-en="Imagery">
+  <header class="sec-head"><span class="sec-no">08</span><h2>الصور</h2><span class="en" lang="en">Imagery · evidence before decoration</span><span class="src">فيقما 08 — Imagery</span></header>
+  <p class="intro">الصورة في هذه الهوية دليل قبل أن تكون زخرفة: شاشة حقيقية، أو أداة بحث، أو لحظة استخدام. المعالجات تخدم ترتيب القراءة ولا تخفي ما تُظهره الصورة.</p>
+  <div class="grid3">
+    <div class="panel"><span class="k">01</span><p>ضعي الصورة في طبقة «Replace with image»، والمعالجة تبقى في المكوّن. <b lang="en">Blue Tint</b> و <b lang="en">Dark Overlay</b> هما المعالجتان اللونيتان الوحيدتان، ولا تلوين بلون خارج اللوحة.</p></div>
+    <div class="panel"><span class="k">02</span><p>التعليق يقع تحت الصورة أو بجانبها. النص الوحيد فوق صورة يقع على الطرف الداكن من Dark Overlay.</p></div>
+    <div class="panel"><span class="k">03</span><p>لا ادعاءات مشروع مخترعة. الصور التجريبية تُعلَّم <span class="sample">SAMPLE</span>.</p></div>
+  </div>
+  <div class="block">
+    <h3>ست معالجات، مصدر واحد <span class="en" lang="en">One Imagery component</span></h3>
+    <div class="grid3" id="treat"></div>
+    <p class="note">أساسية: Natural و Framed. ثانوية: Muted. خاصة: Blue Tint و Dark Overlay. سياقية: Portrait. Blue Tint و Dark Overlay للمقارنة فقط، ولا يُطبَّقان على الدليل. Portrait ينتظر صورة حقيقية بموافقة صاحبها. المعاينة هنا تقريبية؛ القيم الدقيقة في مكوّن Imagery.</p>
+  </div>
+  <div class="grid2">
+    <div class="panel"><span class="k" lang="en">Crop for the channel</span><p>أعيدي القص من المصدر لكل نسبة، ولا تمطّي الدليل ولا تضغطيه. أبقي البيانات المحورية كاملة، ولا تقطعي العنصر الذي تدور حوله القصة. ابني بالحجم الكامل على نمط الشبكة المسمّى.</p></div>
+    <div class="panel"><span class="k" lang="en">Imagery usage check</span><p>ثمانية فحوص قبل نشر أي صورة. المقروء منها: إعادة القص من المصدر لكل نسبة، وعنصر بصري مسيطر واحد في كل إطار، والتعليق تحت الصورة أو بجانبها. البقية <span class="req">[CONTENT REQUIRED]</span>.</p></div>
+  </div>
+</section>
+
+<!-- 09 INFORMATION DESIGN -->
+<section class="ch" id="info" data-no="09" data-ar="تصميم المعلومات" data-en="Information design">
+  <header class="sec-head"><span class="sec-no">09</span><h2>تصميم المعلومات</h2><span class="en" lang="en">Information design · make the signal impossible to miss</span><span class="src">فيقما 09 — Information Design</span></header>
+  <p class="intro">طريقة واحدة لتحويل البحث إلى ادعاء يمكن تتبّعه: من السؤال، إلى نوع الادعاء، إلى بطاقة لكل ادعاء بمستوى دليله. المصطلحات البحثية هنا هي المرجع لصفحة الصوت: مصطلح واحد لكل مفهوم.</p>
+  <ol class="steps" lang="en" dir="ltr" style="text-align:left">
+    <li>Start from your question</li><li>Know what kind of claim you are making</li><li>Colour, line and shape carry fixed meanings</li><li>Small parts that make a claim traceable</li><li>Show the number, then the shape</li><li>One card per claim, at its evidence level</li><li>One line language for every map and flow</li><li>Putting it together</li>
+  </ol>
+  <p class="note">الصفحة تضم <b>37 منهجًا</b>، لكلٍّ مصدره وحدوده. قائمة المناهج ومعاني الألوان والخطوط والأشكال <span class="req">[CONTENT REQUIRED]</span>.</p>
+  <div class="block">
+    <h3>بطاقات الأدلة <span class="en" lang="en">Evidence cards · SAMPLE content from the component library</span></h3>
+    <div class="grid4">
+      <div class="cardx"><span class="ov" lang="en">Insight <span class="sample">SAMPLE</span></span><h4 lang="en">Labels carried more weight than layout</h4><p lang="en">Participants read the label before scanning the page structure.</p></div>
+      <div class="cardx"><span class="ov" lang="en">Finding · round 2 <span class="sample">SAMPLE</span></span><h4 lang="en">6 of 8 completed the task unaided</h4><p lang="en">Revised wording removed the hesitation seen in round one.</p></div>
+      <div class="cardx"><span class="ov" lang="en">Participant 04 <span class="sample">SAMPLE</span></span><q lang="en">I knew where to go the moment I read it.</q><p lang="en">Remote usability session · 32 minutes</p></div>
+      <div class="cardx"><span class="ov" lang="en">SUS score <span class="sample">SAMPLE</span></span><span class="num" lang="en">78.5</span><p lang="en">Above the 68 benchmark, n=12. Collected over two rounds.</p></div>
+    </div>
+    <p class="note">مكوّن <span class="mono">Information/Source Line</span> يرافق كل رقم بمصدره. الاقتباس يُنسب بالدور والجلسة، لا بالاسم.</p>
+  </div>
+</section>
+
+<!-- 10 ICONOGRAPHY -->
+<section class="ch" id="icons" data-no="10" data-ar="الأيقونات" data-en="Iconography">
+  <header class="sec-head"><span class="sec-no">10</span><h2>الأيقونات</h2><span class="en" lang="en">Iconography · one icon language</span><span class="src">فيقما 10 — Iconography</span></header>
+  <p class="intro">لغة أيقونات واحدة على شبكة <span class="mono">24</span>، مرتبة في 12 فئة. اختاري الفئة ثم الاسم، والأيقونة تتبع وضع الألوان النشط.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:6px" lang="en" id="iconcats"></div>
+  <div class="grid3">
+    <div class="panel"><span class="k" lang="en">Sizes</span><p>صناديق الأيقونات: <span class="mono">12 · 16 · 20 · 24 · 32 · 40 · 48</span>، والافتراضي <span class="mono">24</span>.</p></div>
+    <div class="panel"><span class="k" lang="en">Touch target</span><p>هدف اللمس <span class="mono">44 × 44</span> على الجوال، و <span class="mono">32 × 32</span> على سطح المكتب، حتى لو كانت الأيقونة أصغر.</p></div>
+    <div class="panel"><span class="k" lang="en">Arabic direction</span><p>أيقونات الاتجاه تنعكس في العربية. التفاصيل وقائمة «قبل إضافة أيقونة» <span class="req">[CONTENT REQUIRED]</span>.</p></div>
+  </div>
+  <p class="note">الأقسام الأخرى في الصفحة: الشبكة والخط، واللون، والأيقونة مع النص، و«أبقي الأيقونات واضحة وصادقة». مجموعة الأيقونات نفسها لم تُصدَّر بعد <span class="req">[CONTENT REQUIRED]</span>.</p>
+</section>
+
+<!-- 11 COMPONENTS -->
+<section class="ch" id="components" data-no="11" data-ar="المكوّنات" data-en="Components">
+  <header class="sec-head"><span class="sec-no">11</span><h2>المكوّنات</h2><span class="en" lang="en">Component library · UI 01–07</span><span class="src">فيقما 11 — Component Library</span></header>
+  <p class="intro">سبع مجموعات، كل منها بأربع نسخ: EN و AR، فاتح وداكن. الاستخدام العادي لا يحتاج فصل النسخة؛ الخصائص والمتغيرات قبل أي نسخة خاصة. المعاينات أدناه مرسومة من التوكنات الحية.</p>
+
+  <div class="cmp"><div class="cmp-h"><b lang="en">UI 01 — Actions</b><p>أزرار، وروابط نصية، وأزرار أيقونة. زر أساسي واحد لكل شاشة؛ الإجراءات الثانوية بالزر الثانوي أو برابط نصي.</p></div>
+    <div class="cmp-b"><span class="btn" lang="en">Read the case study</span><span class="btn hov" lang="en">Hover</span><span class="btn focus" lang="en">Focus</span><span class="btn dis" lang="en">Disabled</span><span class="btn sec">قراءة دراسة الحالة</span><span class="btn link">قراءة دراسة الحالة</span></div></div>
+
+  <div class="cmp"><div class="cmp-h"><b lang="en">UI 02 — Navigation</b><p>تبويبات، وترقيم صفحات، وصفوف تنقل، وتذييل، وروابط اجتماعية. الموقع الحالي يظهر بأكثر من اللون.</p></div>
+    <div class="cmp-b col"><div class="tabs" lang="en" dir="ltr"><span class="on">Overview</span><span>Research</span><span>Outcome</span></div><div class="tabs"><span class="on">نظرة عامة</span><span>البحث</span><span>النتيجة</span></div><div class="pager"><span class="on">1</span><span>2</span><span>3</span><span>…</span><span>10</span></div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:13px;color:var(--text-muted);border-top:1px solid var(--border-subtle);padding-top:12px" lang="en" dir="ltr"><span>Work · About · Writing · Contact</span><span>UX · HCI · Product Design</span><span>© 2026 Wejdan. All rights reserved</span></div></div></div>
+
+  <div class="cmp"><div class="cmp-h"><b lang="en">UI 03 — Feedback &amp; status</b><p>تنبيهات، وتلميحات، وشارات، وتحميل، وحالات فارغة وخطأ. الحالة تحملها كلمة وعلامة، لا اللون وحده.</p></div>
+    <div class="cmp-b">
+      <div class="toastx" lang="en" dir="ltr"><span class="mk" style="color:var(--info)">• INFO</span><b>Info message</b><p>Description text goes here.</p></div>
+      <div class="toastx" lang="en" dir="ltr"><span class="mk" style="color:var(--ok)">✓ SUCCESS</span><b>Success message</b><p>Description text goes here.</p></div>
+      <div class="toastx"><span class="mk" style="color:var(--warn)">! تحذير</span><b>رسالة تحذير</b><p>يظهر نص الوصف هنا.</p></div>
+      <div class="toastx"><span class="mk" style="color:var(--err)">✕ خطأ</span><b>رسالة خطأ</b><p>يظهر نص الوصف هنا.</p></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;width:100%" lang="en"><span class="badge" style="color:var(--text-muted)">NEUTRAL</span><span class="badge" style="color:var(--info)">• INFO</span><span class="badge" style="color:var(--ok)">✓ SUCCESS</span><span class="badge" style="color:var(--warn)">! WARNING</span><span class="badge" style="color:var(--err)">✕ ERROR</span></div>
+      <div class="empty" lang="en" dir="ltr"><b>Nothing here yet</b><p>Once there is a project to show, it will appear here.</p></div>
+      <div class="empty"><b>تعذّر تحميل هذا القسم</b><p>تحقّقي من الاتصال، ثم أعيدي المحاولة.</p><span class="btn sec" style="min-height:36px;padding:6px 14px;font-size:14px">إعادة المحاولة</span></div>
+    </div></div>
+
+  <div class="cmp"><div class="cmp-h"><b lang="en">UI 04 — Inputs &amp; selection</b><p>حقول، وقوائم منسدلة، ورقائق. التسمية خارج الحقل، والحدود تبلغ <span class="mono">3:1</span>، والخطأ يضيف رسالة تحت الحقل.</p></div>
+    <div class="cmp-b">
+      <div class="field" lang="en" dir="ltr"><label>Email</label><div class="in">wejdan@example.com</div><small>Concise helper text</small></div>
+      <div class="field" lang="en" dir="ltr"><label>Email</label><div class="in err">wejdan@example</div><small class="e">✕ Enter a full email address.</small></div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;width:100%"><span class="chip-x on" lang="en">Research</span><span class="chip-x" lang="en">Product Design</span><span class="chip-x">بحث</span><span class="chip-x">تصميم المنتجات</span></div>
+    </div>
+    <p class="note" style="padding:0 18px 16px">رسالة الخطأ في الحقل الثاني مثال توضيحي <span class="sample">DEMO</span>.</p></div>
+
+  <div class="cmp"><div class="cmp-h"><b lang="en">UI 05 — Portfolio blocks</b><p>كتل مستقلة للبورتفوليو: بطاقة مشروع، واقتباس، وبطاقة تواصل وروابط، ووسوم، وشارة مهارة، وتسمية قسم.</p></div>
+    <div class="cmp-b" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))">
+      <div class="cardx" lang="en" dir="ltr"><span class="ov">UX Research · HCI · 2026</span><h4>A digital experience that understands context</h4><p>Turning research evidence into a clearer, measurable product flow.</p><a href="#components" class="btn link" style="justify-self:start;padding:0;min-height:auto">Read the case study →</a></div>
+      <div class="cardx"><span class="ov">بحث تجربة المستخدم · HCI · 2026</span><h4>تجربة رقمية تفهم السياق</h4><p>تحويل أدلة البحث إلى مسار منتج أوضح وقابل للقياس.</p></div>
+      <div class="cardx" lang="en" dir="ltr"><span class="ov">Let’s talk</span><h4 class="mono" style="font-size:15px;text-align:left">wejdan4458@gmail.com</h4><p>Usually replies within two days.</p><div style="display:flex;gap:6px;flex-wrap:wrap"><span class="chip-x">LinkedIn</span><span class="chip-x">X</span><span class="chip-x">GitHub</span></div></div>
+    </div></div>
+
+  <div class="cmp"><div class="cmp-h"><b lang="en">UI 06 — Content &amp; data</b><p>بطاقات محتوى، وأكورديون، وجداول مهام وحالات.</p></div>
+    <div class="cmp-b col">
+      <div class="cardx"><span class="ov">النوع</span><h4>عبارة واحدة واضحة في سطر واحد</h4><p>جملة داعمة تقدّم الدليل أو السياق وراء العبارة.</p></div>
+      <details class="cardx" lang="en" dir="ltr"><summary style="cursor:pointer;font-weight:600">What does this section cover?</summary><p>The answer in two or three sentences, one idea per panel.</p></details>
+    </div></div>
+
+  <div class="cmp"><div class="cmp-h"><b lang="en">UI 07 — Documentation · component contract</b><p>العائلات المطلوبة، وما يجب أن يوثّقه كل مكوّن مهم.</p></div>
+    <div class="cmp-b col">
+      <div style="display:flex;flex-wrap:wrap;gap:6px" lang="en" id="families"></div>
+      <p class="note" style="color:var(--text-2)">كل مكوّن مهم يوثّق: الغرض، ومتى يُستخدم ومتى لا، والخصائص، والمتغيرات، والقيمة الافتراضية، والتوكنات، وحدود المحتوى، و RTL، والاستجابة، والوصول، وملاحظات التنفيذ، وتعليمات الوكيل. <b lang="en">The component is not the content</b>: نفس التوكنات، وتسميات حقيقية، وعربية طويلة؛ التركيز والخطأ والفراغ والتحميل جزء من النظام.</p>
+    </div></div>
+</section>
+
+<!-- 12 EDITORIAL -->
+<section class="ch" id="editorial" data-no="12" data-ar="النظام التحريري" data-en="Editorial">
+  <header class="sec-head"><span class="sec-no">12</span><h2>النظام التحريري</h2><span class="en" lang="en">Editorial/Section · five 1200-wide layouts</span><span class="src">فيقما 12 — Editorial System</span></header>
+  <p class="intro"><b>العمل هو البطل.</b> كل دراسة حالة تُبقي الهوية ثابتة وتترك الدليل والصور يتغيران. عناصر البراند تؤطّر الدليل ولا تغطّي أدوات البحث أو تفاصيل الواجهة. <span lang="en">Editorial/Section</span> مكوّن واحد بخمسة تخطيطات بعرض <span class="mono">1200</span>، تُرصّ بترتيب القراءة.</p>
+  <div class="grid3" id="editorial-layouts"></div>
+  <div class="dd">
+    <div class="do"><h4>✓ قواعد ثابتة</h4><ul><li>رصّي الأقسام بترتيب القراءة، فكرة واحدة لكل قسم.</li><li>افتحي كل صفحة بـ Hero واحد.</li><li>أبقي Theme على Auto داخل الصفحات.</li><li>كل رقم في Metrics له مصدر، والباقي <span class="sample">SAMPLE</span>.</li></ul></div>
+    <div class="dont"><h4>✕ تجنّبي</h4><ul><li>فصل القسم لتغيير تخطيطه؛ بدّلي Layout.</li><li>كتابة العربية في خصائص النص الإنجليزي.</li><li>فرض Light أو Dark إلا لشريط تباين مقصود.</li><li>نسبة الاقتباس إلى اسم شخص.</li></ul></div>
+  </div>
+</section>
+
+<!-- 13 SOCIAL -->
+<section class="ch" id="social" data-no="13" data-ar="السوشال ميديا" data-en="Social media">
+  <header class="sec-head"><span class="sec-no">13</span><h2>السوشال ميديا</h2><span class="en" lang="en">Social masters · LinkedIn · X · carousel</span><span class="src">فيقما 13 — Social Media · Carousel/Slide Masters</span></header>
+  <p class="intro">اختاري قالبًا، أضيفي المحتوى، انشري. لكل نوع تكوينه وتدرّجه. النص أولًا، والتدرّج ثانيًا. العربية تُكتب، لا تُعكس.</p>
+  <div class="grid3">
+    <div class="panel"><span class="k" lang="en">LinkedIn · 1200 × 1500</span><p>ثمانية أنواع، ثمانية تكوينات: القوس، والنجمة الوسطى، والرسم البياني، والاقتباس، وبطاقة الصورة، والخط الزمني لدراسة الحالة، وإعلان W، والتوهج الأوسط.</p></div>
+    <div class="panel"><span class="k" lang="en">X · 1600 × 900</span><p>سبعة أنواع مبنية للخط الزمني.</p></div>
+    <div class="panel"><span class="k" lang="en">Carousel · 1200 × 1500</span><p>ستة أدوار تُقرأ كقصة واحدة.</p></div>
+  </div>
+  <div class="tw"><table><thead><tr><th>العنصر</th><th>القيمة</th></tr></thead><tbody>
+    <tr><td>الهامش</td><td class="mono">96 px</td></tr>
+    <tr><td>Overline</td><td class="mono">IBM Plex Sans SemiBold 30/40</td></tr>
+    <tr><td>العلامة W</td><td class="mono">64 px (XL)</td></tr>
+    <tr><td>التذييل EN</td><td lang="en">Wejdan Almalki · UX &amp; HCI &nbsp;/&nbsp; @wejdan404ui · UX &amp; HCI</td></tr>
+    <tr><td>التذييل AR</td><td>وجدان المالكي · تجربة المستخدم</td></tr>
+    <tr><td>حد المتن الأدنى</td><td class="mono">46 px @1080 · 51 px @1200</td></tr>
+    <tr><td>التدرّجات</td><td>25 تدرّجًا، لكل واحد وظيفة</td></tr>
+  </tbody></table></div>
+  <div class="shelf" id="social-shelf"></div>
+  <div class="grid2">
+    <a class="mini-card" href="../" style="text-decoration:none;color:var(--text)"><b>استوديو المحتوى ←</b><p>اكتبي المحتوى، اختاري المنصة، وتظهر التصاميم جاهزة بالنص على القوالب.</p></a>
+    <a class="mini-card" href="https://claude.ai/artifact/T3tz7eyWqCUBhnbE8o2NcN" target="_blank" rel="noopener" style="text-decoration:none;color:var(--text)"><b>لوحة التصاميم ←</b><p>كل القوالب في لوحة واحدة، قابلة لتحرير النصوص.</p></a>
+  </div>
+  <div class="dd">
+    <div class="do"><h4>✓ قبل النشر</h4><ul><li>ابدئي من قالب، لا من إطار فارغ.</li><li>فكرة واحدة لكل منشور.</li><li>كل رقم له مصدر، أو يُعلَّم <span class="sample">SAMPLE</span>.</li><li>العربية بأنماط AR، محاذاة يمين.</li></ul></div>
+    <div class="dont"><h4>✕ لا تفعلي</h4><ul><li>لا تضعي النص فوق الجزء الأفتح من التدرّج.</li><li>لا تعكسي التخطيط الإنجليزي حرفيًا للعربية.</li><li>لا تصغّري المتن تحت الحد الأدنى للوحة.</li></ul></div>
+  </div>
+</section>
+
+<!-- 14 MEDIA KIT + CARD -->
+<section class="ch" id="media" data-no="14" data-ar="الملف الإعلامي وبطاقة العمل" data-en="Media kit & business card">
+  <header class="sec-head"><span class="sec-no">14</span><h2>الملف الإعلامي وبطاقة العمل</h2><span class="en" lang="en">Media kit · business card</span><span class="src">فيقما 14 — Media Kit · 15 — Business Card</span></header>
+  <p class="intro">ملف واحد، ثلاثة أطوال، لغتان: كل ما يحتاجه مضيف أو محرر أو صفحة فعالية دون أن يسأل. بطاقة ملف شخصي، ونبذات بثلاثة أطوال، وبطاقة متحدثة، بالعربية والإنجليزية، فاتح وداكن.</p>
+  <div class="tw"><table><thead><tr><th>الأصل</th><th>المكوّن</th><th>الحجم</th><th>اللغات · الأوضاع</th></tr></thead><tbody>
+    <tr><td>بطاقة الملف الشخصي</td><td class="mono">Media/Profile Card</td><td class="mono">700 wide</td><td>EN · AR · Light · Dark</td></tr>
+    <tr><td>النبذات: قصيرة، متوسطة، موسّعة</td><td class="mono">Media/Bios</td><td class="mono">700 wide</td><td>EN · AR · Light · Dark</td></tr>
+    <tr><td>بطاقة المتحدثة</td><td class="mono">Media/Speaker Card</td><td class="mono">700 wide</td><td>EN · AR · Light · Dark</td></tr>
+    <tr><td>البطاقة الرقمية</td><td class="mono">Card/Digital</td><td class="mono">1080 × 1350</td><td>EN · AR · Light · Dark</td></tr>
+    <tr><td>بطاقة العمل</td><td class="mono">Card/Print</td><td class="mono">1124 × 674 with bleed</td><td>EN · AR · Light · Dark</td></tr>
+  </tbody></table></div>
+  <div class="grid2">
+    <div class="panel"><span class="k" lang="en">Files a publisher receives</span><ul class="line-list">
+      <li><b>الشعار</b> SVG و PDF متجهي، و PNG شفاف: فاتح، داكن، لون واحد.</li>
+      <li><b>الصورة الشخصية</b> <span class="req">[CONTENT REQUIRED]</span></li>
+      <li><b>صور صحفية</b> <span class="req">[CONTENT REQUIRED]</span></li>
+      <li><b>النبذات</b> نص عادي بثلاثة أطوال، بالعربية والإنجليزية.</li>
+      <li><b>التواصل</b> <span class="mono">wejdan4458@gmail.com</span></li></ul></div>
+    <div class="panel"><span class="k" lang="en">Rules for the kit</span><ul class="line-list">
+      <li><b>النبذة تبقى كاملة.</b> تُنسخ كما كُتبت؛ للاختصار تُختار النبذة الأقصر، ولا تُقص الأطول.</li>
+      <li><b>لا جديد في الملف.</b> لا ادعاء غير موجود في السيرة أو البورتفوليو.</li>
+      <li><b>W هي العلامة.</b> الاسم يُكتب نصًا، لا شعارًا. W في زاوية واحدة من البطاقة.</li>
+      <li><b>العربية نص مستقل.</b> نبذات عربية منفصلة، محاذاة يمين، والبريد والروابط تبقى من اليسار لليمين.</li></ul></div>
+  </div>
+  <div class="panel"><span class="k" lang="en">Before sending</span><ul class="line-list"><li>طول النبذة يطابق الطلب.</li><li>الاسم والدور والبريد تطابق بطاقة العمل.</li><li>لا تُرسل خانة صورة فارغة.</li><li>النسختان العربية والإنجليزية تحملان الحقائق نفسها.</li><li>الملفات تُفتح فاتحة وداكنة دون نص مقصوص.</li></ul></div>
+
+  <div class="block">
+    <h3>بطاقة العمل <span class="en" lang="en">W on the front · essentials on the back</span></h3>
+    <div class="shelf" id="cards"></div>
+    <div class="tw"><table><thead><tr><th>المواصفة</th><th>القيمة</th></tr></thead><tbody>
+      <tr><td>مقاس القص</td><td class="mono">3.5 × 2 in (88.9 × 50.8 mm) · 1050 × 600 px @ 300 dpi</td></tr>
+      <tr><td>النزف</td><td class="mono">0.125 in (3.2 mm) each side · artboard 1124 × 674 px</td></tr>
+      <tr><td>المنطقة الآمنة</td><td class="mono">900 × 450 px · 0.25 in inside the trim</td></tr>
+      <tr><td>أحجام النص</td><td class="mono">Name 44 px (10.6 pt) · role 30 px (7.2 pt) · details 32 px (7.7 pt) · AR name 48 px · AR role 32 px</td></tr>
+      <tr><td>العلامة</td><td class="mono">W at 256 px (≈ 0.85 in), centred on the front</td></tr>
+      <tr><td>اللون</td><td>وضع Brand Light أو Brand Dark؛ تحويل CMYK يُؤكَّد مع المطبعة.</td></tr>
+      <tr><td>الأدلة</td><td>خاصية Guides تُظهر TRIM و SAFE AREA، وتُطفأ عند التصدير.</td></tr>
+    </tbody></table></div>
+    <p class="note">الخطوات: اختاري Side و Lang وضعي Brand Light أو Brand Dark، ثم شغّلي Guides وتأكدي أن كل النص داخل المنطقة الآمنة، ثم أطفئيها وصدّري PDF للوحة <span class="mono">1124 × 674</span> كاملة بالنزف. تُفحص نسخة مطبوعة قبل الطباعة. رابط LinkedIn على الظهر <span class="req">[CONTENT REQUIRED]</span>.</p>
+  </div>
+</section>
+
+<!-- 15 PROFESSIONAL -->
+<section class="ch" id="pro" data-no="15" data-ar="التطبيقات المهنية والموكأب" data-en="Professional applications & mockups">
+  <header class="sec-head"><span class="sec-no">15</span><h2>التطبيقات المهنية والموكأب</h2><span class="en" lang="en">Deck · CV · email signature · LinkedIn header · README · mockups · freelance</span><span class="src">فيقما 16 — Professional Applications · 17 — Mockups · 27 — Freelance Business</span></header>
+  <p class="intro">نظام واحد لكل سطح مهني. العرض التقديمي، والسيرة، وتوقيع البريد، وغلاف LinkedIn، وترويسة README تشترك في التوكنات والخطوط والرموز نفسها. كل صورة على اللوحة نسخة حية من قالبها.</p>
+  <div class="block"><h3>العرض: سبعة تخطيطات لسبع مهام <span class="en" lang="en">The deck · 1920 × 1080</span></h3><div class="shelf" id="deck" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))"></div></div>
+  <div class="tw"><table><thead><tr><th>التطبيق</th><th>المقاس</th><th>ملاحظات</th></tr></thead><tbody>
+    <tr><td>السيرة الذاتية</td><td class="mono">A4 · 794 × 1123</td><td>تدفق نص واحد، نص حقيقي فقط، والعناوين في عمود البداية. الحقائق تتغير في السيرة المصدر فقط.</td></tr>
+    <tr><td>غلاف LinkedIn</td><td class="mono">1584 × 396</td><td>W وسطر التموضع. الاسم الكامل لا يتحول إلى شعار.</td></tr>
+    <tr><td>توقيع البريد</td><td><span class="req">[CONTENT REQUIRED]</span></td><td>القالب <span class="mono">Docs/EmailSignature</span>.</td></tr>
+    <tr><td>ترويسة README</td><td class="mono">1280 × 640</td><td lang="en">Design tokens for the Wejdan system</td></tr>
+  </tbody></table></div>
+  <div class="dd">
+    <div class="do"><h4>✓ أبقي النظام صادقًا</h4><ul><li>رسالة واحدة لكل شريحة، والتخطيط حسب مهمة الشريحة.</li><li>Metric: رقم واحد ووحدته في العنوان، والمصدر في المتن.</li><li>رمز واحد لكل شريحة: Halftone أو Harlequin أو ثلاثي الشرارات. Content و Media بلا رموز.</li><li>للعربية نسخ RTL خاصة، وأنماط عربية، وأرقام غربية.</li></ul></div>
+    <div class="dont"><h4>✕ لا تفعلي</h4><ul><li>لا تكتبي الاسم الكامل كشعار نصي.</li><li>لا تضعي نصًا عربيًا في نسخة إنجليزية.</li></ul></div>
+  </div>
+  <div class="block">
+    <h3>الموكأب: النظام حيث يعيش <span class="en" lang="en">Mockups · fix the master, never the mockup</span></h3>
+    <div class="tw"><table><thead><tr><th>الموكأب</th><th>يُظهر</th><th>القالب</th></tr></thead><tbody id="mockups"></tbody></table></div>
+    <div class="grid4">
+      <div class="mini-card"><b>حي، لا ملصوق</b><p>كل شاشة نسخة من قالبها؛ لقطة الشاشة الملصوقة تتقادم.</p></div>
+      <div class="mini-card"><b>نسب حقيقية</b><p>منشورات 4:5، وشرائح 16:9، وصفحات A4، وبطاقات 3.5 × 2 in.</p></div>
+      <div class="mini-card"><b>سياق، لا زخرفة</b><p>الموكأب يُظهر المقياس والقص ومسافة القراءة. لا لمعان ولا إكسسوارات.</p></div>
+      <div class="mini-card"><b>لا عناوين مخترعة</b><p>عنوان البورتفوليو يُكتب PORTFOLIO URL حتى يعمل النطاق.</p></div>
+    </div>
+  </div>
+  <div class="panel"><span class="k" lang="en">27 — Freelance business</span><p lang="en" dir="ltr" style="text-align:left;font-family:var(--f-display);font-size:20px;color:var(--text)">From first inquiry to final handoff.</p><p>قوالب العمل الحر من أول استفسار إلى التسليم النهائي، مع قائمة «المستند جاهز للإرسال حين…». المحتوى التفصيلي <span class="req">[CONTENT REQUIRED]</span>.</p></div>
+</section>
+
+<!-- 16 VOICE -->
+<section class="ch" id="voice" data-no="16" data-ar="الصوت والكتابة" data-en="Voice & copy">
+  <header class="sec-head"><span class="sec-no">16</span><h2>الصوت والكتابة</h2><span class="en" lang="en">Voice &amp; copy · how Wejdan sounds</span><span class="src">فيقما 23 — Voice &amp; Copy · 18 — Content Studio</span></header>
+  <p class="intro">ركائز الصوت، والنبرة حسب السياق، وقائمة الكلمات، وعبارات جاهزة. اللغتان تسيران بالتوازي: كلٌّ منهما مكتوبة بأصالتها، ولا تُترجم إحداهما عن الأخرى سطرًا بسطر. العربية فصحى واضحة، بلا لهجة، ولا تفترض جنس القارئ.</p>
+  <div class="block">
+    <h3>أربع كلمات تحكم كل جملة <span class="en" lang="en">If a line fails one of them, rewrite it</span></h3>
+    <div class="grid4">
+      <div class="panel"><span class="k">الوضوح · <span lang="en">Plain</span></span><p lang="en" dir="ltr" style="text-align:left">Says it once, in words people already use.</p><p lang="en" dir="ltr" style="text-align:left;color:var(--text);font-family:var(--f-display)">We removed two fields from the form.</p></div>
+      <div class="panel"><span class="k">الثقة · <span lang="en">Certain</span></span><p lang="en" dir="ltr" style="text-align:left">States a position without hedging.</p><p lang="en" dir="ltr" style="text-align:left;color:var(--text);font-family:var(--f-display)">Observation alone is not enough. We need evidence.</p></div>
+      <div class="panel"><span class="k">القرب · <span lang="en">Close</span></span><p lang="en" dir="ltr" style="text-align:left">Speaks to a person, not an audience.</p><p lang="en" dir="ltr" style="text-align:left;color:var(--text);font-family:var(--f-display)">Here is what I would change first.</p></div>
+      <div class="panel"><span class="k">الخفة · <span lang="en">Dry</span></span><p lang="en" dir="ltr" style="text-align:left">Wit through precision, never through jokes.</p><p lang="en" dir="ltr" style="text-align:left;color:var(--text);font-family:var(--f-display)">Fewer fields, higher completion.</p></div>
+    </div>
+  </div>
+  <div class="block">
+    <h3>صوت واحد، ثمانية مواقف <span class="en" lang="en">Tone by context</span></h3>
+    <p class="note">الصوت ثابت، والنبرة تتغير مع القارئ واللحظة. الأرقام في الأمثلة <span class="sample">SAMPLE</span>.</p>
+    <div class="tw"><table><thead><tr><th>الموقف</th><th>القاعدة</th><th>مثال</th></tr></thead><tbody>
+      <tr><td>دراسة الحالة</td><td>ابدئي بالمشكلة والدليل، واذكري الدور كما ورد في المصدر.</td><td lang="en" dir="ltr">Six of eight participants stopped at step three, so we removed two fields.</td></tr>
+      <tr><td>منشور LinkedIn</td><td>فكرة واحدة لكل منشور.</td><td lang="en" dir="ltr">The label outranks the layout.</td></tr>
+      <tr><td>منشور على X</td><td>سطر واحد يحمل الفكرة كاملة، بلا وسوم متراكمة.</td><td lang="en" dir="ltr">Hesitation is data. Do not design past it.</td></tr>
+      <tr><td>السيرة الذاتية</td><td>أفعال ونتائج كما وردت في المصدر، بلا مديح للذات.</td><td lang="en" dir="ltr">HCI graduate working in UX research and product design.</td></tr>
+      <tr><td>رسالة تواصل أو تقديم</td><td>مباشرة: الدور المطلوب ورابط واحد.</td><td lang="en" dir="ltr">I am applying for the UX Researcher role. The most relevant case study is linked below.</td></tr>
+      <tr><td>نصوص الواجهة</td><td>ابدئي بفعل، وسمّي النتيجة.</td><td lang="en" dir="ltr">Save changes</td></tr>
+      <tr><td>الأخطاء</td><td>ما الذي حدث وما الخطوة التالية، بلا لوم.</td><td lang="en" dir="ltr">The file did not upload. Check the connection and try again.</td></tr>
+      <tr><td>العروض والمحاضرات</td><td>رسالة واحدة لكل شريحة، والعنوان يقول النتيجة.</td><td lang="en" dir="ltr">Step three is where people leave.</td></tr>
+    </tbody></table></div>
+  </div>
+  <div class="block">
+    <h3>الفكرة نفسها مكتوبة مرتين <span class="en" lang="en">The same idea, written twice</span></h3>
+    <div lang="en" dir="ltr" style="text-align:left">
+      <div class="pair"><p class="good">We study behaviour before we draw a screen.</p><p class="bad">A comprehensive behavioural study is conducted prior to commencing the design phase.</p></div>
+      <div class="pair"><p class="good">Observation alone is not enough. We need evidence.</p><p class="bad">It is important to note that observation alone may not always be sufficient.</p></div>
+      <div class="pair"><p class="good">We tested it with eight participants. Six stopped at the same step.</p><p class="bad">Testing was conducted with a sample of eight users.</p></div>
+      <div class="pair"><p class="good">We changed two words. Completion rose 24%. <span class="sample">SAMPLE</span></p><p class="bad">Following the necessary adjustments, a notable improvement in completion was observed.</p></div>
+      <div class="pair"><p class="good">We removed two fields from the form.</p><p class="bad">Work was undertaken to enhance the user experience of the form.</p></div>
+    </div>
+    <p class="note">قائمة الكلمات (نستخدم / نتجنب) بأعمدتها الثلاثة: كلمات بسيطة، ومصطلحات البحث، ووعود بلا دليل. القيم <span class="req">[CONTENT REQUIRED]</span>.</p>
+  </div>
+  <div class="block">
+    <h3>عبارات للتكييف، لا للصق <span class="en" lang="en">Ready lines · EN and AR written natively</span></h3>
+    <div class="lines" id="lines-ar"></div>
+    <div class="lines" id="lines-en" lang="en"></div>
+    <p class="note">العبارات العربية المنشورة هنا هي المقروءة بوضوح من إطار AR؛ بقية الأسطر العربية <span class="req">[CONTENT REQUIRED]</span>.</p>
+  </div>
+  <div class="grid2">
+    <div class="panel"><span class="k" lang="en">Call to action</span><ul class="line-list" lang="en" dir="ltr" style="text-align:left"><li>Read the full case study.</li><li>See how we got there.</li><li>The reasoning is in the write-up.</li><li>Have a problem worth researching? Get in touch.</li><li>I write about research and design. Follow if that is useful.</li></ul></div>
+    <div class="panel"><span class="k" lang="en">Content labels</span><ul class="line-list">
+      <li><span class="sample">DEMO</span> نص تجريبي يُظهر التخطيط، ويُستبدل قبل النشر.</li>
+      <li><span class="sample">SAMPLE</span> رقم أو اقتباس مؤقت، لا يُنشر كنتيجة أبدًا.</li>
+      <li><span class="req">[CONTENT REQUIRED]</span> حقيقة لم تُقدَّم بعد؛ النشر ينتظر حتى تُملأ.</li></ul>
+      <p><b>فحص التكافؤ:</b> العربية والإنجليزية تشتركان في القصد لا في البنية الحرفية. افحصي الدفء والدقة وطول الجملة ووضوح الإجراء، وهل تبدو كل لغة أصيلة في الواجهة والتحرير والبورتفوليو.</p></div>
+  </div>
+</section>
+
+<!-- 17 RESEARCH -->
+<section class="ch" id="research" data-no="17" data-ar="عُدّة البحث" data-en="Research toolkit">
+  <header class="sec-head"><span class="sec-no">17</span><h2>عُدّة البحث</h2><span class="en" lang="en">Research templates, ready to fill</span><span class="src">فيقما 24 — Research Toolkit</span></header>
+  <p class="intro">قوالب بحث جاهزة للتعبئة، مرتبة بمراحل الدراسة. كل قالب يحمل كلمات المشاركين الحقيقية فقط.</p>
+  <div class="grid3" id="research-stages"></div>
+  <p class="note">محتوى كل قالب وأسماؤه <span class="req">[CONTENT REQUIRED]</span>؛ التصدير المتاح لا يقرأ النص الصغير.</p>
+</section>
+
+<!-- 18 PRODUCT UI + AI -->
+<section class="ch" id="product" data-no="18" data-ar="واجهات المنتج وتجربة الوكلاء" data-en="Product UI & AI/agent UX">
+  <header class="sec-head"><span class="sec-no">18</span><h2>واجهات المنتج وتجربة الوكلاء</h2><span class="en" lang="en">Product UI starters · AI &amp; agent UX</span><span class="src">فيقما 25 — Product UI Starters · 26 — AI &amp; Agent UX</span></header>
+  <p class="intro">ثلاث عشرة نقطة بداية. لكل واحدة شاشة سطح مكتب، وشاشة جوال، وحالتان أساسيتان، وكل منها بأربع نسخ: EN فاتح وداكن، AR فاتح وداكن.</p>
+  <div class="tw"><table><thead><tr><th>البداية</th><th>الأنماط المعروضة</th><th>مبنية من</th></tr></thead><tbody id="starters"></tbody></table></div>
+  <div class="block">
+    <h3>ابدئي من نقطة بداية <span class="en" lang="en">Extend from a starter</span></h3>
+    <div class="tw"><table><thead><tr><th>الحاجة</th><th>ابدئي من</th></tr></thead><tbody lang="en" dir="ltr" id="extend"></tbody></table></div>
+  </div>
+  <div class="block">
+    <h3>اعرضي العمل، وأبقي الناس في السيطرة <span class="en" lang="en">AI &amp; agent UX</span></h3>
+    <p class="note">أنماط لمنتجات يشارك فيها نموذج أو وكيل في الواجهة. القواعد الثماني لكل ميزة ذكاء اصطناعي <span class="req">[CONTENT REQUIRED]</span>.</p>
+    <div class="grid3" id="ai5"></div>
+    <div class="grid2">
+      <div class="panel"><span class="k" lang="en">Nine patterns · a model replies</span><div style="display:flex;flex-wrap:wrap;gap:6px" lang="en" id="ai9"></div></div>
+      <div class="panel"><span class="k" lang="en">Seven patterns · an agent acts</span><div style="display:flex;flex-wrap:wrap;gap:6px" lang="en" id="ai7"></div></div>
+      <div class="panel"><span class="k" lang="en">Six controls people must always have</span><div style="display:flex;flex-wrap:wrap;gap:6px" lang="en" id="ai6"></div></div>
+      <div class="panel"><span class="k" lang="en">Notes for the engineer</span><ol class="steps" lang="en" dir="ltr" style="text-align:left"><li>Streaming states</li><li>Confirmation model</li><li>Provenance data</li><li>Reduced motion</li><li>Voice and disclosure</li></ol></div>
+    </div>
+    <p class="note">«طابقي التأكيد مع ما يمكن التراجع عنه»: جدول يُقرأ من الأعلى قبل إضافة أي قدرة جديدة للوكيل <span class="req">[CONTENT REQUIRED]</span>.</p>
+  </div>
+</section>
+
+<!-- 19 MOTION -->
+<section class="ch" id="motion" data-no="19" data-ar="الحركة" data-en="Motion">
+  <header class="sec-head"><span class="sec-no">19</span><h2>الحركة</h2><span class="en" lang="en">Motion that explains, then steps aside</span><span class="src">فيقما 28 — Motion · مجموعة Wejdan — Motion</span></header>
+  <p class="intro">الحركة تخدم الانتباه والسيطرة. كل حركة توضّح تغييرًا، أو تشير إلى حالة، أو تحفظ الثقة، وتتنحّى لحظة يطلب الشخص حركة أقل. كل مدة ومنحنى في الصفحة يأتي من متغيرات الحركة الحية (11 متغيرًا: مدد ومنحنيات ومسافات).</p>
+  <div class="grid2">
+    <div class="panel"><span class="k" lang="en">Five UI tiers and one ambient loop</span><div style="display:flex;flex-wrap:wrap;gap:6px" lang="en"><span class="pill">Instant</span><span class="pill">Quick</span><span class="pill">Gentle</span><span class="req">[CONTENT REQUIRED]</span><span class="req">[CONTENT REQUIRED]</span><span class="pill">Ambient</span></div><p>اختاري الدرجة حسب نوع التغيير. القيم بالمللي ثانية <span class="req">[CONTENT REQUIRED]</span>.</p></div>
+    <div class="panel"><span class="k" lang="en">The reduced-motion contract</span><p>الهوية تبقى معروفة بلا حركة. إن احتاج التصميم الحركة ليُعرف، فالتكوين هو الخطأ.</p></div>
+  </div>
+  <div class="block">
+    <h3>اثنا عشر سلوكًا، لكلٍّ بديل <span class="en" lang="en">Twelve behaviours, each with a fallback</span></h3>
+    <div class="grid4" id="behaviours" lang="en"></div>
+  </div>
+  <div class="panel"><span class="k" lang="en">Tokens in code</span><p>في CSS تُربط <span class="mono">transition-duration</span> و <span class="mono">transition-timing-function</span> بالمتغيرات المخصّصة. مكتبات الحركة (Framer Motion و Motion One) تأخذ قيم التوكن بالمللي ثانية و <span class="mono">cubic-bezier</span>. قواعد الحركة الست، وعادات «ثلاث تصمد وثلاث تنكسر»، وقائمة «الحركة جاهزة حين…» <span class="req">[CONTENT REQUIRED]</span>.</p></div>
+</section>
+
+<!-- 20 GOVERNANCE -->
+<section class="ch" id="governance" data-no="20" data-ar="الحوكمة والمصادر" data-en="Governance & sources">
+  <header class="sec-head"><span class="sec-no">20</span><h2>الحوكمة والمصادر</h2><span class="en" lang="en">Every release has a trail</span><span class="src">فيقما 29 — Governance &amp; Sources · 21 — QA · 22 — Agent</span></header>
+  <div class="grid2">
+    <div class="panel"><span class="k" lang="en">Four statuses, one meaning each</span><div style="display:flex;flex-wrap:wrap;gap:6px" lang="en"><span class="pill">Planned</span><span class="pill">In progress</span><span class="pill v-ok">Ready</span><span class="pill v-watch">Needs owner input</span></div><p>لا تُعلَّم صفحة Ready بالاستحسان، بل بتحقيق قائمتها.</p></div>
+    <div class="panel"><span class="k" lang="en">Versioning</span><p class="mono" style="text-align:left">Major.Minor.Patch</p><p>Major لإعادة تسمية توكن تكسر الاستخدام، و Minor للإضافات، و Patch لتصحيح القيم.</p></div>
+    <div class="panel"><span class="k" lang="en">Fonts are licensed dependencies</span><p>كل خط يحمل ترخيصًا مؤكدًا قبل النشر. كل أصل له ترخيص قبل أن يُشحن، ومسار مصدر يرافقه.</p></div>
+    <div class="panel"><span class="k" lang="en">Accessibility</span><p>تباين <span class="mono">4.5:1</span> للنص و <span class="mono">3:1</span> للنص الكبير والأجزاء. أهداف <span class="mono">44 × 44</span> على الجوال و <span class="mono">32 × 32</span> على المكتب. كل عنصر تفاعلي يُظهر <span class="mono">focus/ring</span>. العربية تنتظر مراجعة متحدثة أصلية قبل الشحن.</p></div>
+  </div>
+  <div class="block">
+    <h3>الأسماء عقود، لا تسميات <span class="en" lang="en">Naming grammar</span></h3>
+    <div class="tw"><table><thead><tr><th>النوع</th><th>النمط</th><th>مثال</th></tr></thead><tbody id="naming" lang="en" dir="ltr"></tbody></table></div>
+    <p class="note">«Frame 12» أو «Group 7» بلا اسم عمل غير منتهٍ. صفحة 22 تضم قواعد التوجيه لوكلاء الذكاء الاصطناعي وعقد «لا اختراع».</p>
+  </div>
+</section>
+
+<!-- APPENDIX -->
+<section class="ch" id="appendix" data-no="A" data-ar="الملحق" data-en="Appendix">
+  <header class="sec-head"><span class="sec-no">A</span><h2>الملحق</h2><span class="en" lang="en">Figma page map · asset inventory · transcription status</span></header>
+  <div class="block">
+    <h3>خريطة صفحات فيقما وحالة النقل <span class="en" lang="en">39 pages · four frames per core page: EN-L · EN-D · AR-L · AR-D</span></h3>
+    <div class="tw"><table><thead><tr><th>#</th><th>الصفحة</th><th class="n">Page ID</th><th>في هذا الدليل</th></tr></thead><tbody id="pagemap"></tbody></table></div>
+  </div>
+  <div class="block">
+    <h3>جرد الأصول <span class="en" lang="en">Asset inventory</span></h3>
+    <div class="tw"><table><thead><tr><th>الملف</th><th>المحتوى</th><th>الحالة</th></tr></thead><tbody>
+      <tr><td class="mono">W-monogram-ink.svg</td><td>العلامة W بالحبر <span class="mono">#0E121C</span>، <span class="mono">viewBox 0 0 227 205</span>، شفافة</td><td>رسمي · المصدر الوحيد للعلامة في هذا الدليل</td></tr>
+      <tr><td class="mono">W-monogram-white.svg</td><td>العلامة W بالأبيض، القصّ نفسه، شفافة</td><td>رسمي</td></tr>
+      <tr><td class="mono">W-monogram-{ink|white}-{512|1024|2048}.png</td><td>نسخ PNG شفافة مولّدة من الملفين الرسميين</td><td>من لوحة التنزيل</td></tr>
+      <tr><td class="mono">asset-3</td><td>شعار WEJDAN النصي القديم</td><td>مؤرشف. الاسم يُكتب نصًا، لا شعارًا</td></tr>
+      <tr><td class="mono">asset-2 · asset-6</td><td>W مع قوس بالبنفسجي (تلوين قديم)</td><td>مؤرشف. لا يُستخدم للشعار</td></tr>
+      <tr><td class="mono">logo-full.svg</td><td>ورقة أرشيف بخلفية <span class="mono">#F5F5F5</span> مخبوزة</td><td>لا يُستخدم</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<footer class="end"><svg class="w" viewBox="0 0 227 205" aria-hidden="true"><use href="#w"/></svg><span>دليل هوية وجدان · الإصدار 1 · 2026</span><span class="mono">Brand OS · 31 component sets · 170 variables · 44 text styles · 25 gradients · 4 effects</span></footer>
+</main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function el(tag,attrs,html){var e=document.createElement(tag);if(attrs)for(var k in attrs){if(k==="style")e.style.cssText=attrs[k];else e.setAttribute(k,attrs[k]);}if(html!=null)e.innerHTML=html;return e}
+var WVB="0 0 227 205";
+function W(px,extra){return '<svg class="w" viewBox="'+WVB+'" style="width:'+px+'px;height:auto;'+(extra||'')+'" aria-hidden="true"><use href="#w"/></svg>'}
+function SP(){return '<use href="#spark"/>'}
+
+/* toast + copy */
+var tt;function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){t.classList.remove("show")},1600)}
+function copy(txt){try{var p=navigator.clipboard&&navigator.clipboard.writeText(txt);if(p&&p.then){p.then(function(){toast("نُسخ "+txt)},function(){toast(txt)})}else toast(txt)}catch(e){toast(txt)}}
+document.addEventListener("click",function(e){var b=e.target.closest("[data-copy]");if(b){copy(b.getAttribute("data-copy"))}});
+function tok(hex,label){return '<button class="tok" type="button" data-copy="'+hex+'" aria-label="نسخ '+hex+'"><i style="background:'+hex+'"></i>'+(label||hex)+'</button>'}
+
+/* contrast */
+function lum(h){h=h.replace("#","");var c=[0,2,4].map(function(i){var v=parseInt(h.substr(i,2),16)/255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*c[0]+.7152*c[1]+.0722*c[2]}
+function cr(a,b){var x=lum(a),y=lum(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05)}
+function txtOn(h){return cr(h,"#0E121C")>=cr(h,"#FFFFFF")?"#0E121C":"#FFFFFF"}
+
+/* ---------- nav ---------- */
+var secs=$$("section.ch[data-ar]");
+var rail=$("#rail"),chips=$("#chips"),toc=$("#toc");
+secs.forEach(function(s){
+  if(s.id==="contents")return;
+  var no=s.getAttribute("data-no"),ar=s.getAttribute("data-ar"),en=s.getAttribute("data-en");
+  rail.appendChild(el("li",null,'<a href="#'+s.id+'" data-sec="'+s.id+'"><b>'+no+'</b><span>'+ar+'</span></a>'));
+  chips.appendChild(el("a",{href:"#"+s.id,"data-sec":s.id},ar));
+  toc.appendChild(el("a",{href:"#"+s.id},'<b>'+no+'</b><span>'+ar+'</span><small lang="en">'+en+'</small>'));
+});
+if("IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;$$("[data-sec]").forEach(function(a){a.classList.toggle("on",a.getAttribute("data-sec")===id)});var c=chips.querySelector('[data-sec="'+id+'"]');if(c&&chips.offsetParent){var l=c.offsetLeft-chips.clientWidth/2+c.clientWidth/2;chips.scrollTo({left:l,behavior:"smooth"})}}})},{rootMargin:"-30% 0px -60% 0px"});
+  secs.forEach(function(s){io.observe(s)});
+}
+
+/* ---------- 01 ---------- */
+var P=[
+ ["الإنسان في المركز","The person at the centre","البحث يبدأ من الناس الذين يستخدمون المنتج، لا من الشاشة.","كل شاشة تجيب عمّا يحتاجه الشخص بعد ذلك.","كلمات بسيطة يقولها المستخدم.","لا زخرفة تنافس المهمة."],
+ ["الدليل، لا الرأي","Evidence, not opinion","لكل نتيجة مصدرها، والادعاء بلا دليل يبقى خارجًا.","اعرضي الشاشة أو الأداة أو الرقم، مع مصدره.","اذكري المنهج والعينة، وعلّمي المحتوى التجريبي SAMPLE.","لا أرقام ولا أدوار ولا نتائج مخترعة."],
+ ["نظام يبقى مفتوحًا","A system that stays open","المنتج لا ينغلق على مستخدمه: مخارج واضحة، وخطوات قابلة للتراجع، وحالة ظاهرة.","كل مسار يُظهر أين الشخص وكيف يعود.","—","لا طرق مسدودة، ولا أنماط مظلمة، ولا تكاليف مخفية."],
+ ["استمرارية بعد التسليم","Continuity after handover","القرارات موثّقة ليبني عليها من يأتي بعدك.","مكوّنات وتوكنات وقواعد بدل شاشات منفردة.","سجّلي السبب، لا النتيجة فقط.","لا شيء يُشحن دون مبرره."]];
+$("#principles").innerHTML=P.map(function(p,i){return '<div class="panel"><span class="k mono">0'+(i+1)+' · <span lang="en">'+p[1]+'</span></span><h4 style="font-size:19px">'+p[0]+'</h4><p>'+p[2]+'</p><ul class="line-list pr"><li><b>التصميم:</b> '+p[3]+'</li>'+(p[4]!=="—"?'<li><b>الكتابة:</b> '+p[4]+'</li>':'')+'<li><b>الحد:</b> '+p[5]+'</li></ul></div>'}).join("");
+var T=[["Human","Technical",.38,"متوازن، يميل للإنسان"],["Soft","Precise",.5,"متوازن"],["Graphic","Professional",.72,"المهنية أولًا"],["Expressive","Calm",.64,"هادئ، مع شرارة"]];
+$("#tensions").innerHTML=T.map(function(t){return '<div style="display:grid;gap:6px"><div style="display:flex;justify-content:space-between;font:500 13px/18px var(--f-sans);direction:ltr"><span>'+t[0]+'</span><span>'+t[1]+'</span></div><div style="position:relative;height:6px;border-radius:3px;background:var(--surface-subtle);direction:ltr"><span style="position:absolute;top:50%;left:'+(t[2]*100)+'%;width:16px;height:16px;border-radius:50%;background:var(--brand);transform:translate(-50%,-50%);box-shadow:0 0 0 3px var(--surface)"></span><span style="position:absolute;left:50%;top:-3px;bottom:-3px;width:1px;background:var(--border)"></span></div><span style="font-size:13px;color:var(--text-muted)">'+t[3]+'</span></div>'}).join("");
+
+/* ---------- 02 logo ---------- */
+var SIZES=[[16,"Micro","أيقونة المتصفح والتبويب، علامة صغيرة جدًا"],[20,"XS","واجهة مضغوطة"],[24,"S","تنقل صغير، رؤوس بطاقات مضغوطة"],[32,"M","شريط التنقل وترويسة التطبيق (الافتراضي)"],[48,"L","كتلة الملف الشخصي، عرض مضغوط"],[64,"XL","هوية السوشال، لمسة غلاف المستند"],[96,"2XL","بطاقة البطل، الملف الإعلامي، عرض بطاقة العمل"],[128,"3XL","غلاف تحريري كبير، باعتدال"],[192,"Display","عرض كبير للعلامة"],[256,"Hero","عرض الهوية فقط"]];
+$("#ladder").innerHTML=SIZES.map(function(s){return '<figure>'+W(s[0])+'<figcaption><b>'+s[0]+'</b>'+s[1]+'</figcaption></figure>'}).join("");
+$("#sizes").innerHTML=SIZES.map(function(s){return '<tr><td class="mono n">'+s[0]+'</td><td class="mono">'+s[1]+'</td><td>'+s[2]+'</td></tr>'}).join("");
+var MIS=[
+ ["لا تمطّي","حافظي على النسبة دائمًا.",W(64,"transform:scaleX(1.45)")],
+ ["لا تدوّري","العلامة تحتفظ باتجاهها.",W(64,"transform:rotate(-18deg)")],
+ ["لا ظلال ولا مؤثرات","رسم واحد بلا ظل أو توهج للإنقاذ.",W(64,"filter:drop-shadow(4px 6px 4px rgba(14,18,28,.45))")],
+ ["لا تلوّني","الحبر أو الأبيض فقط. البنفسجي والسماوي لعناصر أخرى.",W(64,"color:#6172B5")],
+ ["لا تدرّج","حتى تدرّج البراند ممنوع على العلامة.",'<svg class="w" viewBox="'+WVB+'" style="width:64px;height:auto"><use href="#w" fill="url(#g-bad)"/></svg>'],
+ ["لا صندوق خلفها","العلامة توضع مباشرة على السطح.",'<span style="display:grid;place-items:center;width:104px;height:96px;background:#6172B5;border-radius:16px">'+W(64,"color:#FFFFFF")+'</span>'],
+ ["لا إطار","لا خط محيطي بدل التعبئة.",'<svg class="w" viewBox="'+WVB+'" style="width:64px;height:auto;fill:none;stroke:#0E121C;stroke-width:6"><use href="#w"/></svg>'],
+ ["لا تكرار كنسيج","W لا تُستخدم نمطًا زخرفيًا.",'<span style="display:grid;grid-template-columns:repeat(4,28px);gap:8px;opacity:.5">'+Array(12).join(",").split(",").map(function(){return W(28,"color:#0E121C")}).join("")+'</span>'],
+ ["لا ازدحام","لا رمز داخل المسافة الآمنة.",'<span style="position:relative;display:block">'+W(64)+'<svg viewBox="0 0 24 24" style="position:absolute;width:26px;right:-14px;top:-12px;fill:#6172B5"><use href="#spark"/></svg></span>'],
+ ["على صورة مزدحمة","ضعيها على سطح هادئ بتباين واضح.",'<span style="display:grid;place-items:center;width:100%;height:100%;background:repeating-linear-gradient(60deg,#9BC4EE 0 10px,#6172B5 10px 20px,#BEDAF7 20px 30px)">'+W(64)+'</span>']];
+$("#misuse").innerHTML=MIS.map(function(m){return '<div class="mis"><div class="s">'+m[2]+'</div><div class="t"><b>✕ '+m[0]+'</b><span>'+m[1]+'</span></div></div>'}).join("")+'<div class="mis ok"><div class="s" style="background:#0E121C">'+W(64,"color:#FFFFFF")+'</div><div class="t"><b>✓ صحيح</b><span>أبيض مباشرة على سطح داكن.</span></div></div>';
+
+/* downloads */
+/* official files, verbatim */
+var OFFICIAL={ink:"<svg width=\"227\" height=\"205\" viewBox=\"0 0 227 205\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0 84.9507L4.59193 86.3283L8.95426 89.0834L14.235 96.4305L56.7103 202.734L88.165 136.151L117.094 204.111L118.013 204.8L119.62 204.111L150.845 140.283L160.947 146.483L167.605 148.319H172.197L176.33 147.171L180.004 144.416L181.381 141.891L180.922 136.61L177.248 134.314L173.804 135.232L172.197 136.839L170.59 140.972L166.228 143.957L158.881 142.579L151.763 137.758L161.636 118.472L175.412 94.3641L180.233 88.8538L184.136 86.3283L188.269 85.4099V84.7211L153.83 84.9507L159.57 86.5579L163.243 89.5426L165.08 93.9049L165.309 98.2673L163.932 105.614L159.799 116.865L149.926 136.61L140.513 127.885L117.783 102.63L107.451 92.5274L102.17 88.6242L92.757 84.2619L90.0018 83.5731L84.2619 84.0323L81.5067 85.4099L78.522 88.6242L76.6852 93.2161L76.226 99.6448L78.7516 111.813L86.7874 133.396L65.8942 177.248L33.2915 99.8744L33.7507 94.1345L35.5874 90.9202L41.0978 86.7874L48.2152 84.9507H0ZM93.6753 88.3946H94.1345L94.3641 88.165H97.3489L97.5785 88.3946L99.4152 88.8538L103.548 91.3794L104.237 92.0682L105.385 92.757L107.222 94.5937H107.451L115.487 102.63V102.859L123.293 111.354V111.584L126.278 114.798V115.028L127.656 116.405V116.635L129.033 118.013V118.242L135.921 125.819V126.048L138.447 128.574V128.804L139.135 129.263L139.365 129.722L144.875 135.232H145.105L149.008 138.906L147.171 142.579V143.039L146.253 144.416V144.875L145.105 146.942V147.401L144.646 147.86V148.319L144.187 148.778L143.727 149.697V150.156L142.809 151.534V151.993L142.35 152.452L141.661 153.83V154.289L137.987 161.406V161.865L137.528 162.325L134.543 168.294V168.753L129.263 179.085V179.544L127.885 182.3L127.426 182.759L126.967 182.3L125.13 178.626V178.167L123.293 174.723V174.264L121.916 171.738V171.279L120.309 168.294V167.835L118.013 163.243V162.784L115.946 158.881V158.422L115.028 156.814V156.355L112.961 152.452V151.993L109.977 146.023V145.564L108.37 142.579V142.12L106.762 139.135V138.676L104.926 135.232V134.773L103.778 132.707V132.248L101.022 126.967V126.508L99.8744 124.441V123.982L97.5785 119.39V118.931L97.1193 118.242V117.783L96.6601 117.094V116.635L95.2825 113.65L94.8233 111.813L93.9049 109.977V109.517L93.4457 108.599V107.91L92.5274 105.614V104.926L92.2978 104.696V104.007L91.8386 103.089V102.4L91.609 102.17V101.252L91.3794 101.022V100.104L91.1498 99.8744V98.9561L90.9202 98.7265V96.4305L90.6906 96.2009V93.9049L90.9202 93.6753L91.1498 91.609L92.2978 89.5426L93.6753 88.3946ZM64.7462 35.1283V36.2762L64.5166 36.5058V37.4242L64.287 37.6538V38.5722L64.0574 38.8018V39.4906L63.8278 39.7202V40.1794L63.5982 40.409V40.8682L63.3686 41.0978V41.557L62.9094 42.2457V42.7049L62.4502 43.3937V43.8529L62.2206 44.0825V44.3121L61.991 44.5417L61.7614 45.2305L61.3022 45.6897V45.9193L61.0726 46.1489V46.3785L60.6135 46.8377V47.0673L59.6951 47.9857V48.2152L57.8583 50.052H57.6287L56.7103 50.9704H56.4807L56.0215 51.4296H55.7919L55.5623 51.6592H55.3327L55.1031 51.8888H54.8735L54.6439 52.1184H54.4143L53.2664 52.8072H52.8072L52.5776 53.0368H52.1184L51.8888 53.2664H51.4296L51.2 53.496H50.5112L50.2816 53.7256H49.5928L49.3632 53.9552H48.6744L48.4448 54.1848H47.0673H47.9856L48.2152 54.4144H49.1336L49.3632 54.6439H50.052L50.2816 54.8735H50.9704L51.2 55.1031H51.8888L52.5776 55.5623H53.0368L53.2664 55.7919H53.7256L53.9552 56.0215H54.1848L54.4143 56.2511H54.6439L54.8735 56.4807L55.5623 56.7103L56.0215 57.1695H56.2511L56.7103 57.6287H56.9399L57.8583 58.5471H58.0879L59.6951 60.1543V60.3839L60.3839 61.0726V61.3022L60.843 61.7614V61.991L61.7614 63.139V63.3686L61.991 63.5982V64.0574L62.2206 64.287V64.5166L62.6798 65.2054V65.6646L63.139 66.3534V66.8126L63.3686 67.0422V67.5014L63.5982 67.7309V68.4197L63.8278 68.6493V69.3381L64.0574 69.5677V70.2565L64.287 70.4861V71.4045L64.5166 71.6341V72.5525L64.7462 72.7821V73.93V73.0117L64.9758 72.7821V71.6341L65.2054 71.4045V70.4861L65.435 70.2565V69.5677L65.6646 69.3381V68.6493L65.8942 68.4197V67.9605L66.1238 67.7309V67.0422L66.583 66.3534V65.8942L67.0422 65.2054V64.7462L67.2717 64.5166V64.287L67.5013 64.0574V63.8278L67.7309 63.5982V63.3686L67.9605 63.139L68.1901 62.4502L68.6493 61.991V61.7614L69.1085 61.3022V61.0726L70.0269 60.1543V59.9247L71.6341 58.3175H71.8637L72.5525 57.6287H72.7821L73.93 56.7103H74.1596L74.3892 56.4807H74.6188L75.7668 55.7919H76.226L76.4556 55.5623H76.6852L76.9148 55.3327H77.374L77.6036 55.1031H78.2924L78.522 54.8735H79.2108L79.4404 54.6439H80.1291L80.3587 54.4144H81.2771L81.5067 54.1848H82.4251H81.2771L81.0475 53.9552H80.1291L79.8996 53.7256H79.2108L78.9812 53.496H78.2924L78.0628 53.2664H77.6036L77.374 53.0368H76.9148L76.226 52.5776H75.7668L75.5372 52.348H75.3076L75.078 52.1184H74.8484L74.6188 51.8888H74.3892L74.1596 51.6592L73.4708 51.4296L73.0117 50.9704H72.7821L72.0933 50.2816H71.8637L69.5677 47.9857V47.7561L68.8789 47.0673V46.8377L68.4197 46.3785V46.1489L68.1901 45.9193L67.9605 45.2305L67.5013 44.7713V44.5417L67.2717 44.3121V43.8529L66.583 42.7049V42.2457L66.3534 42.0161V41.557L66.1238 41.3274V40.8682L65.8942 40.6386V40.1794L65.6646 39.9498V39.261L65.435 39.0314V38.3426L65.2054 38.113V37.4242L64.9758 37.1946V36.0466L64.7462 35.817V35.1283ZM96.2009 16.3013V17.2197L95.9713 17.4493V18.1381L95.7417 18.3677V18.8269L95.5121 19.0565V19.5157L95.2825 19.7453V20.2045L95.0529 20.4341V20.6637L94.8233 20.8933V21.1229L94.5937 21.3525L94.3641 22.0413L93.9049 22.5005V22.73L93.4457 23.1892V23.4188L92.5274 24.3372H92.2978L91.609 25.026H91.3794L90.9202 25.4852H90.6906L90.461 25.7148H90.0018L89.7722 25.9444H89.5426L89.313 26.174H88.8538L88.6242 26.4036H87.7058L87.4762 26.6332H87.017H87.7058L87.9354 26.8628H88.6242L88.8538 27.0924H89.313L89.5426 27.322H89.7722L90.0018 27.5516H90.2314L90.461 27.7812L91.1498 28.0108L91.609 28.47H91.8386L94.1345 30.7659V30.9955L94.3641 31.2251V31.4547L94.5937 31.6843V31.9139L95.2825 33.0619V33.5211L95.5121 33.7507V34.2099L95.7417 34.4395V35.1283L95.9713 35.3578V36.0466L96.2009 36.2762V37.1946V36.965L96.4305 36.7354V35.817L96.6601 35.5874V34.8987L96.8897 34.6691V34.2099L97.1193 33.9803V33.5211L97.3489 33.2915V32.8323L97.5785 32.6027V32.3731L97.8081 32.1435L98.0377 31.4547L98.9561 30.3067V30.0771L100.334 28.6996H100.563L101.252 28.0108H101.482L102.63 27.322H103.089L103.318 27.0924H103.778L104.007 26.8628H104.466L104.696 26.6332H105.614H104.926L104.696 26.4036H104.007L103.778 26.174H103.318L103.089 25.9444H102.63L102.4 25.7148H102.17L101.941 25.4852L101.252 25.2556L100.334 24.3372H100.104L99.6448 23.878V23.6484L98.4969 22.5005V22.2709L98.0377 21.8117V21.5821L97.3489 20.4341V19.9749L97.1193 19.7453V19.2861L96.8897 19.0565V18.5973L96.6601 18.3677V17.9085L96.4305 17.6789V16.9901L96.2009 16.7605V16.3013ZM42.9345 1.60717V2.52556L42.7049 2.75516V3.44395L42.4753 3.67354V4.36233L42.2457 4.59193V5.05112L42.0161 5.28072V5.73991L41.7865 5.96951V6.4287L41.5569 6.6583L41.3274 7.34709L40.8682 7.80628L40.6386 8.49507L39.7202 9.41345V9.64305L38.3426 11.0206H38.113L36.965 11.939H36.7354L35.5874 12.6278H35.1283L34.8987 12.8574H34.4395L34.2099 13.087H33.5211L33.2915 13.3166L33.5211 13.5462H34.2099L34.8987 14.0054H35.3578L35.5874 14.235H36.0466L36.2762 14.4646L36.965 14.6942L37.4242 15.1534H37.6538L38.113 15.6126H38.3426L39.9498 17.2197V17.4493L40.6386 18.1381V18.3677L40.8682 18.5973V18.8269L41.0978 19.0565V19.2861L41.7865 20.4341V20.8933L42.0161 21.1229V21.5821L42.2457 21.8117V22.2709L42.4753 22.5005V23.1892L42.7049 23.4188V24.3372L42.9345 24.5668L43.1641 24.3372V23.4188L43.3937 23.1892V22.5005L43.6233 22.2709V21.8117L43.8529 21.5821V21.1229L44.0825 20.8933V20.4341L44.3121 20.2045V19.9749L44.5417 19.7453V19.5157L44.7713 19.2861L45.0009 18.5973L45.4601 18.1381V17.9085L45.9193 17.4493V17.2197L47.5265 15.6126H47.7561L48.2152 15.1534L48.904 14.9238L49.3632 14.4646H49.5928L49.8224 14.235H50.2816L50.5112 14.0054H50.9704L51.2 13.7758H51.6592L51.8888 13.5462H52.5776L52.8072 13.3166H53.2664H52.5776L52.348 13.087H51.8888L51.6592 12.8574H50.9704L50.7408 12.6278H50.2816L50.052 12.3982H49.8224L49.5928 12.1686L48.904 11.939L48.4448 11.4798H48.2152L47.7561 11.0206H47.5265L45.6897 9.18386V8.95426L45.2305 8.49507V8.26547L45.0009 8.03587V7.80628L44.7713 7.57668V7.34709L44.0825 6.1991V5.73991L43.6233 5.05112V4.36233L43.3937 4.13274V3.67354L43.1641 3.44395V2.52556L42.9345 2.29596V1.60717ZM106.303 2.29596L90.2314 6.88789L75.5372 13.3166L64.5166 19.7453L50.9704 30.0771L39.7202 41.3274L31.4547 52.348L23.6484 67.2718L20.4341 78.0628L21.5821 78.2924L25.4852 67.0422L31.9139 54.6439L39.261 44.3121L47.7561 35.1283L56.4807 27.5516L68.6493 19.0565L78.2924 13.7758L90.2314 8.72466L103.778 4.82152L113.88 3.21435L127.426 2.75516L137.069 3.67354L149.238 6.4287L157.503 9.41345L167.605 14.4646L177.937 21.5821L188.958 31.9139L196.075 40.6386L202.045 50.052L207.096 60.6135L210.54 70.7157L212.836 81.2771L213.754 89.5426L213.525 104.696L211.458 116.865L206.637 131.1L200.667 142.809L190.335 156.814L178.167 168.524L166.687 176.33L152.452 182.759L140.283 185.973L147.63 185.743L158.881 183.218L168.983 179.544L177.019 175.641L192.402 165.539L204.57 154.059L210.77 146.253L215.591 138.676L222.709 122.375L226.152 106.074V87.2466L224.775 78.0628L222.249 68.4197L218.805 59.2359L214.443 50.5112L204.57 36.0466L191.713 22.9596L176.56 12.3982L162.784 5.96951L154.978 3.44395L143.039 0.918386L134.314 0H123.982L106.303 2.29596Z\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" fill=\"#0E121C\"/>\n</svg>\n",white:"<svg width=\"227\" height=\"205\" viewBox=\"0 0 227 205\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0 84.9507L4.59193 86.3283L8.95426 89.0834L14.235 96.4305L56.7103 202.734L88.165 136.151L117.094 204.111L118.013 204.8L119.62 204.111L150.845 140.283L160.947 146.483L167.605 148.319H172.197L176.33 147.171L180.004 144.416L181.381 141.891L180.922 136.61L177.248 134.314L173.804 135.232L172.197 136.839L170.59 140.972L166.228 143.957L158.881 142.579L151.763 137.758L161.636 118.472L175.412 94.3641L180.233 88.8538L184.136 86.3283L188.269 85.4099V84.7211L153.83 84.9507L159.57 86.5579L163.243 89.5426L165.08 93.9049L165.309 98.2673L163.932 105.614L159.799 116.865L149.926 136.61L140.513 127.885L117.783 102.63L107.451 92.5274L102.17 88.6242L92.757 84.2619L90.0018 83.5731L84.2619 84.0323L81.5067 85.4099L78.522 88.6242L76.6852 93.2161L76.226 99.6448L78.7516 111.813L86.7874 133.396L65.8942 177.248L33.2915 99.8744L33.7507 94.1345L35.5874 90.9202L41.0978 86.7874L48.2152 84.9507H0ZM93.6753 88.3946H94.1345L94.3641 88.165H97.3489L97.5785 88.3946L99.4152 88.8538L103.548 91.3794L104.237 92.0682L105.385 92.757L107.222 94.5937H107.451L115.487 102.63V102.859L123.293 111.354V111.584L126.278 114.798V115.028L127.656 116.405V116.635L129.033 118.013V118.242L135.921 125.819V126.048L138.447 128.574V128.804L139.135 129.263L139.365 129.722L144.875 135.232H145.105L149.008 138.906L147.171 142.579V143.039L146.253 144.416V144.875L145.105 146.942V147.401L144.646 147.86V148.319L144.187 148.778L143.727 149.697V150.156L142.809 151.534V151.993L142.35 152.452L141.661 153.83V154.289L137.987 161.406V161.865L137.528 162.325L134.543 168.294V168.753L129.263 179.085V179.544L127.885 182.3L127.426 182.759L126.967 182.3L125.13 178.626V178.167L123.293 174.723V174.264L121.916 171.738V171.279L120.309 168.294V167.835L118.013 163.243V162.784L115.946 158.881V158.422L115.028 156.814V156.355L112.961 152.452V151.993L109.977 146.023V145.564L108.37 142.579V142.12L106.762 139.135V138.676L104.926 135.232V134.773L103.778 132.707V132.248L101.022 126.967V126.508L99.8744 124.441V123.982L97.5785 119.39V118.931L97.1193 118.242V117.783L96.6601 117.094V116.635L95.2825 113.65L94.8233 111.813L93.9049 109.977V109.517L93.4457 108.599V107.91L92.5274 105.614V104.926L92.2978 104.696V104.007L91.8386 103.089V102.4L91.609 102.17V101.252L91.3794 101.022V100.104L91.1498 99.8744V98.9561L90.9202 98.7265V96.4305L90.6906 96.2009V93.9049L90.9202 93.6753L91.1498 91.609L92.2978 89.5426L93.6753 88.3946ZM64.7462 35.1283V36.2762L64.5166 36.5058V37.4242L64.287 37.6538V38.5722L64.0574 38.8018V39.4906L63.8278 39.7202V40.1794L63.5982 40.409V40.8682L63.3686 41.0978V41.557L62.9094 42.2457V42.7049L62.4502 43.3937V43.8529L62.2206 44.0825V44.3121L61.991 44.5417L61.7614 45.2305L61.3022 45.6897V45.9193L61.0726 46.1489V46.3785L60.6135 46.8377V47.0673L59.6951 47.9857V48.2152L57.8583 50.052H57.6287L56.7103 50.9704H56.4807L56.0215 51.4296H55.7919L55.5623 51.6592H55.3327L55.1031 51.8888H54.8735L54.6439 52.1184H54.4143L53.2664 52.8072H52.8072L52.5776 53.0368H52.1184L51.8888 53.2664H51.4296L51.2 53.496H50.5112L50.2816 53.7256H49.5928L49.3632 53.9552H48.6744L48.4448 54.1848H47.0673H47.9856L48.2152 54.4144H49.1336L49.3632 54.6439H50.052L50.2816 54.8735H50.9704L51.2 55.1031H51.8888L52.5776 55.5623H53.0368L53.2664 55.7919H53.7256L53.9552 56.0215H54.1848L54.4143 56.2511H54.6439L54.8735 56.4807L55.5623 56.7103L56.0215 57.1695H56.2511L56.7103 57.6287H56.9399L57.8583 58.5471H58.0879L59.6951 60.1543V60.3839L60.3839 61.0726V61.3022L60.843 61.7614V61.991L61.7614 63.139V63.3686L61.991 63.5982V64.0574L62.2206 64.287V64.5166L62.6798 65.2054V65.6646L63.139 66.3534V66.8126L63.3686 67.0422V67.5014L63.5982 67.7309V68.4197L63.8278 68.6493V69.3381L64.0574 69.5677V70.2565L64.287 70.4861V71.4045L64.5166 71.6341V72.5525L64.7462 72.7821V73.93V73.0117L64.9758 72.7821V71.6341L65.2054 71.4045V70.4861L65.435 70.2565V69.5677L65.6646 69.3381V68.6493L65.8942 68.4197V67.9605L66.1238 67.7309V67.0422L66.583 66.3534V65.8942L67.0422 65.2054V64.7462L67.2717 64.5166V64.287L67.5013 64.0574V63.8278L67.7309 63.5982V63.3686L67.9605 63.139L68.1901 62.4502L68.6493 61.991V61.7614L69.1085 61.3022V61.0726L70.0269 60.1543V59.9247L71.6341 58.3175H71.8637L72.5525 57.6287H72.7821L73.93 56.7103H74.1596L74.3892 56.4807H74.6188L75.7668 55.7919H76.226L76.4556 55.5623H76.6852L76.9148 55.3327H77.374L77.6036 55.1031H78.2924L78.522 54.8735H79.2108L79.4404 54.6439H80.1291L80.3587 54.4144H81.2771L81.5067 54.1848H82.4251H81.2771L81.0475 53.9552H80.1291L79.8996 53.7256H79.2108L78.9812 53.496H78.2924L78.0628 53.2664H77.6036L77.374 53.0368H76.9148L76.226 52.5776H75.7668L75.5372 52.348H75.3076L75.078 52.1184H74.8484L74.6188 51.8888H74.3892L74.1596 51.6592L73.4708 51.4296L73.0117 50.9704H72.7821L72.0933 50.2816H71.8637L69.5677 47.9857V47.7561L68.8789 47.0673V46.8377L68.4197 46.3785V46.1489L68.1901 45.9193L67.9605 45.2305L67.5013 44.7713V44.5417L67.2717 44.3121V43.8529L66.583 42.7049V42.2457L66.3534 42.0161V41.557L66.1238 41.3274V40.8682L65.8942 40.6386V40.1794L65.6646 39.9498V39.261L65.435 39.0314V38.3426L65.2054 38.113V37.4242L64.9758 37.1946V36.0466L64.7462 35.817V35.1283ZM96.2009 16.3013V17.2197L95.9713 17.4493V18.1381L95.7417 18.3677V18.8269L95.5121 19.0565V19.5157L95.2825 19.7453V20.2045L95.0529 20.4341V20.6637L94.8233 20.8933V21.1229L94.5937 21.3525L94.3641 22.0413L93.9049 22.5005V22.73L93.4457 23.1892V23.4188L92.5274 24.3372H92.2978L91.609 25.026H91.3794L90.9202 25.4852H90.6906L90.461 25.7148H90.0018L89.7722 25.9444H89.5426L89.313 26.174H88.8538L88.6242 26.4036H87.7058L87.4762 26.6332H87.017H87.7058L87.9354 26.8628H88.6242L88.8538 27.0924H89.313L89.5426 27.322H89.7722L90.0018 27.5516H90.2314L90.461 27.7812L91.1498 28.0108L91.609 28.47H91.8386L94.1345 30.7659V30.9955L94.3641 31.2251V31.4547L94.5937 31.6843V31.9139L95.2825 33.0619V33.5211L95.5121 33.7507V34.2099L95.7417 34.4395V35.1283L95.9713 35.3578V36.0466L96.2009 36.2762V37.1946V36.965L96.4305 36.7354V35.817L96.6601 35.5874V34.8987L96.8897 34.6691V34.2099L97.1193 33.9803V33.5211L97.3489 33.2915V32.8323L97.5785 32.6027V32.3731L97.8081 32.1435L98.0377 31.4547L98.9561 30.3067V30.0771L100.334 28.6996H100.563L101.252 28.0108H101.482L102.63 27.322H103.089L103.318 27.0924H103.778L104.007 26.8628H104.466L104.696 26.6332H105.614H104.926L104.696 26.4036H104.007L103.778 26.174H103.318L103.089 25.9444H102.63L102.4 25.7148H102.17L101.941 25.4852L101.252 25.2556L100.334 24.3372H100.104L99.6448 23.878V23.6484L98.4969 22.5005V22.2709L98.0377 21.8117V21.5821L97.3489 20.4341V19.9749L97.1193 19.7453V19.2861L96.8897 19.0565V18.5973L96.6601 18.3677V17.9085L96.4305 17.6789V16.9901L96.2009 16.7605V16.3013ZM42.9345 1.60717V2.52556L42.7049 2.75516V3.44395L42.4753 3.67354V4.36233L42.2457 4.59193V5.05112L42.0161 5.28072V5.73991L41.7865 5.96951V6.4287L41.5569 6.6583L41.3274 7.34709L40.8682 7.80628L40.6386 8.49507L39.7202 9.41345V9.64305L38.3426 11.0206H38.113L36.965 11.939H36.7354L35.5874 12.6278H35.1283L34.8987 12.8574H34.4395L34.2099 13.087H33.5211L33.2915 13.3166L33.5211 13.5462H34.2099L34.8987 14.0054H35.3578L35.5874 14.235H36.0466L36.2762 14.4646L36.965 14.6942L37.4242 15.1534H37.6538L38.113 15.6126H38.3426L39.9498 17.2197V17.4493L40.6386 18.1381V18.3677L40.8682 18.5973V18.8269L41.0978 19.0565V19.2861L41.7865 20.4341V20.8933L42.0161 21.1229V21.5821L42.2457 21.8117V22.2709L42.4753 22.5005V23.1892L42.7049 23.4188V24.3372L42.9345 24.5668L43.1641 24.3372V23.4188L43.3937 23.1892V22.5005L43.6233 22.2709V21.8117L43.8529 21.5821V21.1229L44.0825 20.8933V20.4341L44.3121 20.2045V19.9749L44.5417 19.7453V19.5157L44.7713 19.2861L45.0009 18.5973L45.4601 18.1381V17.9085L45.9193 17.4493V17.2197L47.5265 15.6126H47.7561L48.2152 15.1534L48.904 14.9238L49.3632 14.4646H49.5928L49.8224 14.235H50.2816L50.5112 14.0054H50.9704L51.2 13.7758H51.6592L51.8888 13.5462H52.5776L52.8072 13.3166H53.2664H52.5776L52.348 13.087H51.8888L51.6592 12.8574H50.9704L50.7408 12.6278H50.2816L50.052 12.3982H49.8224L49.5928 12.1686L48.904 11.939L48.4448 11.4798H48.2152L47.7561 11.0206H47.5265L45.6897 9.18386V8.95426L45.2305 8.49507V8.26547L45.0009 8.03587V7.80628L44.7713 7.57668V7.34709L44.0825 6.1991V5.73991L43.6233 5.05112V4.36233L43.3937 4.13274V3.67354L43.1641 3.44395V2.52556L42.9345 2.29596V1.60717ZM106.303 2.29596L90.2314 6.88789L75.5372 13.3166L64.5166 19.7453L50.9704 30.0771L39.7202 41.3274L31.4547 52.348L23.6484 67.2718L20.4341 78.0628L21.5821 78.2924L25.4852 67.0422L31.9139 54.6439L39.261 44.3121L47.7561 35.1283L56.4807 27.5516L68.6493 19.0565L78.2924 13.7758L90.2314 8.72466L103.778 4.82152L113.88 3.21435L127.426 2.75516L137.069 3.67354L149.238 6.4287L157.503 9.41345L167.605 14.4646L177.937 21.5821L188.958 31.9139L196.075 40.6386L202.045 50.052L207.096 60.6135L210.54 70.7157L212.836 81.2771L213.754 89.5426L213.525 104.696L211.458 116.865L206.637 131.1L200.667 142.809L190.335 156.814L178.167 168.524L166.687 176.33L152.452 182.759L140.283 185.973L147.63 185.743L158.881 183.218L168.983 179.544L177.019 175.641L192.402 165.539L204.57 154.059L210.77 146.253L215.591 138.676L222.709 122.375L226.152 106.074V87.2466L224.775 78.0628L222.249 68.4197L218.805 59.2359L214.443 50.5112L204.57 36.0466L191.713 22.9596L176.56 12.3982L162.784 5.96951L154.978 3.44395L143.039 0.918386L134.314 0H123.982L106.303 2.29596Z\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" fill=\"white\"/>\n</svg>\n"};
+function png(svg,w){return new Promise(function(res,rej){var img=new Image();img.onload=function(){var c=document.createElement("canvas");c.width=w;c.height=Math.round(w*205/227);c.getContext("2d").drawImage(img,0,0,c.width,c.height);c.toBlob(function(b){b?res(b):rej(new Error("png"))},"image/png")};img.onerror=rej;img.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svg.replace('width="227" height="205"','width="'+w+'" height="'+Math.round(w*205/227)+'"'))})}
+var JOBS={"svg-ink":function(){return ["W-monogram-ink.svg",Promise.resolve(OFFICIAL.ink)]},"svg-white":function(){return ["W-monogram-white.svg",Promise.resolve(OFFICIAL.white)]}};
+["ink","white"].forEach(function(c){[512,1024,2048].forEach(function(w){JOBS["png-"+c+"-"+w]=function(){return ["W-monogram-"+c+"-"+w+".png",png(OFFICIAL[c],w)]}})});
+var dlP=(window.claude&&typeof window.claude.use==="function")?window.claude.use("downloads").catch(function(){return null}):Promise.resolve(null);
+
+$("#dl").addEventListener("click",function(e){var b=e.target.closest("[data-dl]");if(!b)return;var job=JOBS[b.getAttribute("data-dl")]();
+  dlP.then(function(d){if(!d){return job[1].then(function(data){var bl=data instanceof Blob?data:new Blob([data],{type:"image/svg+xml"});var u=URL.createObjectURL(bl);var a=document.createElement("a");a.href=u;a.download=job[0];document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},4000);toast("حُفظ "+job[0])},function(){toast("تعذّر التنزيل")})}return job[1].then(function(data){return d.save({filename:job[0],data:data})}).then(function(r){if(r&&r.status==="saved")toast("حُفظ "+job[0])},function(err){var c=err&&err.code;toast(c==="declined"?"أُلغي الحفظ":c==="rate_limited"?"انتظري لحظة ثم أعيدي المحاولة":"تعذّر الحفظ في هذا العرض")})})});
+
+/* ---------- 03 colour ---------- */
+var CORE=[["#0E121C","الأسود · Ink","neutral/1000 · نص الفاتح، وصفحة الداكن، والـ W على الفاتح"],["#FFFFFF","الأبيض · White","neutral/0 · أسطح الفاتح، ونص الداكن، والـ W على الداكن"],["#BEDAF7","السماوي · Cloud Blue","sky/200 · brand/secondary، لمسة ناعمة في الفاتح، ويقود التفاعل في الداكن"],["#6172B5","البنفسجي · Misty Purple","violet/500 · brand/primary، إجراءات الفاتح"]];
+$("#core").innerHTML=CORE.map(function(c){return '<button type="button" data-copy="'+c[0]+'" aria-label="نسخ '+c[0]+'"><span class="chip" style="background:'+c[0]+';color:'+txtOn(c[0])+';'+(c[0]==="#FFFFFF"?"box-shadow:inset 0 -1px 0 var(--border-subtle)":"")+'"><span>'+c[0]+'</span></span><span class="meta"><b>'+c[1]+'</b>'+c[2]+'</span></button>'}).join("");
+$("#cr-ink").textContent=cr("#0E121C","#FFFFFF").toFixed(2)+":1";
+var RAMPS=[["Violet","البنفسجي",[["50","#EEF0F8"],["100","#DCE0EF"],["200","#B9C1DE"],["300","#96A1CD"],["400","#7587CF"],["500","#6172B5"],["600","#4E5C96"],["700","#3D4877"],["800","#2B3358"],["900","#1A1F3A"]]],
+ ["Sky","السماوي",[["50","#F2F7FE"],["100","#DDEBFC"],["200","#BEDAF7"],["300","#9BC4EE"],["400","#7FAAE3"],["500","#5E93D6"],["600","#4A79B8"],["700","#3A5F94"],["800","#2A4470"],["900","#1B2E4C"]]],
+ ["Neutral","الحيادي",[["0","#FFFFFF"],["50","#FBFBFB"],["100","#F6F7F7"],["200","#E5E6E7"],["300","#D1D2D5"],["400","#A2A4A9"],["500","#86898F"],["600","#6E7179"],["700","#50545C"],["800","#40444D"],["900","#222630"],["950","#181C26"],["1000","#0E121C"]]]];
+$("#ramps").innerHTML=RAMPS.map(function(r){return '<div class="block" style="gap:8px"><div class="ramp-h"><h4>'+r[1]+' <span lang="en">'+r[0]+' ramp</span></h4></div><div class="ramp" style="--n:'+r[2].length+'">'+r[2].map(function(s){return '<button type="button" data-copy="'+s[1]+'" aria-label="'+r[0]+' '+s[0]+' '+s[1]+'" style="background:'+s[1]+';color:'+txtOn(s[1])+'"><b>'+s[0]+'</b><em>'+s[1].slice(1)+'</em></button>'}).join("")+'</div></div>'}).join("")+'<p class="note"><span class="mono">violet/400</span> أُعيد ضبطه من <span class="mono">#7B89C1</span> إلى <span class="mono">#7587CF</span> ليعمل على الأسود (brand/primary في الداكن). السلّم الحيادي مشتق على خط OKLab من الأسود الأساسي إلى الأبيض، للواجهة فقط.</p>';
+var SEM=[["surface/default","#FFFFFF","#0E121C","خلفية الصفحة والبطاقة"],["surface/subtle","#F2F7FE","#181C26","ألواح هادئة، رؤوس الجداول، مسارح الصور"],["surface/elevated","#FFFFFF","#222630","أسطح مرتفعة: قوائم ونوافذ منبثقة"],["surface/inverse","#0E121C","#FFFFFF","كتل معكوسة وتلميحات"],["surface/dark","#0E121C","#0E121C","داكن دائمًا: وسائط وأغلفة"],["text/primary","#0E121C","#FFFFFF","العناوين والمتن"],["text/secondary","#2B3358","#D1D2D5","المقدمات والنص الداعم"],["text/muted","#50545C","#A2A4A9","تعليقات وبيانات وصفية"],["text/accent","#4E5C96","#BEDAF7","Overline، روابط، نص أزرق صغير"],["text/inverse","#FFFFFF","#0E121C","النص على الأسطح المعكوسة وتعبئات الإجراء"],["border/subtle","#BEDAF7","#40444D","فواصل وخطوط"],["border/default","#9BC4EE","#6E7179","إطارات زخرفية فقط"],["border/strong","#0E121C","#86898F","حدود الحقول وخطوط التأكيد"],["focus/ring","#6172B5","#BEDAF7","تركيز لوحة المفاتيح، 2 px"],["brand/primary","#6172B5","#7587CF","تعبئات البراند ونقطة البيانات المميزة"],["brand/secondary","#9BC4EE","#BEDAF7","تعبئات ناعمة؛ ليست نصًا أبدًا"],["action/default","#6172B5","#9BC4EE","الأزرار الأساسية"],["action/hover","#3D4877","#BEDAF7","الزر الأساسي عند المرور"],["action/pressed","#2B3358","#7FAAE3","الزر الأساسي عند الضغط"],["action/disabled","#E5E6E7","#40444D","عناصر معطّلة"],["glow/accent","#9BC4EE","#BEDAF7","مؤثرات التوهج"],["logo/primary","#0E121C","#FFFFFF","علامة W. لا لون براند ولا تدرّج ولا إطار"],["overlay/scrim","#0E121C @56%","#0E121C @56%","خلفية النوافذ الحوارية"]];
+$("#sem").innerHTML=SEM.map(function(s){var a=s[1].slice(0,7),b=s[2].slice(0,7);return '<tr><td class="mono">'+s[0]+'</td><td>'+tok(a,s[1])+'</td><td>'+tok(b,s[2])+'</td><td>'+s[3]+'</td></tr>'}).join("");
+var ST=[["success","#207F4D","#78E8AF","✓","نجاح"],["warning","#966400","#FFCD53","!","تحذير"],["error","#A71A1E","#F78383","✕","خطأ"],["info","#2169C7","#78B7FF","•","معلومة"]];
+$("#status").innerHTML=ST.map(function(s){return '<div class="panel" style="gap:8px"><span class="k" lang="en">status/'+s[0]+'</span><div style="display:flex;gap:6px;flex-wrap:wrap">'+tok(s[1])+tok(s[2])+'</div><span class="badge" style="color:var(--'+({success:"ok",warning:"warn",error:"err",info:"info"})[s[0]]+');justify-self:start">'+s[3]+' '+s[4]+'</span></div>'}).join("");
+var PAIRS=[["text/primary · surface/default","#0E121C","#FFFFFF","#FFFFFF","#0E121C",4.5],["text/secondary · surface/default","#2B3358","#FFFFFF","#D1D2D5","#0E121C",4.5],["text/muted · surface/default","#50545C","#FFFFFF","#A2A4A9","#0E121C",4.5],["text/accent · surface/default","#4E5C96","#FFFFFF","#BEDAF7","#0E121C",4.5],["text/accent · surface/subtle","#4E5C96","#F2F7FE","#BEDAF7","#181C26",4.5],["text/inverse · action/default","#FFFFFF","#6172B5","#0E121C","#9BC4EE",4.5],["border/strong · surface/default","#0E121C","#FFFFFF","#86898F","#0E121C",3],["border/default · surface/default","#9BC4EE","#FFFFFF","#6E7179","#0E121C",3]];
+$("#contrast").innerHTML=PAIRS.map(function(p){var l=cr(p[1],p[2]),d=cr(p[3],p[4]),ok=l>=p[5]&&d>=p[5];return '<tr><td class="mono">'+p[0]+'</td><td class="n mono">'+l.toFixed(2)+'</td><td class="n mono">'+d.toFixed(2)+'</td><td><span class="pill '+(ok?"v-ok":"v-watch")+'">'+(ok?"≥ "+p[5]+":1":"< "+p[5]+":1 — "+(p[5]===3?"decorative":"no body text"))+'</span></td></tr>'}).join("");
+var GR=[["Gradient/Hero/Aurora","linear-gradient(135deg,#0F1220 0%,#1E243F 55%,rgba(97,114,181,.85) 100%)","#0F1220 → #1E243F → #6172B5@0.85","ok","OK on Dark · white ≥ 5.67:1"],["Gradient/Social/High Impact","linear-gradient(135deg,#0F1220,#4A5793 50%,#6172B5)","#0F1220 → #4A5793 → #6172B5","ok","OK on Dark · white ≥ 4.58:1"],["Gradient/Surface/Dark Glow","linear-gradient(135deg,#0F1220,#1E243F)","#0F1220 → #1E243F","ok","OK on Dark · white ≥ 15.22:1"],["Gradient/Hero/Atmospheric","linear-gradient(135deg,#FFFFFF,#EAF2FB 50%,#BEDAF7)","#FFFFFF → #EAF2FB → #BEDAF7","watch","Light only"],["Gradient/Ice","linear-gradient(135deg,#FFFFFF,#DDEBFC 50%,#BEDAF7)","#FFFFFF → #DDEBFC → #BEDAF7","watch","Light only"],["Gradient/Soft Background","linear-gradient(135deg,#FFFFFF,#F2F7FE)","#FFFFFF → #F2F7FE","watch","Light only"],["Gradient/Surface/Light Wash","linear-gradient(135deg,#FFFFFF,#EAF2FB)","#FFFFFF → #EAF2FB","watch","Light only"],["Gradient/Surface/Frost","linear-gradient(135deg,#EAF2FB,rgba(190,218,247,.6))","#EAF2FB → #BEDAF7@0.60","watch","Light only"],["Gradient/Editorial/Soft Field","linear-gradient(135deg,#EAF2FB,#FFFFFF 50%,#EAF2FB)","#EAF2FB → #FFFFFF → #EAF2FB","watch","Light only"],["Gradient/Ambient/Background","linear-gradient(135deg,rgba(234,242,251,.6),rgba(255,255,255,.4))","#EAF2FB@0.60 → #FFFFFF@0.40","watch","Light only"],["Gradient/Image/Overlay Light","linear-gradient(135deg,rgba(255,255,255,.85),rgba(255,255,255,.25))","#FFFFFF@0.85 → #FFFFFF@0.25","watch","Light only"],["Gradient/Dark Surface","linear-gradient(135deg,#1A1D24,#090C14)","#1A1D24 → #090C14","watch","Watch · stop darker than core black"],["Gradient/Depth","linear-gradient(135deg,#090C14,#1A1F3A 50%,#2B3358)","#090C14 → #1A1F3A → #2B3358","clash","Clash · keep off Dark boards"]];
+$("#grads").innerHTML=GR.map(function(g){return '<div class="grad"><div class="g" style="background:'+g[1]+'"></div><div class="m"><b>'+g[0]+'</b><span class="mono" style="font-size:11px">'+g[2]+'</span><span class="pill v-'+g[3]+'" style="justify-self:start">'+g[4]+'</span></div></div>'}).join("")+'<div class="grad" style="place-content:center;padding:16px"><p class="note">12 نمطًا إضافيًا للّمسات والنجوم (Glow، Highlight، Beam، Star/Dimensional، Star/Luminous، Accent/Halo …) بلا تعارض. قيمها <span class="req">[CONTENT REQUIRED]</span>.</p></div>';
+
+/* ---------- 04 type ---------- */
+var TY={
+ "t-ard":["ar-display",[["ar-display-poster",200,236,900],["ar-display-hero",112,150,900],["ar-display-social",96,130,900],["ar-quote-l",88,128,300],["ar-display-l",64,90,900],["ar-heading-h1",56,78,700],["ar-quote-m",56,84,300],["ar-heading-h2",44,62,700],["ar-heading-h3",34,48,700]],"الدليل"],
+ "t-art":["ar-text",[["ar-print-name",48,72,500],["ar-metric",40,52,700],["ar-print-label",32,50,400],["ar-body-xl",28,50,400],["ar-body-l",22,40,400],["ar-label-l",20,30,500],["ar-title-s",20,32,500],["ar-body-m",19,34,400],["ar-body-s",16,28,400],["ar-data",16,26,500],["ar-button",15,24,500],["ar-label",15,24,500],["ar-caption",14,24,400],["ar-overline",13,22,500]],"يبدأ البحث من الناس الذين يستخدمون المنتج، لا من الشاشة."],
+ "t-end":["en-display",[["display-poster",190,202,900],["display-m",150,160,900],["display-hero",104,116,900],["display-social",88,100,900],["quote-l",82,108,300],["display-s",80,92,900],["display-xl",72,80,900],["display-l",56,64,900],["heading-h1",52,60,700],["quote-m",52,68,300],["heading-h2",40,48,700],["heading-editorial",36,44,400],["quote",32,46,300],["heading-h3",30,38,700],["heading-h4",24,32,500]],"Evidence"],
+ "t-ent":["en-text",[["evidence-display",64,72,600],["print-name",44,56,600],["evidence-value",32,40,600],["metric",32,38,600],["print-detail",32,44,400],["print-label",30,40,400],["body-xl",26,40,400],["body-l",20,32,400],["label-l",20,28,600],["title-s",20,28,600],["body-m",17,28,400],["button",15,20,600],["body-s",14,22,400],["data",14,20,500],["label",13,18,600],["caption",12,18,400],["overline",11,16,600]],"Research finds the person. Decisions follow evidence."]};
+Object.keys(TY).forEach(function(id){var g=TY[id],ar=id.indexOf("ar")>-1,disp=id.indexOf("d")===4;
+  var fam=disp?(ar?"var(--f-display-ar)":"var(--f-display)"):(ar?"var(--f-ar)":"var(--f-sans)");
+  $("#"+id).innerHTML=g[1].map(function(s){var sz=s[1],lh=s[2];var num=/metric|evidence|data/.test(s[0]);var txt=num?(ar?"92%":"78.5"):(/overline/.test(s[0])?(ar?"بحث تجربة المستخدم":"UX RESEARCH"):g[2]);var fs=sz>56?"min("+sz+"px,"+(sz/9.5).toFixed(1)+"vw)":sz+"px";
+    return '<div class="spec-row"><div class="spec-meta"><b>'+s[0]+'</b><span>'+sz+' / '+lh+'</span><span>wt '+s[3]+'</span></div><div class="spec-sample" '+(ar?'dir="rtl"':'dir="ltr" lang="en" style="text-align:left"')+'><span style="display:block;font-family:'+(num?(ar?"var(--f-ar)":"var(--f-sans)"):fam)+';font-size:'+fs+';line-height:'+(lh/sz).toFixed(3)+';font-weight:'+s[3]+';'+(/overline/.test(s[0])&&!ar?"letter-spacing:.12em;":"")+'font-variant-numeric:tabular-nums">'+txt+'</span></div></div>'}).join("")});
+
+/* ---------- 05 ---------- */
+var SPC=[4,8,12,16,20,24,32,40,48,64,80,96,120,128,160];
+$("#spacing").innerHTML=SPC.map(function(v){return '<div class="sp-row"><span>space-'+v+'</span><div style="width:'+v+'px"></div></div>'}).join("");
+$("#radii").innerHTML=[["4","xs"],["8",""],["12","sm"],["16",""],["20","md"],["24",""],["32","lg"],["999","full"]].map(function(r){return '<figure><div class="r" style="border-radius:'+r[0]+'px"></div>'+r[0]+(r[1]?' · '+r[1]:'')+'</figure>'}).join("");
+$("#strokes").innerHTML=[["hairline","0.5"],["default","1"],["strong","2"]].map(function(s){return '<div class="sp-row"><span>stroke-'+s[0]+'</span><div style="height:'+s[1]+'px;background:var(--text);width:100%"></div></div>'}).join("");
+$("#iconsizes").innerHTML=[12,16,20,24,32,40,48].map(function(v){return '<figure><div class="box" style="width:'+v+'px;height:'+v+'px'+(v===24?';outline-color:var(--brand);outline-style:solid':'')+'"><svg viewBox="0 0 24 24" style="width:'+(v*0.75)+'px;fill:var(--text)"><use href="#spark"/></svg></div>'+v+'</figure>'}).join("");
+var GRIDS=[["Portfolio / Desktop",12,24,96,8,1440,900,"البورتفوليو بعرض 1440"],["Portfolio / Tablet",8,20,48,8,768,1024,"البورتفوليو بعرض 768"],["Portfolio / Mobile",4,16,20,8,390,844,"البورتفوليو بعرض 390"],["Social / Square",6,24,64,8,1080,1080,"صور السوشال المربعة"],["Social / Portrait",6,24,72,8,1080,1350,"منشور LinkedIn، كاروسيل، إعلان"],["Presentation",12,32,96,8,1920,1080,"البحث والعروض وتكوينات X"],["Document / A4",12,16,56,4,794,1123,"صفحة دراسة الحالة، السيرة"],["Editorial / Case Study",12,32,120,8,1440,900,"تكوينات دراسة الحالة"]];
+$("#grids").innerHTML=GRIDS.map(function(g){var W0=200,H0=Math.round(W0*g[6]/g[5]);if(H0>220){H0=220}var s=W0/g[5];var m=g[3]*s,gu=g[2]*s;return '<div class="gv"><div class="cv" style="width:'+W0+'px;height:'+H0+'px"><div class="cols" style="left:'+m+'px;right:'+m+'px;grid-template-columns:repeat('+g[1]+',1fr);column-gap:'+gu+'px">'+Array(g[1]+1).join("<i></i>")+'</div></div><b class="mono" style="font-size:12px">'+g[0]+'</b><span class="mono" style="font-size:12px;color:var(--text-muted)">'+g[1]+' col · '+g[2]+' gutter · '+g[3]+' margin · '+g[4]+' base · '+g[5]+(g[0].indexOf("Portfolio")===0||g[0].indexOf("Editorial")===0?' wide':' × '+g[6])+'</span><span style="color:var(--text-muted)">'+g[7]+'</span></div>'}).join("");
+
+/* ---------- patterns (SVG) ---------- */
+var NS="http://www.w3.org/2000/svg";
+function harlequin(a,b,op,id){/* a=half diamond width, b=half height; tile 4a x 4b */
+  var dia=function(cx,cy,spark){var p='<path d="M'+cx+' '+(cy-b)+'L'+(cx+a)+' '+cy+'L'+cx+' '+(cy+b)+'L'+(cx-a)+' '+cy+'Z" style="fill:var(--brand)"/>';if(spark){var s=a*0.9;p+='<use href="#spark" x="'+(cx-s/2)+'" y="'+(cy-s/2)+'" width="'+s+'" height="'+s+'" fill="#FFFFFF"/>'}return p};
+  return '<defs><pattern id="'+id+'" width="'+(4*a)+'" height="'+(4*b)+'" patternUnits="userSpaceOnUse">'+dia(a,b,1)+dia(3*a,b,0)+dia(a,3*b,0)+dia(3*a,3*b,1)+'</pattern></defs><rect width="100%" height="100%" fill="url(#'+id+')" opacity="'+op+'"/>'}
+var H=[["Standard",24,32,1,"Medium = Standard · Expressive 100%"],["Dense",12,16,.48,"Small = Dense · Standard 48%"],["Large",48,64,.16,"Large = Standard @200% · Subtle 16%"]];
+$("#harl").innerHTML=H.map(function(h,i){return '<figure><div class="tile" style="background:var(--surface)"><svg aria-hidden="true">'+harlequin(h[1],h[2],h[3],"hq"+i)+'</svg></div><figcaption><b lang="en">Harlequin · '+h[0]+'</b><span lang="en" dir="ltr" style="text-align:right">'+h[4]+'</span></figcaption></figure>'}).join("");
+(function(){var s="";for(var r=0;r<5;r++){var y=24+r*40;for(var i=0;i<60;i++){var x=12+i*12;if(i%8===4){s+='<use href="#spark" x="'+(x-7)+'" y="'+(y-7)+'" width="14" height="14" fill="#BEDAF7"/>'}else s+='<circle cx="'+x+'" cy="'+y+'" r="1.6" fill="#BEDAF7" opacity="'+(r===2?0.9:0.35)+'"/>'}}$("#sdl").innerHTML=s;$("#sdl").setAttribute("viewBox","0 0 360 220");$("#sdl").setAttribute("preserveAspectRatio","xMidYMid slice")})();
+(function(){var s="";for(var r=0;r<9;r++)for(var c=0;c<14;c++){var t=c/13;var sz=16*(1-t)+2;var op=(0.95*(1-t)+0.08).toFixed(2);s+='<use href="#spark" x="'+(14+c*26-sz/2)+'" y="'+(14+r*24-sz/2)+'" width="'+sz+'" height="'+sz+'" fill="#BEDAF7" opacity="'+op+'"/>'}$("#half").innerHTML=s;$("#half").setAttribute("viewBox","0 0 360 220");$("#half").setAttribute("preserveAspectRatio","xMidYMid slice")})();
+$("#motifs").innerHTML=[
+ ["Star · النجمة",'<use href="#spark" x="150" y="50" width="60" height="60" fill="#FFFFFF"/><use href="#spark" x="226" y="38" width="18" height="18" fill="#BEDAF7"/><use href="#spark" x="118" y="104" width="12" height="12" fill="#BEDAF7"/>'],
+ ["Light & depth · الضوء والعمق",'<defs><radialGradient id="lg1"><stop offset="0" stop-color="#8E9CCB" stop-opacity=".55"/><stop offset=".55" stop-color="#6172B5" stop-opacity=".25"/><stop offset="1" stop-color="#0F1220" stop-opacity="0"/></radialGradient></defs><rect width="360" height="160" fill="url(#g-aurora)"/><ellipse cx="250" cy="40" rx="140" ry="120" fill="url(#lg1)"/>'],
+ ["Pattern · النمط",harlequin(10,13,.48,"mt")],
+ ["Spark · الشرارة",'<use href="#spark" x="160" y="58" width="40" height="40" fill="#FFFFFF"/><use href="#spark" x="206" y="46" width="20" height="20" fill="#FFFFFF" opacity=".8"/><use href="#spark" x="140" y="96" width="14" height="14" fill="#FFFFFF" opacity=".6"/>']
+].map(function(m){return '<figure style="margin:0;display:grid;gap:8px"><div class="motif"><svg viewBox="0 0 360 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+m[1]+'</svg></div><figcaption style="font-size:13px" lang="en">'+m[0]+'</figcaption></figure>'}).join("");
+$("#density").innerHTML=[["0 Functional",0],["1 Subtle",.16],["2 Standard",.48],["3 Expressive",1],["4 Hero",1]].map(function(d,i){return '<figure><div class="tile"><svg viewBox="0 0 120 150" preserveAspectRatio="xMidYMid slice" aria-hidden="true">'+(i===4?'<rect width="120" height="150" fill="url(#g-aurora)"/>':'')+harlequin(8,10.5,d[1],"dn"+i)+(i>=3?'<circle cx="90" cy="30" r="40" fill="#BEDAF7" opacity="'+(i===3?.12:.2)+'"/>':'')+'</svg></div><span class="mono" style="font-size:11px">'+d[0]+'</span></figure>'}).join("");
+
+/* ---------- 07 illus ---------- */
+$("#illus").innerHTML=[["illustration/canvas","#FFFFFF","#0E121C","الخلفية، فراغات النجوم، تعبئة الملاحظات والبطاقات"],["illustration/field","#DCE0EF","#3D4877","المداخل والجدران ولوحات الرسم والغرف"],["illustration/fill","#BEDAF7","#4E5C96","الناس والملاحظات وبلاطات الوكيل وكتل الوسائط"],["illustration/line","#3D4877","#DDEBFC","الإطارات والخيوط وأسطر النص والنقاط"],["illustration/accent","#6172B5","#9BC4EE","قوس الموجة، مقبض العدسة، النجوم الداعمة"],["illustration/highlight","#5E93D6","#FFFFFF","نجمة الدليل الأساسية والإجراء المحسوم"]].map(function(r){return '<tr><td class="mono">'+r[0]+'</td><td>'+tok(r[1])+'</td><td>'+tok(r[2])+'</td><td>'+r[3]+'</td></tr>'}).join("");
+
+/* ---------- 08 imagery ---------- */
+function screen(){return '<div style="background:#FFFFFF;color:#0E121C;border-radius:8px;padding:14px;display:grid;gap:6px;font-family:var(--f-sans);text-align:left;direction:ltr;width:100%"><span style="font:600 9px/12px var(--f-sans);letter-spacing:.1em;color:#4E5C96">STEP 2 / WHY WE ASK</span><b style="font-size:14px;line-height:1.3">Intent before effort.</b><span style="font-size:11px;line-height:1.4;color:#50545C">A clearer reason before the request.</span><span style="justify-self:start;background:#6172B5;color:#fff;font-size:10px;padding:4px 8px;border-radius:6px">Continue</span></div>'}
+$("#treat").innerHTML=[["Natural","أساسية · الشاشة هي الدليل",'<div style="padding:18px;background:var(--surface-subtle)">'+screen()+'</div>'],["Framed","أساسية · الدليل نفسه بقص أضيق",'<div style="padding:18px;background:var(--surface-subtle)"><div style="padding:10px;border-radius:12px;background:var(--surface-elevated);box-shadow:var(--shadow-subtle)">'+screen()+'</div></div>'],["Muted","ثانوية · مادة عملية خلف الدليل الأساسي",'<div style="padding:18px;background:var(--surface-subtle);opacity:.55;filter:saturate(.4)">'+screen()+'</div>'],["Blue Tint","خاصة · للمقارنة فقط",'<div style="padding:18px;background:#BEDAF7;position:relative"><div style="mix-blend-mode:multiply">'+screen()+'</div></div>'],["Dark Overlay","خاصة · النص على الطرف الداكن فقط",'<div style="padding:18px;background:var(--surface-subtle);position:relative">'+screen()+'<div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(14,18,28,.85),rgba(14,18,28,0) 70%);display:flex;align-items:flex-end;padding:12px;color:#fff;font:600 12px/1.4 var(--f-sans);direction:ltr">The screen is the evidence.</div></div>'],["Portrait","سياقية · صور حقيقية بموافقة فقط",'<div style="padding:18px;background:var(--surface-subtle);display:grid;place-items:center;min-height:142px"><div style="width:96px;height:96px;border-radius:50%;border:1px dashed var(--border-strong);display:grid;place-items:center;font:500 10px/1.3 var(--f-mono);color:var(--text-muted);text-align:center">PORTRAIT<br>slot</div></div>']].map(function(t){return '<figure style="margin:0;display:grid;gap:8px"><div style="border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border-subtle)">'+t[2]+'</div><figcaption style="font-size:13px;line-height:1.5"><b lang="en">'+t[0]+'</b> <span class="sample">SAMPLE</span><br><span style="color:var(--text-muted)">'+t[1]+'</span></figcaption></figure>'}).join("");
+
+/* ---------- 10 / 11 lists ---------- */
+$("#iconcats").innerHTML=["Actions","Navigation","Research","Data","Files","Communication","People","Time","Devices","AI & Tools","Editing"].map(function(c){return '<span class="pill">'+c+'</span>'}).join("")+'<span class="req">+1 [CONTENT REQUIRED]</span>';
+$("#families").innerHTML="Button · Icon Button · Text Link · Navigation · Tabs · Tag · Chip · Badge · Project Card · Article Card · Metric Card · Insight Card · Quote Card · Accordion · Input · Textarea · Dropdown · Tooltip · Pagination · Footer · Social Links".split(" · ").map(function(c){return '<span class="pill">'+c+'</span>'}).join("");
+
+/* ---------- 12 editorial ---------- */
+function ed(inner){return '<div style="aspect-ratio:1200/760;max-width:100%;border-radius:var(--r-sm);border:1px solid var(--border-subtle);background:var(--surface);padding:7%;display:grid;align-content:center;gap:8px;overflow:hidden;font-family:var(--f-sans);direction:ltr;text-align:left" lang="en">'+inner+'</div>'}
+var OV='<span style="font:600 9px/12px var(--f-sans);letter-spacing:.12em;color:var(--text-accent)">SECTION</span>';
+$("#editorial-layouts").innerHTML=[["Hero","افتتاح دراسة الحالة: Eyebrow وعنوان وملخص سطر واحد وسطر للدور والمدة. واحد لكل صفحة.",ed('<span style="font:600 9px/12px var(--f-sans);letter-spacing:.12em;color:var(--text-accent)">CASE STUDY · 2026</span><b style="font-family:var(--f-display);font-size:20px;line-height:1.15">Clinic intake redesign</b><span style="font-size:11px;color:var(--text-muted)">Role · Timeline <span class="req" style="font-size:9px">[CONTENT REQUIRED]</span></span>')],
+ ["Narrative","أقسام سردية: السياق، والتحدي، والمنهج. فكرة واحدة لكل قسم.",ed(OV+'<b style="font-size:16px">Section title</b><span style="font-size:11px;color:var(--text-2)">Supporting copy for this section.</span>')],
+ ["Media","شاشة أو مخطط أو صورة مع تعليقها. استبدلي العنصر المؤقت بالأداة الحقيقية.",ed(OV+'<div style="height:60px;border-radius:6px;background:var(--surface-subtle);border:1px dashed var(--border)"></div><span style="font-size:10px;color:var(--text-muted)">Caption · source</span>')],
+ ["Metrics","حتى ثلاث نتائج، لكلٍّ منهجها في التعليق. الأرقام SAMPLE حتى يُذكر مصدرها.",ed(OV+'<div style="display:flex;gap:14px"><span><b style="font-size:22px">+24%</b><br><span style="font-size:9px;color:var(--text-muted)">Form completion · SAMPLE</span></span><span><b style="font-size:22px">−38%</b><br><span style="font-size:9px;color:var(--text-muted)">Time on task · SAMPLE</span></span><span><b style="font-size:22px">78.5</b><br><span style="font-size:9px;color:var(--text-muted)">SUS score · SAMPLE</span></span></div>')],
+ ["Quote","اقتباس مشارك واحد، يُنسب بالدور والجلسة، لا بالاسم.",ed('<q style="font-family:var(--f-display);font-size:16px;line-height:1.35">I knew where to go the moment I read it.</q><span style="font-size:10px;color:var(--text-muted)">Participant 04 · usability session · SAMPLE</span>')],
+ ["Theme","Auto يتبع وضع الصفحة؛ Light و Dark يثبّتان القسم. نص العربية في خصائص AR فقط.",'<div style="aspect-ratio:1200/760;max-width:100%;border-radius:var(--r-sm);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;border:1px solid var(--border-subtle)"><div style="background:#FFFFFF;color:#0E121C;display:grid;place-items:center;font:600 12px var(--f-sans)">Light</div><div style="background:#0E121C;color:#FFFFFF;display:grid;place-items:center;font:600 12px var(--f-sans)">Dark</div></div>']].map(function(l){return '<figure style="margin:0;display:grid;gap:8px">'+l[2]+'<figcaption style="font-size:13px;line-height:1.6"><b lang="en">'+l[0]+'</b><br><span style="color:var(--text-muted)">'+l[1]+'</span></figcaption></figure>'}).join("");
+
+/* ---------- scaled frames ---------- */
+function frame(w,h,html,bg,label){return '<figure><div class="fbox" data-w="'+w+'" data-h="'+h+'" style="aspect-ratio:'+w+'/'+h+'"><div class="fr" style="width:'+w+'px;height:'+h+'px;background:'+bg+'">'+html+'</div></div><figcaption>'+label+'</figcaption></figure>'}
+function fit(){$$(".fbox").forEach(function(b){var w=+b.getAttribute("data-w");var s=b.clientWidth/w;var f=b.firstElementChild;f.style.transform="scale("+s+")"})}
+var stars='<svg viewBox="0 0 24 24" style="position:absolute;width:120px;right:150px;top:170px;fill:#FFFFFF"><use href="#spark"/></svg><svg viewBox="0 0 24 24" style="position:absolute;width:44px;right:96px;top:120px;fill:#BEDAF7"><use href="#spark"/></svg>';
+var li='<div style="position:absolute;inset:96px;display:flex;flex-direction:column;color:#FFFFFF;direction:ltr;text-align:left">'+
+  '<span style="font:600 30px/40px var(--f-sans);letter-spacing:.08em;text-transform:uppercase;color:#BEDAF7">UX research</span>'+
+  '<span style="margin-top:auto;font:900 88px/100px var(--f-display)">Research finds the person. Decisions follow evidence.</span>'+
+  '<span style="margin-top:40px;font:400 51px/72px var(--f-sans);color:#D1D2D5">Findings carry their source.</span>'+
+  '<span style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;font:500 30px/40px var(--f-sans);color:#D1D2D5"><span>Wejdan Almalki · UX &amp; HCI</span>'+W(64,"color:#FFFFFF")+'</span></div>';
+var liAR='<div style="position:absolute;inset:96px;display:flex;flex-direction:column;color:#0E121C;direction:rtl;text-align:right">'+
+  '<span style="font:600 32px/50px var(--f-ar);color:#4E5C96">بحث تجربة المستخدم</span>'+
+  '<span style="margin-top:auto;font:900 96px/130px var(--f-display-ar)">البحث يجد الإنسان، والقرار يتبع الدليل.</span>'+
+  '<span style="margin-top:32px;font:400 52px/88px var(--f-ar);color:#2B3358">لكل نتيجة مصدرها.</span>'+
+  '<span style="margin-top:auto;display:flex;align-items:center;justify-content:space-between;font:500 32px/48px var(--f-ar);color:#50545C"><span>وجدان المالكي · تجربة المستخدم</span>'+W(64,"color:#0E121C")+'</span></div>';
+var x='<div style="position:absolute;inset:96px;display:grid;grid-template-columns:1fr auto;gap:64px;color:#FFFFFF;direction:ltr;text-align:left">'+
+  '<div style="display:flex;flex-direction:column"><span style="font:600 30px/40px var(--f-sans);letter-spacing:.08em;text-transform:uppercase;color:#BEDAF7">Design principle</span><span style="margin-top:auto;font:900 104px/116px var(--f-display)">Evidence, not opinion.</span><span style="margin-top:auto;font:500 30px/40px var(--f-sans);color:#D1D2D5">@wejdan404ui · UX &amp; HCI</span></div>'+
+  '<div style="display:flex;align-items:flex-end">'+W(64,"color:#FFFFFF")+'</div></div>';
+$("#social-shelf").innerHTML=frame(1200,1500,'<div style="position:absolute;inset:0;background:linear-gradient(135deg,#0F1220 0%,#1E243F 55%,rgba(97,114,181,.85) 100%)"></div>'+stars+li,"#0F1220","LinkedIn · 1200 × 1500 · Gradient/Hero/Aurora · Insight · <span class='sample'>DEMO</span>")+
+  frame(1200,1500,'<div style="position:absolute;inset:0;background:linear-gradient(135deg,#FFFFFF,#EAF2FB 50%,#BEDAF7)"></div>'+liAR,"#FFFFFF","LinkedIn · AR · Gradient/Hero/Atmospheric · <span class='sample'>DEMO</span>")+
+  frame(1600,900,'<div style="position:absolute;inset:0;background:linear-gradient(135deg,#0F1220,#4A5793 50%,#6172B5)"></div>'+x,"#0F1220","X · 1600 × 900 · Gradient/Social/High Impact · Quote · <span class='sample'>DEMO</span>");
+
+/* business card 1050x600 trim */
+var cardFront=frame(1050,600,'<div style="position:absolute;inset:0;display:grid;place-items:center">'+W(256,"color:#FFFFFF")+'</div>',"#0E121C","الوجه · Brand Dark · W ‏256 في المنتصف، ولا شيء غيرها");
+var cardBack=frame(1050,600,'<div style="position:absolute;inset:75px;display:flex;flex-direction:column;justify-content:space-between;direction:ltr;text-align:left;color:#0E121C"><div><div style="font:600 44px/56px var(--f-sans)">Wejdan Almalki</div><div style="font:400 30px/40px var(--f-sans);color:#50545C">UX &amp; HCI</div></div><div style="font:400 32px/44px var(--f-sans)"><div>wejdan4458@gmail.com</div><div style="color:#50545C">LinkedIn · [CONTENT REQUIRED]</div></div></div><div style="position:absolute;right:75px;top:75px">'+W(64,"color:#0E121C")+'</div>',"#FFFFFF","الظهر · EN · Brand Light · الاسم والدور والبريد و LinkedIn");
+var cardBackAR=frame(1050,600,'<div style="position:absolute;inset:75px;display:flex;flex-direction:column;justify-content:space-between;color:#0E121C"><div style="direction:rtl;text-align:right"><div style="font:500 48px/72px var(--f-ar)">وجدان المالكي</div><div style="font:400 32px/50px var(--f-ar);color:#50545C">تجربة المستخدم</div></div><div style="font:400 32px/44px var(--f-sans);direction:ltr;text-align:right"><div>wejdan4458@gmail.com</div><div style="color:#50545C">LinkedIn · [CONTENT REQUIRED]</div></div></div><div style="position:absolute;left:75px;top:75px">'+W(64,"color:#0E121C")+'</div>',"#FFFFFF","الظهر · AR · البريد والرابط يبقيان لاتينيين ومن اليسار لليمين");
+$("#cards").innerHTML=cardFront+cardBack+cardBackAR;
+
+/* deck */
+var DK=[["Cover",'<div style="position:absolute;inset:0;background:linear-gradient(135deg,#0F1220 0%,#1E243F 55%,rgba(97,114,181,.85) 100%)"></div><div style="position:absolute;inset:96px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;direction:ltr;text-align:left">'+W(96,"color:#fff")+'<span style="font:900 120px/1.1 var(--f-display)">Human insight.<br>Precise systems.</span></div>',"#0F1220"],
+ ["Section",'<div style="position:absolute;inset:96px;display:flex;align-items:center;color:#0E121C;direction:ltr"><span style="font:900 150px/1.05 var(--f-display)">Evidence,<br>not opinion</span></div>',"#F2F7FE"],
+ ["Media",'<div style="position:absolute;inset:96px;display:grid;grid-template-columns:2fr 1fr;gap:64px"><div style="background:#DCE0EF;border-radius:20px"></div><div style="display:flex;flex-direction:column;justify-content:flex-end;font:400 32px/1.4 var(--f-sans);color:#50545C;direction:ltr">Caption · source</div></div>',"#FFFFFF"],
+ ["Metric",'<div style="position:absolute;inset:96px;display:flex;flex-direction:column;justify-content:center;color:#0E121C;direction:ltr;text-align:left"><span style="font:600 220px/1 var(--f-sans)">00.0</span><span style="font:400 40px/1.4 var(--f-sans);color:#50545C;margin-top:24px">One figure, its unit in the title, the source in the body · SAMPLE</span></div>',"#FFFFFF"],
+ ["Content",'<div style="position:absolute;inset:96px;display:grid;grid-template-columns:1fr 1fr;gap:96px;direction:ltr;text-align:left;color:#0E121C"><span style="font:700 72px/1.15 var(--f-display)">Research-led, human-centred design practice</span><span style="font:400 36px/1.6 var(--f-sans);color:#2B3358">One message per slide. Choose the layout by the job of the slide.</span></div>',"#FFFFFF"],
+ ["Quote",'<div style="position:absolute;inset:96px;display:flex;align-items:center;color:#fff;direction:ltr;text-align:left"><span style="font:300 96px/1.3 var(--f-display)">“Defending the human inside the product.”</span></div>',"#0E121C"],
+ ["Closing",'<div style="position:absolute;inset:96px;display:flex;flex-direction:column;justify-content:space-between;color:#0E121C;direction:ltr;text-align:left"><span style="font:900 150px/1 var(--f-display)">Thank you.</span><span style="display:flex;justify-content:space-between;align-items:center;font:500 36px var(--f-sans)">Wejdan Almalki'+W(96,"color:#0E121C")+'</span></div>',"#FFFFFF"]];
+$("#deck").innerHTML=DK.map(function(d){return frame(1920,1080,d[1],d[2],'<b lang="en">'+d[0]+'</b>')}).join("");
+fit();window.addEventListener("resize",fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+
+/* mockups */
+$("#mockups").innerHTML=[["Phone · Arabic feed","منشور LinkedIn عربي في خلاصة الجوال","Social/LinkedIn/Post"],["Phone · LinkedIn feed","منشور LinkedIn إنجليزي في الخلاصة","Social/LinkedIn/Post"],["Browser · X post","منشور X على الخط الزمني","Social/X/Post"],["Phone · carousel swipe","صفحات كاروسيل عربية بالسحب","Social/Carousel/Slide"],["Browser · portfolio desktop","الصفحة الرئيسية بعرض سطح المكتب","Portfolio/Home/Landing"],["Phone · portfolio mobile","الصفحة الرئيسية بعرض الجوال","Portfolio/Home/Landing"],["Browser · media kit","بطاقة الملف الشخصي على صفحة ويب","Media/Profile Card"],["Print · business cards","الوجه والظهر العربي على سطح فاتح","Card/Print"],["Print · business card, dark","الأوجه والظهور بـ Brand Dark","Card/Print"],["Print · CV","الصفحة الأولى بالإنجليزية والعربية","CV"],["Laptop · presentation","شريحة بحجم العمل","Presentation/Slide"],["Email client · signature","التوقيع تحت رسالة","Docs/EmailSignature"],["Browser · case study","صفحة دراسة حالة بحثية","CaseStudy/Hero and sections"]].map(function(m){return '<tr><td lang="en">'+m[0]+'</td><td>'+m[1]+'</td><td class="mono">'+m[2]+'</td></tr>'}).join("");
+
+/* voice lines */
+$("#lines-ar").innerHTML=["الناس لا يقرؤون التصميم، بل يستخدمونه.","الرقم يقول كم، والمقابلة تقول لماذا.","ثمانية مشاركين يكفون لكشف المشكلة، لا لإثباتها.","الوضوح قرار، لا مصادفة.","التصميم الذي يحتاج إلى شرح لم ينجح بعد.","التسمية أهم من الترتيب.","عند الخطوة الثالثة يغادر الناس.","حقول أقل، إكمال أعلى.","سهولة الوصول ليست إضافة في النهاية."].map(function(l){return '<p dir="rtl">'+l+'</p>'}).join("");
+$("#lines-en").innerHTML=["I design from evidence, not instinct.","People do not read a design — they use it.","The question comes before the screen.","Clarity is a decision, not luck.","A design that needs explaining has already failed.","One accurate observation can redirect a whole product.","I do not ask what people want — I watch what they do.","Numbers say how many. Interviews say why.","Eight participants are enough to find the problem, not to prove it.","Hesitation is data. Do not design past it.","The label outranks the layout.","Step three is where people leave.","Fewer fields, higher completion.","Accessibility is not a final pass.","Signal before noise."].map(function(l){return '<p dir="ltr" style="text-align:left">'+l+'</p>'}).join("");
+
+/* research */
+$("#research-stages").innerHTML=[["Plan the study","خطّطي الدراسة"],["Collect evidence","اجمعي الأدلة"],["Find the patterns","اعثري على الأنماط"],["Represent people and systems","مثّلي الناس والأنظمة"],["Evaluate the design","قيّمي التصميم"],["Decide and share","قرّري وشاركي"]].map(function(r,i){return '<div class="mini-card"><span class="mono" style="font-size:12px;color:var(--text-muted)">0'+(i+1)+'</span><b lang="en">'+r[0]+'</b><p>'+r[1]+'</p></div>'}).join("");
+
+/* starters */
+$("#starters").innerHTML=[["01 Sign in","Sign in with visible labels, single sign-on and passkey · wrong credentials and signing in","Form field, Button, Text Link, Checkbox · Alert banner, Form field (Focus), Button (Disabled)"],["02 Onboarding","Step-by-step onboarding, one question per screen · notification choices during setup","Progress, Option card, Button · List row with Switch"],["03 Home","Overview with counts that match the lists · first run and loading","List row, Badge, Top bar, Tabbar · State panel (Empty), Loading"],["04 List","Search, status filters and sort · table with row action and load more · no results and filters in a bottom sheet","Input, Chip, Dropdown · Badge, Icon action, Button · State panel (No results), Sheet header, Checkbox"],["05 Detail","Product page with gallery, choices and details · choice validation and confirmation toast","Chip, Accordion, Button · Toast, error message"],["06 Form","Form step with optional fields · error summary with field messages, then success","Form field, Dropdown, Progress · Alert banner, Form field (Error), State panel (Success)"],["07 Settings","Grouped settings, switches and drill-in · destructive action confirmed in a bottom sheet","Nav link, List row, Switch, Dropdown · Sheet header, Button"],["08 Profile","Profile with edit screen and saved toast","Avatar, Chip, Form field, Textarea, Toast"],["09 Notifications","Inbox grouped by time with unread marks · all caught up and loading","List row, Chip, Switch · State panel (Success), Loading"],["10 System states","Empty, no results, error, offline, success, loading","State panel, Alert banner, Loading"],["11 Booking","Calendar with unavailable days and time slots · no times left and booking confirmed","Calendar day, Chip, Button · State panel"],["12 Messaging","Conversation list, thread and composer","List row, Input, Icon action"],["13 Service request","<span class='req'>[CONTENT REQUIRED]</span>","<span class='req'>[CONTENT REQUIRED]</span>"]].map(function(s){return '<tr><td class="mono" style="white-space:nowrap">'+s[0]+'</td><td lang="en" dir="ltr">'+s[1]+'</td><td lang="en" dir="ltr" style="color:var(--text-muted)">'+s[2]+'</td></tr>'}).join("");
+$("#extend").innerHTML=[["Sign up, forgot or reset password, one-time code, two-factor, passkey set-up, account locked","01 Sign in"],["Product grid, cart, checkout steps, order confirmation, order history, wishlist","04 List, 05 Detail and 06 Form"],["Reports, report detail, board view","03 Home and 04 List"],["Workspace, team, billing and integration settings","07 Settings"],["Permission denied, rate limited, maintenance, page not found, session expired","10 System states"],["Single-page form, long form with sections, review and submit, save for later","06 Form"],["Reschedule or cancel a booking","11 Booking"],["Group chat, attachments, read receipts","12 Messaging"]].map(function(e){return '<tr><td>'+e[0]+'</td><td class="mono" style="white-space:nowrap">'+e[1]+'</td></tr>'}).join("");
+$("#ai5").innerHTML=[["01 · Disclosure","الإفصاح عن مشاركة الذكاء الاصطناعي.","<span class='req'>[CONTENT REQUIRED]</span>"],["02 · Confidence","قولي مدى ثقة الإجابة بالكلمات، بجانب الادعاء.",""],["03 · Human review","شخص يوافق على الإجراءات ذات العواقب قبل تنفيذها.",""],["04 · Error recovery","أظهري ما الذي فشل، واعرضي الخطوة التالية.",""],["05 · Undo","الإجراءات القابلة للتراجع يمكن استرجاعها فور حدوثها.",""]].map(function(a){return '<div class="mini-card"><b lang="en">'+a[0]+'</b><p>'+a[1]+' '+a[2]+'</p></div>'}).join("");
+$("#ai9").innerHTML=["Prompt input","Suggested prompts","Streaming response","Processing","Tool use","Sources and citations","Uncertainty","Stop, try again, regenerate","Human handoff"].map(function(c){return '<span class="pill">'+c+'</span>'}).join("");
+$("#ai7").innerHTML=["Agent plan","Action status row","Permission request","Destructive confirmation","Undo and cancel","Activity log","Evidence panel"].map(function(c){return '<span class="pill">'+c+'</span>'}).join("");
+$("#ai6").innerHTML=["Pause / Stop","Regenerate","Fork","Edit prompt","Export history","Delete / clear"].map(function(c){return '<span class="pill">'+c+'</span>'}).join("");
+
+/* motion */
+$("#behaviours").innerHTML=[["01","Hover"],["02","Press"],["03",null],["04","Modal"],["05","Drawer"],["06",null],["07","Loading"],["08",null],["09","Success"],["10",null],["11","Page transition"],["12","Ambient hero"]].map(function(b){return '<div class="mini-card" style="gap:2px"><span class="mono" style="font-size:12px;color:var(--text-muted)">'+b[0]+'</span>'+(b[1]?'<b>'+b[1]+'</b>':'<span class="req">[CONTENT REQUIRED]</span>')+'</div>'}).join("");
+
+/* naming */
+$("#naming").innerHTML=[["Variables","group/name","surface/default · spacing/16 · duration/quick"],["Spacing","spacing/<px>","spacing/4 … spacing/160"],["Radius","radius/<px> · radius/semantic/<size>","radius/16 · radius/semantic/full"],["Text styles","LANG / Role / Size","EN / Heading / H2 · AR / Body / M"],["Paint, effect, grid styles","Category/Name","Gradient/Hero · Wejdan/Shadow/Subtle · Grid/Presentation/1920x1080"],["Components","Domain/Family/Component","Brand/Logo/W · Information/Source Line"],["Variants","Property=Value","Job=Case study · Cover, Lang=EN"],["Layers","the role, not the shape","Container · Label · Icon Leading · Supporting Text"],["Pages","NN — NAME","03 — DESIGN SYSTEM FOUNDATIONS"]].map(function(n){return '<tr><td>'+n[0]+'</td><td class="mono">'+n[1].replace(/</g,"&lt;").replace(/>/g,"&gt;")+'</td><td class="mono" style="color:var(--text-muted)">'+n[2]+'</td></tr>'}).join("");
+
+/* page map */
+var full="منقول",head="عناوين + المقروء",req="[CONTENT REQUIRED]";
+$("#pagemap").innerHTML=[["00","START HERE","0:1","المقدمة",full],["01","BRAND FOUNDATION","4:2","01",full],["02","LOGO SYSTEM","188:133","02",full],["03","DESIGN SYSTEM FOUNDATIONS","188:149","03 · 04 · 05",full],["06","GRAPHIC LANGUAGE","188:151","06",full],["07","ILLUSTRATION","188:258","07",head],["08","IMAGERY","188:259","08",head],["09","INFORMATION DESIGN","39:5","09",head],["10","ICONOGRAPHY","188:260","10",head],["11","COMPONENT LIBRARY","4:11","11",full],["12","EDITORIAL SYSTEM","4:12","12",full],["13","SOCIAL MEDIA","4:14","13",full],["14","MEDIA KIT","178:5","14",full],["15","BUSINESS CARD","178:6","14",full],["16","PROFESSIONAL APPLICATIONS","39:16","15",head],["17","MOCKUPS","185:133","15",full],["18","CONTENT STUDIO","39:14","05 · 16",full],["20","MASTER LIBRARY","4:20","—",req],["21","QA","4:17","20",req],["22","AGENT","39:2","20",req],["23","VOICE & COPY","182:5","16",head],["24","RESEARCH TOOLKIT","331:127","17",head],["25","PRODUCT UI STARTERS","331:128","18",full],["26","AI & AGENT UX","331:129","18",head],["27","FREELANCE BUSINESS","331:130","15",head],["28","MOTION","331:131","19",head],["29","GOVERNANCE & SOURCES","331:132","20",full],["30–32","PORTFOLIO (owner review)","449:12 · 449:13 · 796:174","—","خارج النطاق، تحت مراجعة المالكة"],["33","BRAND GUIDELINES","981:3345","هذا الدليل",full],["99","ARCHIVE / LEGACY","39:19","الملحق","للتتبع فقط"]].map(function(p){var c=p[4]===req?'<span class="req">'+req+'</span>':p[4];return '<tr><td class="mono">'+p[0]+'</td><td class="mono" lang="en">'+p[1]+'</td><td class="mono n">'+p[2]+'</td><td><span class="mono">'+p[3]+'</span> · '+c+'</td></tr>'}).join("");
+})();
+</script>
+
+</body>
+</html>

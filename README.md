@@ -24,6 +24,8 @@ https://ask.thmanyah.com/hc/en-001/articles/45993930027281-thmanyah-Font-for-Eve
 
 ملفا الشعار الرسميان (الحبري والأبيض) في `assets/brand/`.
 
+دليل الهوية الكامل على الصفحة `guide/`، ومنه تُحمَّل ملفات الشعار SVG وPNG.
+
 
 </div>
 
@@ -51,5 +53,7 @@ Base fonts load from Google Fonts. Thmanyah is never shipped: if it is installed
 Everything is plain static files at the repo root (`index.html`, `assets/`). In the repo settings: Pages → Deploy from a branch → main, folder `/ (root)`. No server, no sign-in, no GitHub Actions.
 
 The official W monogram files (ink and white) are in `assets/brand/`.
+
+The full brand guide lives at `guide/`; the logo SVG and PNG files download from there.
 
 Third-party code: snapdom 3.3.3 and jsPDF 2.5.1, both MIT — licences in `assets/vendor/`.
