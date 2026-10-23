@@ -50,7 +50,6 @@ Base fonts load from Google Fonts. Thmanyah is never shipped: if it is installed
 
 Everything is plain static files at the repo root (`index.html`, `assets/`). In the repo settings: Pages → Deploy from a branch → main, folder `/ (root)`. No server, no sign-in, no GitHub Actions.
 
-The official W monogram files (ink and white) are in .
-
+The official W monogram files (ink and white) are in `assets/brand/`.
 
 Third-party code: snapdom 3.3.3 and jsPDF 2.5.1, both MIT — licences in `assets/vendor/`.
